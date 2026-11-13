@@ -1,0 +1,161 @@
+strategy,id,rank,chunk_id,auto_is_gold,text,label_0_2,reason
+A,q16,1,pride-and-prejudice:p002:fx500o50:04,True,"ty, I will visit them all.”
+
+Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and caprice, that the
+experience of three-and-twenty years had been insufficient to make his wife understand his character.
+_Her_ mind was less difficult to develope. She was a woman of mean understanding, little
+information, and uncertain temper. When she was discontented, she fancied herself nervous. The
+business of her life was to get her daughters married: its solace was visiting and news.",2,top-1 chứa evidence đầy đủ
+A,q16,2,pride-and-prejudice:p063:fx500o50:01,False,"never see
+you again if you _do_.”
+
+Elizabeth could not but smile at such a conclusion of such a beginning; but Mrs. Bennet, who had
+persuaded herself that her husband regarded the affair as she wished, was excessively disappointed.
+
+“What do you mean, Mr. Bennet, by talking in this way? You promised me to _insist_ upon her
+marrying him.”
+
+“My dear,” replied her husband, “I have two small favours to request. First, that you will allow me the
+free use of my understanding on the present occasion;",,chấm ở hàng rank 1 của câu này
+A,q16,3,pride-and-prejudice:p215:fx500o50:01,False,"d woman for the rest of her life; though, perhaps, it was
+lucky for her husband, who might not have relished domestic felicity in so unusual a form, that she
+still was occasionally nervous and invariably silly.
+
+Mr. Bennet missed his second daughter exceedingly; his affection for her drew him oftener from
+home than anything else could do. He delighted in going to Pemberley, especially when he was least
+expected.
+
+Mr. Bingley and Jane remained at Netherfield only a twelvemonth. So near a vicinity",,chấm ở hàng rank 1 của câu này
+A,q17,1,pride-and-prejudice:p171:fx500o50:02,False,"useless; for, of course, they
+were to have a son. This son was to join in cutting off the entail, as soon as he should be of age, and
+the widow and younger children would by that means be provided for. Five daughters successively
+entered the world, but yet the son was to come; and Mrs. Bennet, for many years after Lydia’s birth,
+had been certain that he would. This event had at last been despaired of, but it was then too late to be
+saving. Mrs. Bennet had no turn for economy; and her husband’s l",1,"top-3 có trang nhắc ""entail"" nhưng thiếu điều kiện thừa kế ""heirs male / distant relation"""
+A,q17,2,pride-and-prejudice:p172:fx500o50:02,False,"e of either, by receiving them at
+Longbourn.”
+
+A long dispute followed this declaration; but Mr. Bennet was firm: it soon led to another; and Mrs.
+Bennet found, with amazement and horror, that her husband would not advance a guinea to buy
+clothes for his daughter. He protested that she should receive from him no mark of affection whatever
+on the occasion. Mrs. Bennet could hardly comprehend it. That his anger could be carried to such a
+point of inconceivable resentment as to refuse his daughter",,chấm ở hàng rank 1 của câu này
+A,q17,3,pride-and-prejudice:p037:fx500o50:00,False,"need of encouragement, nor inclined to be silent himself. He was a tall, heavy-looking young man of
+five-and-twenty. His air was grave and stately, and his manners were very formal. He had not been
+long seated before he complimented Mrs. Bennet on having so fine a family of daughters, said he had
+heard much of their beauty, but that, in this instance, fame had fallen short of the truth; and added,
+that he did not doubt her seeing them all in due time well disposed of in marriage. This gallantry",,chấm ở hàng rank 1 của câu này
+A,q18,1,pride-and-prejudice:p210:fx500o50:05,False,"length, by repeated
+assurances that Mr. Darcy was really the object of her choice, by explaining the gradual change which
+her estimation of him had undergone, relating her absolute certainty that his affection was not the
+work of a day, but had stood the test of many months’ suspense, and enumerating with energy all his
+good qualities, she did conquer her father’s incredulity, and reconcile him to the match.
+
+“Well, my dear,” said he, when she ceased speaking, “I have no more to say. If this be",0,top-3 không có trang gold và không có cụm evidence
+A,q18,2,pride-and-prejudice:p115:fx500o50:00,False,"Chapter XXXVI
+
+Elizabeth, when Mr. Darcy gave her the letter, did not expect it to contain a renewal of his offers, she
+had formed no expectation at all of its contents. But such as they were, it may be well supposed how
+eagerly she went through them, and what a contrariety of emotion they excited. Her feelings as she
+read were scarcely to be defined. With amazement did she first understand that he believed any
+apology to be in his power; and steadfastly was she persuaded, that he could have no",,chấm ở hàng rank 1 của câu này
+A,q18,3,pride-and-prejudice:p212:fx500o50:00,False,"Chapter LX
+
+Elizabeth’s spirits soon rising to playfulness again, she wanted Mr. Darcy to account for his having
+ever fallen in love with her. “How could you begin?” said she. “I can comprehend your going on
+charmingly, when you had once made a beginning; but what could set you off in the first place?”
+
+“I cannot fix on the hour, or the spot, or the look, or the words, which laid the foundation. It is too
+long ago. I was in the middle before I knew that I _had_ begun.”
+
+“My beauty you had early",,chấm ở hàng rank 1 của câu này
+A,q19,1,pride-and-prejudice:p115:fx500o50:00,False,"Chapter XXXVI
+
+Elizabeth, when Mr. Darcy gave her the letter, did not expect it to contain a renewal of his offers, she
+had formed no expectation at all of its contents. But such as they were, it may be well supposed how
+eagerly she went through them, and what a contrariety of emotion they excited. Her feelings as she
+read were scarcely to be defined. With amazement did she first understand that he believed any
+apology to be in his power; and steadfastly was she persuaded, that he could have no",0,top-3 không có trang gold và không có câu nói về mục đích bức thư
+A,q19,2,pride-and-prejudice:p107:fx500o50:00,False,"Chapter XXXIV
+
+When they were gone, Elizabeth, as if intending to exasperate herself as much as possible against Mr.
+Darcy, chose for her employment the examination of all the letters which Jane had written to her since
+her being in Kent. They contained no actual complaint, nor was there any revival of past occurrences,
+or any communication of present suffering. But in all, and in almost every line of each, there was a
+want of that cheerfulness which had been used to characterize her style, and",,chấm ở hàng rank 1 của câu này
+A,q19,3,pride-and-prejudice:p032:fx500o50:02,False,"room together, with either of which motives his joining them would
+interfere. What could he mean? She was dying to know what could be his meaning--and asked
+Elizabeth whether she could at all understand him.
+
+“Not at all,” was her answer; “but, depend upon it, he means to be severe on us, and our surest way of
+disappointing him will be to ask nothing about it.”
+
+Miss Bingley, however, was incapable of disappointing Mr. Darcy in anything, and persevered,
+therefore, in requiring an explanation of",,chấm ở hàng rank 1 của câu này
+A,q20,1,pride-and-prejudice:p154:fx500o50:03,False,"s all surprise, all
+astonishment, that Wickham should marry a girl whom it was impossible he could marry for money;
+and how Lydia could ever have attached him had appeared incomprehensible. But now it was all too
+natural. For such an attachment as this, she might have sufficient charms; and though she did not
+suppose Lydia to be deliberately engaging in an elopement, without the intention of marriage, she had
+no difficulty in believing that neither her virtue nor her understanding would preserve",1,"top-3 có trang 169 nêu ""Ten thousand pounds"" nhưng thiếu câu điều kiện ""kẻ ngốc / ít hơn"""
+A,q20,2,pride-and-prejudice:p169:fx500o50:01,False,"y, small as is their chance
+of happiness, and wretched as is his character, we are forced to rejoice! Oh, Lydia!”
+
+“I comfort myself with thinking,” replied Jane, “that he certainly would not marry Lydia, if he had not
+a real regard for her. Though our kind uncle has done something towards clearing him, I cannot
+believe that ten thousand pounds, or anything like it, has been advanced. He has children of his own,
+and may have more. How could he spare half ten thousand pounds?”
+
+“If we are ever ab",,chấm ở hàng rank 1 của câu này
+A,q20,3,pride-and-prejudice:p154:fx500o50:02,False,"gret; and in this early example of what Lydia’s infamy must
+produce, found additional anguish as she reflected on that wretched business. Never since reading
+Jane’s second letter had she entertained a hope of Wickham’s meaning to marry her. No one but Jane,
+she thought, could flatter herself with such an expectation. Surprise was the least of all her feelings on
+this development. While the contents of the first letter remained on her mind, she was all surprise, all
+astonishment, that Wickham sho",,chấm ở hàng rank 1 của câu này
+B,q16,1,pride-and-prejudice:p002:pg800:03,True,"Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and caprice, that the experience of three-and-twenty years had been insufficient to make his wife understand his character. _Her_ mind was less difficult to develope. She was a woman of mean understanding, little information, and uncertain temper. When she was discontented, she fancied herself nervous. The business of her life was to get her daughters married: its solace was visiting and news.",2,top-1 chứa evidence đầy đủ
+B,q16,2,pride-and-prejudice:p171:pg800:02,False,"When first Mr. Bennet had married, economy was held to be perfectly useless; for, of course, they were to have a son. This son was to join in cutting off the entail, as soon as he should be of age, and the widow and younger children would by that means be provided for. Five daughters successively entered the world, but yet the son was to come; and Mrs. Bennet, for many years after Lydia’s birth, had been certain that he would. This event had at last been despaired of, but it was then too late to be saving. Mrs. Bennet had no turn for economy; and her husband’s love of independence had alone prevented their exceeding their income.",,chấm ở hàng rank 1 của câu này
+B,q16,3,pride-and-prejudice:p171:pg800:07,False,"It was a fortnight since Mrs. Bennet had been down stairs, but on this happy day she again took her seat at the head of her table, and in spirits oppressively high. No sentiment of shame gave a damp to her triumph. The marriage of a daughter, which had been the first object of her wishes since Jane was sixteen, was now on the point of accomplishment, and her thoughts and her words ran wholly on those",,chấm ở hàng rank 1 của câu này
+B,q17,1,pride-and-prejudice:p172:pg800:02,False,"A long dispute followed this declaration; but Mr. Bennet was firm: it soon led to another; and Mrs. Bennet found, with amazement and horror, that her husband would not advance a guinea to buy clothes for his daughter. He protested that she should receive from him no mark of affection whatever on the occasion. Mrs. Bennet could hardly comprehend it. That his anger could be carried to such a point of inconceivable resentment as to refuse his daughter a privilege, without which her marriage would scarcely seem valid, exceeded all that she could believe possible. She was more alive to the disgrace, which her want of new clothes must reflect on her daughter’s nuptials, than to any sense of shame at her eloping and living with Wickham a fortnight before they took place.",1,"top-3 có trang nhắc ""entail"" nhưng thiếu điều kiện thừa kế ""heirs male / distant relation"""
+B,q17,2,pride-and-prejudice:p171:pg800:02,False,"When first Mr. Bennet had married, economy was held to be perfectly useless; for, of course, they were to have a son. This son was to join in cutting off the entail, as soon as he should be of age, and the widow and younger children would by that means be provided for. Five daughters successively entered the world, but yet the son was to come; and Mrs. Bennet, for many years after Lydia’s birth, had been certain that he would. This event had at last been despaired of, but it was then too late to be saving. Mrs. Bennet had no turn for economy; and her husband’s love of independence had alone prevented their exceeding their income.",,chấm ở hàng rank 1 của câu này
+B,q17,3,pride-and-prejudice:p039:pg800:04,False,"Then, turning to Mr. Bennet, he offered himself as his antagonist at backgammon. Mr. Bennet accepted the challenge, observing that he acted very wisely in leaving the girls to their own trifling amusements. Mrs. Bennet and her daughters apologized most civilly for Lydia’s interruption, and promised that it should not occur again, if he would resume his book; but Mr. Collins, after assuring them that he bore his young cousin no ill-will, and should never resent her behaviour as any affront, seated himself at another table with Mr. Bennet, and prepared for backgammon.",,chấm ở hàng rank 1 của câu này
+B,q18,1,pride-and-prejudice:p115:pg800:00,False,"Chapter XXXVI
+
+Elizabeth, when Mr. Darcy gave her the letter, did not expect it to contain a renewal of his offers, she had formed no expectation at all of its contents. But such as they were, it may be well supposed how eagerly she went through them, and what a contrariety of emotion they excited. Her feelings as she read were scarcely to be defined. With amazement did she first understand that he believed any apology to be in his power; and steadfastly was she persuaded, that he could have no explanation to give, which a just sense of shame would not conceal. With a strong prejudice against everything he might say, she began his account of what had happened at Netherfield.",0,top-3 không có trang gold và không có cụm evidence
+B,q18,2,pride-and-prejudice:p119:pg800:02,False,"Mr. Darcy’s letter she was in a fair way of soon knowing by heart. She studied every sentence; and her feelings towards its writer were at times widely different. When she remembered the style of his address, she was still full of indignation: but when she considered how unjustly she had condemned and upbraided him, her anger was turned against herself; and his disappointed feelings became the object of compassion. His attachment excited gratitude, his general character respect: but she could not approve him; nor could she for a moment repent her refusal, or feel the slightest inclination ever to see him again. In her own past behaviour, there was a constant source of vexation and regret: and in the unhappy defects of her family, a subject of yet heavier chagrin.",,chấm ở hàng rank 1 của câu này
+B,q18,3,pride-and-prejudice:p108:pg800:01,False,"Mr. Darcy, who was leaning against the mantel-piece with his eyes fixed on her face, seemed to catch her words with no less resentment than surprise. His complexion became pale with anger, and the disturbance of his mind was visible in every feature. He was struggling for the appearance of composure, and would not open his lips till he believed himself to have attained it. The pause was to Elizabeth’s feelings dreadful. At length, in a voice of forced calmness, he said,--
+
+“And this is all the reply which I am to have the honour of expecting! I might, perhaps, wish to be informed why, with so little _endeavour_ at civility, I am thus rejected. But it is of small importance.”",,chấm ở hàng rank 1 của câu này
+B,q19,1,pride-and-prejudice:p115:pg800:00,False,"Chapter XXXVI
+
+Elizabeth, when Mr. Darcy gave her the letter, did not expect it to contain a renewal of his offers, she had formed no expectation at all of its contents. But such as they were, it may be well supposed how eagerly she went through them, and what a contrariety of emotion they excited. Her feelings as she read were scarcely to be defined. With amazement did she first understand that he believed any apology to be in his power; and steadfastly was she persuaded, that he could have no explanation to give, which a just sense of shame would not conceal. With a strong prejudice against everything he might say, she began his account of what had happened at Netherfield.",0,top-3 không có trang gold và không có câu nói về mục đích bức thư
+B,q19,2,pride-and-prejudice:p210:pg800:04,False,"Elizabeth, still more affected, was earnest and solemn in her reply; and, at length, by repeated assurances that Mr. Darcy was really the object of her choice, by explaining the gradual change which her estimation of him had undergone, relating her absolute certainty that his affection was not the work of a day, but had stood the test of many months’ suspense, and enumerating with energy all his good qualities, she did conquer her father’s incredulity, and reconcile him to the match.
+
+“Well, my dear,” said he, when she ceased speaking, “I have no more to say. If this be the case, he deserves you. I could not have parted with you, my Lizzy, to anyone less worthy.”",,chấm ở hàng rank 1 của câu này
+B,q19,3,pride-and-prejudice:p181:pg800:01,False,"The contents of this letter threw Elizabeth into a flutter of spirits, in which it was difficult to determine whether pleasure or pain bore the greatest share. The vague and unsettled suspicions which uncertainty had produced, of what Mr. Darcy might have been doing to forward her sister’s match--which she had feared to encourage, as an exertion of goodness too great to be probable, and at the same time dreaded to be just, from the pain of obligation--were proved beyond their greatest extent to be true!",,chấm ở hàng rank 1 của câu này
+B,q20,1,pride-and-prejudice:p169:pg800:01,False,"“I comfort myself with thinking,” replied Jane, “that he certainly would not marry Lydia, if he had not a real regard for her. Though our kind uncle has done something towards clearing him, I cannot believe that ten thousand pounds, or anything like it, has been advanced. He has children of his own, and may have more. How could he spare half ten thousand pounds?”",1,"top-3 có trang 169 nêu ""Ten thousand pounds"" nhưng thiếu câu điều kiện ""kẻ ngốc / ít hơn"""
+B,q20,2,pride-and-prejudice:p154:pg800:02,False,"Never since reading Jane’s second letter had she entertained a hope of Wickham’s meaning to marry her. No one but Jane, she thought, could flatter herself with such an expectation. Surprise was the least of all her feelings on this development. While the contents of the first letter remained on her mind, she was all surprise, all astonishment, that Wickham should marry a girl whom it was impossible he could marry for money; and how Lydia could ever have attached him had appeared incomprehensible. But now it was all too natural.",,chấm ở hàng rank 1 của câu này
+B,q20,3,pride-and-prejudice:p179:pg800:05,False,"His first object with her, he acknowledged, had been to persuade her to quit her present disgraceful situation, and return to her friends as soon as they could be prevailed on to receive her, offering his assistance as far as it would go. But he found Lydia absolutely resolved on remaining where she was. She cared for none of her friends; she wanted no help of his; she would not hear of leaving Wickham. She was sure they should be married some time or other, and it did not much signify when. Since such were her feelings, it only remained, he thought, to secure and expedite a marriage, which, in his very first conversation with Wickham, he easily learnt had never been _his_ design.",,chấm ở hàng rank 1 của câu này
+C,q16,1,pride-and-prejudice:p002:pg800:03,True,"Mr. Bennet was so odd a mixture of quick parts, sarcastic humour, reserve, and caprice, that the experience of three-and-twenty years had been insufficient to make his wife understand his character. _Her_ mind was less difficult to develope. She was a woman of mean understanding, little information, and uncertain temper. When she was discontented, she fancied herself nervous. The business of her life was to get her daughters married: its solace was visiting and news.",2,top-1 chứa evidence đầy đủ
+C,q16,2,pride-and-prejudice:p171:pg800:02,False,"When first Mr. Bennet had married, economy was held to be perfectly useless; for, of course, they were to have a son. This son was to join in cutting off the entail, as soon as he should be of age, and the widow and younger children would by that means be provided for. Five daughters successively entered the world, but yet the son was to come; and Mrs. Bennet, for many years after Lydia’s birth, had been certain that he would. This event had at last been despaired of, but it was then too late to be saving. Mrs. Bennet had no turn for economy; and her husband’s love of independence had alone prevented their exceeding their income.",,chấm ở hàng rank 1 của câu này
+C,q16,3,pride-and-prejudice:p171:pg800:07,False,"It was a fortnight since Mrs. Bennet had been down stairs, but on this happy day she again took her seat at the head of her table, and in spirits oppressively high. No sentiment of shame gave a damp to her triumph. The marriage of a daughter, which had been the first object of her wishes since Jane was sixteen, was now on the point of accomplishment, and her thoughts and her words ran wholly on those",,chấm ở hàng rank 1 của câu này
+C,q17,1,pride-and-prejudice:p172:pg800:02,False,"A long dispute followed this declaration; but Mr. Bennet was firm: it soon led to another; and Mrs. Bennet found, with amazement and horror, that her husband would not advance a guinea to buy clothes for his daughter. He protested that she should receive from him no mark of affection whatever on the occasion. Mrs. Bennet could hardly comprehend it. That his anger could be carried to such a point of inconceivable resentment as to refuse his daughter a privilege, without which her marriage would scarcely seem valid, exceeded all that she could believe possible. She was more alive to the disgrace, which her want of new clothes must reflect on her daughter’s nuptials, than to any sense of shame at her eloping and living with Wickham a fortnight before they took place.",1,"top-3 có trang nhắc ""entail"" nhưng thiếu điều kiện thừa kế ""heirs male / distant relation"""
+C,q17,2,pride-and-prejudice:p171:pg800:02,False,"When first Mr. Bennet had married, economy was held to be perfectly useless; for, of course, they were to have a son. This son was to join in cutting off the entail, as soon as he should be of age, and the widow and younger children would by that means be provided for. Five daughters successively entered the world, but yet the son was to come; and Mrs. Bennet, for many years after Lydia’s birth, had been certain that he would. This event had at last been despaired of, but it was then too late to be saving. Mrs. Bennet had no turn for economy; and her husband’s love of independence had alone prevented their exceeding their income.",,chấm ở hàng rank 1 của câu này
+C,q17,3,pride-and-prejudice:p039:pg800:04,False,"Then, turning to Mr. Bennet, he offered himself as his antagonist at backgammon. Mr. Bennet accepted the challenge, observing that he acted very wisely in leaving the girls to their own trifling amusements. Mrs. Bennet and her daughters apologized most civilly for Lydia’s interruption, and promised that it should not occur again, if he would resume his book; but Mr. Collins, after assuring them that he bore his young cousin no ill-will, and should never resent her behaviour as any affront, seated himself at another table with Mr. Bennet, and prepared for backgammon.",,chấm ở hàng rank 1 của câu này
+C,q18,1,pride-and-prejudice:p115:pg800:00,False,"Chapter XXXVI
+
+Elizabeth, when Mr. Darcy gave her the letter, did not expect it to contain a renewal of his offers, she had formed no expectation at all of its contents. But such as they were, it may be well supposed how eagerly she went through them, and what a contrariety of emotion they excited. Her feelings as she read were scarcely to be defined. With amazement did she first understand that he believed any apology to be in his power; and steadfastly was she persuaded, that he could have no explanation to give, which a just sense of shame would not conceal. With a strong prejudice against everything he might say, she began his account of what had happened at Netherfield.",0,top-3 không có trang gold và không có cụm evidence
+C,q18,2,pride-and-prejudice:p119:pg800:02,False,"Mr. Darcy’s letter she was in a fair way of soon knowing by heart. She studied every sentence; and her feelings towards its writer were at times widely different. When she remembered the style of his address, she was still full of indignation: but when she considered how unjustly she had condemned and upbraided him, her anger was turned against herself; and his disappointed feelings became the object of compassion. His attachment excited gratitude, his general character respect: but she could not approve him; nor could she for a moment repent her refusal, or feel the slightest inclination ever to see him again. In her own past behaviour, there was a constant source of vexation and regret: and in the unhappy defects of her family, a subject of yet heavier chagrin.",,chấm ở hàng rank 1 của câu này
+C,q18,3,pride-and-prejudice:p108:pg800:01,False,"Mr. Darcy, who was leaning against the mantel-piece with his eyes fixed on her face, seemed to catch her words with no less resentment than surprise. His complexion became pale with anger, and the disturbance of his mind was visible in every feature. He was struggling for the appearance of composure, and would not open his lips till he believed himself to have attained it. The pause was to Elizabeth’s feelings dreadful. At length, in a voice of forced calmness, he said,--
+
+“And this is all the reply which I am to have the honour of expecting! I might, perhaps, wish to be informed why, with so little _endeavour_ at civility, I am thus rejected. But it is of small importance.”",,chấm ở hàng rank 1 của câu này
+C,q19,1,pride-and-prejudice:p115:pg800:00,False,"Chapter XXXVI
+
+Elizabeth, when Mr. Darcy gave her the letter, did not expect it to contain a renewal of his offers, she had formed no expectation at all of its contents. But such as they were, it may be well supposed how eagerly she went through them, and what a contrariety of emotion they excited. Her feelings as she read were scarcely to be defined. With amazement did she first understand that he believed any apology to be in his power; and steadfastly was she persuaded, that he could have no explanation to give, which a just sense of shame would not conceal. With a strong prejudice against everything he might say, she began his account of what had happened at Netherfield.",0,top-3 không có trang gold và không có câu nói về mục đích bức thư
+C,q19,2,pride-and-prejudice:p210:pg800:04,False,"Elizabeth, still more affected, was earnest and solemn in her reply; and, at length, by repeated assurances that Mr. Darcy was really the object of her choice, by explaining the gradual change which her estimation of him had undergone, relating her absolute certainty that his affection was not the work of a day, but had stood the test of many months’ suspense, and enumerating with energy all his good qualities, she did conquer her father’s incredulity, and reconcile him to the match.
+
+“Well, my dear,” said he, when she ceased speaking, “I have no more to say. If this be the case, he deserves you. I could not have parted with you, my Lizzy, to anyone less worthy.”",,chấm ở hàng rank 1 của câu này
+C,q19,3,pride-and-prejudice:p181:pg800:01,False,"The contents of this letter threw Elizabeth into a flutter of spirits, in which it was difficult to determine whether pleasure or pain bore the greatest share. The vague and unsettled suspicions which uncertainty had produced, of what Mr. Darcy might have been doing to forward her sister’s match--which she had feared to encourage, as an exertion of goodness too great to be probable, and at the same time dreaded to be just, from the pain of obligation--were proved beyond their greatest extent to be true!",,chấm ở hàng rank 1 của câu này
+C,q20,1,pride-and-prejudice:p169:pg800:01,False,"“I comfort myself with thinking,” replied Jane, “that he certainly would not marry Lydia, if he had not a real regard for her. Though our kind uncle has done something towards clearing him, I cannot believe that ten thousand pounds, or anything like it, has been advanced. He has children of his own, and may have more. How could he spare half ten thousand pounds?”",1,"top-3 có trang 169 nêu ""Ten thousand pounds"" nhưng thiếu câu điều kiện ""kẻ ngốc / ít hơn"""
+C,q20,2,pride-and-prejudice:p154:pg800:02,False,"Never since reading Jane’s second letter had she entertained a hope of Wickham’s meaning to marry her. No one but Jane, she thought, could flatter herself with such an expectation. Surprise was the least of all her feelings on this development. While the contents of the first letter remained on her mind, she was all surprise, all astonishment, that Wickham should marry a girl whom it was impossible he could marry for money; and how Lydia could ever have attached him had appeared incomprehensible. But now it was all too natural.",,chấm ở hàng rank 1 của câu này
+C,q20,3,pride-and-prejudice:p179:pg800:05,False,"His first object with her, he acknowledged, had been to persuade her to quit her present disgraceful situation, and return to her friends as soon as they could be prevailed on to receive her, offering his assistance as far as it would go. But he found Lydia absolutely resolved on remaining where she was. She cared for none of her friends; she wanted no help of his; she would not hear of leaving Wickham. She was sure they should be married some time or other, and it did not much signify when. Since such were her feelings, it only remained, he thought, to secure and expedite a marriage, which, in his very first conversation with Wickham, he easily learnt had never been _his_ design.",,chấm ở hàng rank 1 của câu này

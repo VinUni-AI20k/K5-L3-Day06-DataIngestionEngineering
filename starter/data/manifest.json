@@ -1,0 +1,539 @@
+{
+  "corpus_name": "Pride and Prejudice (Jane Austen), Project Gutenberg eBook #1342",
+  "source_id": "pride-and-prejudice",
+  "title": "Pride and Prejudice",
+  "author": "Jane Austen (d. 1817)",
+  "source_path_or_url": "https://www.gutenberg.org/cache/epub/1342/pg1342.txt",
+  "local_copy": "starter/data/source/pg1342.txt",
+  "license_or_permission": "Project Gutenberg eBook #1342; public domain in the United States per the Project Gutenberg license included in the file. Check local law before redistribution outside the US; the file is kept only for the lab.",
+  "accessed_at": "2026-11-13",
+  "snapshot": {
+    "sha256_raw": "3f6bb9d6f78e0293b56acd4714dd68cb7d6d1d293402031ce9d5a216bcaf9d75",
+    "bytes": 772386,
+    "gutenberg_release_date_in_file": "June 1, 1998 (eBook #1342)",
+    "gutenberg_most_recently_updated_in_file": "September 1, 2026"
+  },
+  "unit_definition": "Each chapter is one source unit (no physical pages in the .txt). Units are the text between 'Chapter N' headings and the next heading, with Gutenberg header/footer, [Illustration] markers and whitespace removed. All 61 units are >=1500 normalized characters; none is duplicated.",
+  "units_total": 61,
+  "units_used": 61,
+  "units_excluded": [],
+  "chars_total": 685134,
+  "chars_min": 3930,
+  "chars_max": 29192,
+  "units": [
+    {
+      "unit_id": "pride-and-prejudice:ch01",
+      "heading": "Chapter I",
+      "chapter": 1,
+      "source_line_start": 701,
+      "source_line_end": 837,
+      "chars": 4496
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch02",
+      "heading": "Chapter II",
+      "chapter": 2,
+      "source_line_start": 838,
+      "source_line_end": 958,
+      "chars": 4307
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch03",
+      "heading": "Chapter III",
+      "chapter": 3,
+      "source_line_start": 959,
+      "source_line_end": 1149,
+      "chars": 9570
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch04",
+      "heading": "Chapter IV",
+      "chapter": 4,
+      "source_line_start": 1150,
+      "source_line_end": 1271,
+      "chars": 5937
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch05",
+      "heading": "Chapter V",
+      "chapter": 5,
+      "source_line_start": 1272,
+      "source_line_end": 1398,
+      "chars": 5275
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch06",
+      "heading": "Chapter VI",
+      "chapter": 6,
+      "source_line_start": 1399,
+      "source_line_end": 1681,
+      "chars": 13034
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch07",
+      "heading": "Chapter VII",
+      "chapter": 7,
+      "source_line_start": 1682,
+      "source_line_end": 1937,
+      "chars": 11194
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch08",
+      "heading": "Chapter VIII",
+      "chapter": 8,
+      "source_line_start": 1938,
+      "source_line_end": 2197,
+      "chars": 11011
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch09",
+      "heading": "Chapter IX",
+      "chapter": 9,
+      "source_line_start": 2198,
+      "source_line_end": 2399,
+      "chars": 9771
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch10",
+      "heading": "Chapter X",
+      "chapter": 10,
+      "source_line_start": 2400,
+      "source_line_end": 2696,
+      "chars": 12507
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch11",
+      "heading": "Chapter XI",
+      "chapter": 11,
+      "source_line_start": 2697,
+      "source_line_end": 2890,
+      "chars": 8949
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch12",
+      "heading": "Chapter XII",
+      "chapter": 12,
+      "source_line_start": 2891,
+      "source_line_end": 2968,
+      "chars": 3930
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch13",
+      "heading": "Chapter XIII",
+      "chapter": 13,
+      "source_line_start": 2969,
+      "source_line_end": 3160,
+      "chars": 9306
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch14",
+      "heading": "Chapter XIV",
+      "chapter": 14,
+      "source_line_start": 3161,
+      "source_line_end": 3296,
+      "chars": 6445
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch15",
+      "heading": "Chapter XV",
+      "chapter": 15,
+      "source_line_start": 3297,
+      "source_line_end": 3468,
+      "chars": 9792
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch16",
+      "heading": "Chapter XVI",
+      "chapter": 16,
+      "source_line_start": 3469,
+      "source_line_end": 3850,
+      "chars": 19082
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch17",
+      "heading": "Chapter XVII",
+      "chapter": 17,
+      "source_line_start": 3851,
+      "source_line_end": 3990,
+      "chars": 7278
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch18",
+      "heading": "Chapter XVIII",
+      "chapter": 18,
+      "source_line_start": 3991,
+      "source_line_end": 4541,
+      "chars": 29192
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch19",
+      "heading": "Chapter XIX",
+      "chapter": 19,
+      "source_line_start": 4542,
+      "source_line_end": 4740,
+      "chars": 10671
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch20",
+      "heading": "Chapter XX",
+      "chapter": 20,
+      "source_line_start": 4741,
+      "source_line_end": 4937,
+      "chars": 9188
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch21",
+      "heading": "Chapter XXI",
+      "chapter": 21,
+      "source_line_start": 4938,
+      "source_line_end": 5156,
+      "chars": 11297
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch22",
+      "heading": "Chapter XXII",
+      "chapter": 22,
+      "source_line_start": 5157,
+      "source_line_end": 5350,
+      "chars": 10013
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch23",
+      "heading": "Chapter XXIII",
+      "chapter": 23,
+      "source_line_start": 5351,
+      "source_line_end": 5537,
+      "chars": 9323
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch24",
+      "heading": "Chapter XXIV",
+      "chapter": 24,
+      "source_line_start": 5538,
+      "source_line_end": 5749,
+      "chars": 10833
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch25",
+      "heading": "Chapter XXV",
+      "chapter": 25,
+      "source_line_start": 5750,
+      "source_line_end": 5926,
+      "chars": 8605
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch26",
+      "heading": "Chapter XXVI",
+      "chapter": 26,
+      "source_line_start": 5927,
+      "source_line_end": 6170,
+      "chars": 12777
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch27",
+      "heading": "Chapter XXVII",
+      "chapter": 27,
+      "source_line_start": 6171,
+      "source_line_end": 6322,
+      "chars": 7225
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch28",
+      "heading": "Chapter XXVIII",
+      "chapter": 28,
+      "source_line_start": 6323,
+      "source_line_end": 6492,
+      "chars": 8240
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch29",
+      "heading": "Chapter XXIX",
+      "chapter": 29,
+      "source_line_start": 6493,
+      "source_line_end": 6765,
+      "chars": 13688
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch30",
+      "heading": "Chapter XXX",
+      "chapter": 30,
+      "source_line_start": 6766,
+      "source_line_end": 6911,
+      "chars": 7066
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch31",
+      "heading": "Chapter XXXI",
+      "chapter": 31,
+      "source_line_start": 6912,
+      "source_line_end": 7090,
+      "chars": 8750
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch32",
+      "heading": "Chapter XXXII",
+      "chapter": 32,
+      "source_line_start": 7091,
+      "source_line_end": 7273,
+      "chars": 8474
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch33",
+      "heading": "Chapter XXXIII",
+      "chapter": 33,
+      "source_line_start": 7274,
+      "source_line_end": 7494,
+      "chars": 10388
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch34",
+      "heading": "Chapter XXXIV",
+      "chapter": 34,
+      "source_line_start": 7495,
+      "source_line_end": 7726,
+      "chars": 12012
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch35",
+      "heading": "Chapter XXXV",
+      "chapter": 35,
+      "source_line_start": 7727,
+      "source_line_end": 7991,
+      "chars": 16982
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch36",
+      "heading": "Chapter XXXVI",
+      "chapter": 36,
+      "source_line_start": 7992,
+      "source_line_end": 8202,
+      "chars": 11798
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch37",
+      "heading": "Chapter XXXVII",
+      "chapter": 37,
+      "source_line_start": 8203,
+      "source_line_end": 8366,
+      "chars": 7787
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch38",
+      "heading": "Chapter XXXVIII",
+      "chapter": 38,
+      "source_line_start": 8367,
+      "source_line_end": 8496,
+      "chars": 5953
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch39",
+      "heading": "Chapter XXXIX",
+      "chapter": 39,
+      "source_line_start": 8497,
+      "source_line_end": 8669,
+      "chars": 8794
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch40",
+      "heading": "Chapter XL",
+      "chapter": 40,
+      "source_line_start": 8670,
+      "source_line_end": 8873,
+      "chars": 9208
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch41",
+      "heading": "Chapter XLI",
+      "chapter": 41,
+      "source_line_start": 8874,
+      "source_line_end": 9138,
+      "chars": 13025
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch42",
+      "heading": "Chapter XLII",
+      "chapter": 42,
+      "source_line_start": 9139,
+      "source_line_end": 9332,
+      "chars": 10635
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch43",
+      "heading": "Chapter XLIII",
+      "chapter": 43,
+      "source_line_start": 9333,
+      "source_line_end": 9850,
+      "chars": 27522
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch44",
+      "heading": "Chapter XLIV",
+      "chapter": 44,
+      "source_line_start": 9851,
+      "source_line_end": 10087,
+      "chars": 13377
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch45",
+      "heading": "Chapter XLV",
+      "chapter": 45,
+      "source_line_start": 10088,
+      "source_line_end": 10272,
+      "chars": 10103
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch46",
+      "heading": "Chapter XLVI",
+      "chapter": 46,
+      "source_line_start": 10273,
+      "source_line_end": 10580,
+      "chars": 16941
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch47",
+      "heading": "Chapter XLVII",
+      "chapter": 47,
+      "source_line_start": 10581,
+      "source_line_end": 11021,
+      "chars": 22360
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch48",
+      "heading": "Chapter XLVIII",
+      "chapter": 48,
+      "source_line_start": 11022,
+      "source_line_end": 11272,
+      "chars": 12579
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch49",
+      "heading": "Chapter XLIX",
+      "chapter": 49,
+      "source_line_start": 11273,
+      "source_line_end": 11548,
+      "chars": 12268
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch50",
+      "heading": "Chapter L",
+      "chapter": 50,
+      "source_line_start": 11549,
+      "source_line_end": 11780,
+      "chars": 12492
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch51",
+      "heading": "Chapter LI",
+      "chapter": 51,
+      "source_line_start": 11781,
+      "source_line_end": 12016,
+      "chars": 11242
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch52",
+      "heading": "Chapter LII",
+      "chapter": 52,
+      "source_line_start": 12017,
+      "source_line_end": 12338,
+      "chars": 16575
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch53",
+      "heading": "Chapter LIII",
+      "chapter": 53,
+      "source_line_start": 12339,
+      "source_line_end": 12668,
+      "chars": 16108
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch54",
+      "heading": "Chapter LIV",
+      "chapter": 54,
+      "source_line_start": 12669,
+      "source_line_end": 12868,
+      "chars": 8842
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch55",
+      "heading": "Chapter LV",
+      "chapter": 55,
+      "source_line_start": 12869,
+      "source_line_end": 13148,
+      "chars": 13000
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch56",
+      "heading": "Chapter LVI",
+      "chapter": 56,
+      "source_line_start": 13149,
+      "source_line_end": 13497,
+      "chars": 15373
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch57",
+      "heading": "Chapter LVII",
+      "chapter": 57,
+      "source_line_start": 13498,
+      "source_line_end": 13678,
+      "chars": 9417
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch58",
+      "heading": "Chapter LVIII",
+      "chapter": 58,
+      "source_line_start": 13679,
+      "source_line_end": 13958,
+      "chars": 13680
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch59",
+      "heading": "Chapter LIX",
+      "chapter": 59,
+      "source_line_start": 13959,
+      "source_line_end": 14241,
+      "chars": 13567
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch60",
+      "heading": "Chapter LX",
+      "chapter": 60,
+      "source_line_start": 14242,
+      "source_line_end": 14422,
+      "chars": 8714
+    },
+    {
+      "unit_id": "pride-and-prejudice:ch61",
+      "heading": "Chapter LXI",
+      "chapter": 61,
+      "source_line_start": 14423,
+      "source_line_end": 14564,
+      "chars": 7166
+    }
+  ],
+  "filters_candidate": [
+    "chapter (int 1-61); stored per page in data/pages.jsonl"
+  ],
+  "notes": "Plain text: no page numbers, no scans, no OCR. Dev/test benchmark split not defined here.",
+  "derived_pdf": {
+    "path": "starter/data/pride-and-prejudice.pdf",
+    "generated_by": "starter/scripts/build_pdf.py (reportlab 5.1.0, pypdf 6.21.4), rendered from data/corpus.jsonl",
+    "sha256": "4ec68df41688bae01d454fa0ff261531a1bf774cf2591c0a671203718f4db8d8",
+    "format": "A4, Times-Roman 11 pt, page number in footer",
+    "pagination_rule": "Each chapter starts on a new page; long chapters continue onto following pages. Every page belongs to exactly one chapter.",
+    "is_original_print_pagination": false,
+    "note": "The Gutenberg source has no pages. These page numbers are assigned by the generated PDF and are not the printed edition's pages. Benchmark gold references use these page IDs.",
+    "page_id_format": "pride-and-prejudice:pNNN",
+    "pages_file": "starter/data/pages.jsonl (text re-extracted from the PDF with pypdf)",
+    "page_count": 216,
+    "content_pages": 216,
+    "non_content_pages_excluded": 0,
+    "empty_pages": 0,
+    "short_pages_under_100_chars": [
+      "pride-and-prejudice:p068",
+      "pride-and-prejudice:p087",
+      "pride-and-prejudice:p106",
+      "pride-and-prejudice:p174"
+    ],
+    "short_pages_note": "Chapter-ending pages with only a few lines of text. They contain story text, so they are counted as content pages."
+  }
+}
