@@ -1,3 +1,3 @@
 # Báo cáo cá nhân
 
-Copy `MSSV_HoTen.md` thành `<MSSV>_<HoTen>.md`, điền kết quả thực tế và liên kết đến trace, nhãn audit cùng cấu hình. Không ghi giá trị ví dụ thành kết quả đã chạy.
+Báo cáo nằm tại `2A202603705_LeHongQuan.md` (đặt tên theo `<MSSV>_<HoTen>.md`). Mọi số liệu đều lấy từ trace, nhãn audit và cấu hình trong `starter/`; không ghi giá trị ví dụ thành kết quả đã chạy.

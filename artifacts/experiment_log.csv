@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed,500,50,"document_id,source,page,chapter",none,"paraphrase-multilingual-MiniLM-L12-v2 (384d, cosine)",baseline,3/15,5/15,2/8,3/8,"chunks=1610; local model, no API cost; ingest_s=107.2"
+B,paragraph,800,,"document_id,source,page,chapter",none,"paraphrase-multilingual-MiniLM-L12-v2 (384d, cosine)",H1,2/15,3/15,2/8,2/8,"chunks=1166; local model, no API cost; ingest_s=107.2"
+C,paragraph,800,,"document_id,source,page,chapter",chapter (only when question has filter),"paraphrase-multilingual-MiniLM-L12-v2 (384d, cosine)",H2,2/15,4/15,2/8,3/8,"chunks=1166; local model, no API cost; ingest_s=107.2"
