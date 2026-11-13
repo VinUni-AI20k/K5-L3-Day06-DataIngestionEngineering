@@ -1,4 +1,4 @@
-strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+﻿strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
+A,Cửa sổ cố định,500,50,"document_id, source, page, start, program_level khi có",Không lọc,text-embedding-3-small (1536 chiều),Kỳ vọng có chất lượng truy xuất thấp nhất.,2/20,7/20,2/5,2/5,"179 chunk. Kích thước tính bằng ký tự. Ingest dev 4.317 s, test 3.127 s. Tổng chi phí API của thí nghiệm là 0,001 USD theo học viên, chưa có số liệu phân bổ. Giả thuyết được ghi lại sau khi đã có kết quả."
+B,Theo cấu trúc văn bản,500,0,"document_id, source, page, start, program_level khi có",Không lọc,text-embedding-3-small (1536 chiều),Kỳ vọng xếp giữa A và C.,12/20,16/20,3/5,5/5,"445 chunk. Kích thước tính bằng ký tự. Ingest dev 8.883 s, test 7.415 s. Tổng chi phí API của thí nghiệm là 0,001 USD theo học viên, chưa có số liệu phân bổ. Giả thuyết được ghi lại sau khi đã có kết quả."
+C,Theo cấu trúc văn bản,500,0,"document_id, source, page, start, program_level khi có",program_level khi câu hỏi yêu cầu,text-embedding-3-small (1536 chiều),Kỳ vọng có chất lượng truy xuất cao nhất.,13/20,17/20,3/5,5/5,"445 chunk. Kích thước tính bằng ký tự. Ingest dev 1.255 s, test 0.68 s. Tổng chi phí API của thí nghiệm là 0,001 USD theo học viên, chưa có số liệu phân bổ. Giả thuyết được ghi lại sau khi đã có kết quả. Tái sử dụng embedding của B. C cao nhất trên dev và đồng hạng với B trên test."

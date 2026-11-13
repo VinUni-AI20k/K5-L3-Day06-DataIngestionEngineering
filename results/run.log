@@ -1,0 +1,36 @@
+DAY 06 | HUST Academic Regulations 2025 | Nhật ký chạy
+Múi giờ: UTC+07:00 (Asia/Bangkok)
+Mục 1 tổng hợp từ tệp kết quả đã lưu. Mốc thời gian là thời gian sửa tệp trace.
+Mục 2 ghi đầu ra thực tế của lần kiểm tra dữ liệu bên dưới.
+
+=== 1. Kết quả benchmark đã lưu ===
+
+[DEV] Trace cập nhật 2026-11-13T18:19:50+07:00
+Lệnh tái lập từ starter/: python -m src.run --split dev
+Model: text-embedding-3-small (1536 chiều, openai_compatible)
+Kho vector: PostgreSQL 16.16 (Debian 16.16-1.pgdg12+1), pgvector 0.8.7, exact cosine
+Minh chứng: metrics_dev.json, ingestion_dev.json, trace_dev.jsonl
+Trace: 60 lượt, mỗi lượt có 3 kết quả.
+A: 179 chunk, ingest 4.317 s, Hit@1 2/20, Evidence Hit@3 7/20
+B: 445 chunk, ingest 8.883 s, Hit@1 12/20, Evidence Hit@3 16/20
+C: 445 chunk, ingest 1.255 s (dùng lại embedding của B), Hit@1 13/20, Evidence Hit@3 17/20
+
+[TEST] Trace cập nhật 2026-11-13T18:22:53+07:00
+Lệnh tái lập từ starter/: python -m src.run --split test
+Model: text-embedding-3-small (1536 chiều, openai_compatible)
+Kho vector: PostgreSQL 16.16 (Debian 16.16-1.pgdg12+1), pgvector 0.8.7, exact cosine
+Minh chứng: metrics_test.json, ingestion_test.json, trace_test.jsonl
+Trace: 15 lượt, mỗi lượt có 3 kết quả.
+A: 179 chunk, ingest 3.127 s, Hit@1 2/5, Evidence Hit@3 2/5
+B: 445 chunk, ingest 7.415 s, Hit@1 3/5, Evidence Hit@3 5/5
+C: 445 chunk, ingest 0.680 s (dùng lại embedding của B), Hit@1 3/5, Evidence Hit@3 5/5
+
+Tổng chi phí API: 0,001 USD 
+
+=== 2. Đầu ra kiểm tra dữ liệu ===
+Thời điểm kiểm tra: 2026-11-13T19:30:40+07:00
+Lệnh từ starter/: python -B -m src.run --validate-only
+Chế độ kiểm tra chỉ đọc PDF, xác minh bằng chứng và đếm chunk.
+WARNING:root:HUST's ACADEMIC REGULATIONS-2025.pdf: PDF page 4 has no extractable text
+Validated 32 PDF content pages and 25 questions. Chunks: A=179, B=C=445.
+Mã thoát: 0

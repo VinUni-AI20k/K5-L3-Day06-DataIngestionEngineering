@@ -1,16 +1,26 @@
-"""Read and normalize source data. TODO: implement functions."""
+"""Extract and normalize PDF pages without losing physical page numbers."""
+import logging
+import re
+import unicodedata
 from pathlib import Path
+
+from pypdf import PdfReader
+
 from .models import DocumentPage
 
 
 def load_pdf(path: Path, document_id: str, source: str) -> list[DocumentPage]:
-    """TODO: extract each physical page; keep its page number and source.
-
-    Detect and record pages with no text. OCR, when needed, is a separate step.
-    """
-    raise NotImplementedError("TODO: load_pdf")
+    pages = []
+    for number, page in enumerate(PdfReader(path).pages, start=1):
+        text = normalize_text(page.extract_text() or "")
+        if text:
+            pages.append(DocumentPage(document_id, source, number, text))
+        else:
+            logging.warning("%s: PDF page %d has no extractable text", path.name, number)
+    return pages
 
 
 def normalize_text(text: str) -> str:
-    """TODO: normalize Unicode and whitespace without discarding useful structure."""
-    raise NotImplementedError("TODO: normalize_text")
+    text = unicodedata.normalize("NFC", text)
+    text = "\n".join(" ".join(line.split()) for line in text.splitlines())
+    return re.sub(r"\n{3,}", "\n\n", text).strip()

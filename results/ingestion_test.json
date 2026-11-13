@@ -1,0 +1,43 @@
+{
+  "source": "starter/data/corpus/HUST's ACADEMIC REGULATIONS-2025.pdf",
+  "split": "test",
+  "model": "text-embedding-3-small",
+  "provider": "openai_compatible",
+  "dimensions": 1536,
+  "postgresql": "16.16 (Debian 16.16-1.pgdg12+1)",
+  "pgvector": "0.8.7",
+  "search": "exact cosine",
+  "fixed_size": 500,
+  "overlap": 50,
+  "paragraph_max_size": 500,
+  "strategies": {
+    "A": {
+      "chunks": 179,
+      "min_chars": 91,
+      "max_chars": 500,
+      "mean_chars": 469.99441340782124,
+      "total_chars": 84129,
+      "ingest_seconds": 3.127,
+      "reuses_embeddings_from": null
+    },
+    "B": {
+      "chunks": 445,
+      "min_chars": 3,
+      "max_chars": 500,
+      "mean_chars": 172.5370786516854,
+      "total_chars": 76779,
+      "ingest_seconds": 7.415,
+      "reuses_embeddings_from": null
+    },
+    "C": {
+      "chunks": 445,
+      "min_chars": 3,
+      "max_chars": 500,
+      "mean_chars": 172.5370786516854,
+      "total_chars": 76779,
+      "ingest_seconds": 0.68,
+      "reuses_embeddings_from": "B"
+    }
+  },
+  "api_cost": null
+}

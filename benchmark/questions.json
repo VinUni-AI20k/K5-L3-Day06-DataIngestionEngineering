@@ -1,0 +1,236 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "Một năm học tại HUST gồm những học kỳ nào?",
+    "expected_answer": "Hai học kỳ chính và một học kỳ hè.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 7,
+    "evidence_quote": "An academic year consists of two main semesters and one summer semester."
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "Chương trình tiến sĩ có thời gian đào tạo chuẩn bao lâu?",
+    "expected_answer": "Từ 3 đến 4 năm.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 7,
+    "evidence_quote": "For doctoral programs, the standard duration ranges from 3 to 4 years."
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "Hai học phần phải trùng ít nhất bao nhiêu phần trăm nội dung để được coi là tương đương?",
+    "expected_answer": "Ít nhất 70% nội dung học thuật.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 8,
+    "evidence_quote": "Two courses are considered equivalent when they share at least 70% of their academic content."
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "Nếu A là học phần học trước của B, sinh viên trượt A có thể đăng ký B sau khi đã học xong A không?",
+    "expected_answer": "Có. Sinh viên phải đăng ký và hoàn thành A, nhưng không bắt buộc đạt A.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 8,
+    "evidence_quote": "If Course A is a pre -study course for Course B, learners must have registered for and completed Course A (not necessarily passed) before enrolling in Course B."
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "Với học phần từ 2 tín chỉ trở lên, đánh giá cuối kỳ chiếm bao nhiêu phần trăm tổng điểm?",
+    "expected_answer": "Từ 50% đến 80%, theo đề cương học phần.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 9,
+    "evidence_quote": "For courses worth 2 credits or more, the grade is composed of two components: formative assessment and summative assessment, in which the final evaluation accounts for 0.5 to 0.8 of the total weight (or 50% to 80% of the total grade), as specified in the course syllabus."
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Người học vắng thi cuối kỳ theo lịch mà không có lý do chính đáng thì bài thi được ghi mấy điểm?",
+    "expected_answer": "0 điểm.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 9,
+    "evidence_quote": "If a learner misses the scheduled final exam without a valid reason, the exam score will be 0."
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "Khi tính GPA học kỳ, HUST dùng trọng số nào và làm tròn đến mấy chữ số thập phân?",
+    "expected_answer": "Dùng số tín chỉ của từng học phần làm trọng số và làm tròn GPA đến hai chữ số thập phân.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 11,
+    "evidence_quote": "The semester grade point average (GPA) is calculated as the weighted average of the 4-point scale numerical grades for all courses taken in the semester, using the course credits as weights. The GPA is rounded to two decimal places."
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "Nếu người học không đóng đủ học phí đúng hạn, quyền đăng ký học phần trong học kỳ tiếp theo bị ảnh hưởng ra sao?",
+    "expected_answer": "Bị đình chỉ đăng ký học phần trong học kỳ tiếp theo.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 11,
+    "evidence_quote": "Learners who fail to pay tuition fees in full within the period stipulated in Clause 1 of this Article will be suspended from course registration for the following semester."
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "Học phí của lớp học phần rút gọn bằng bao nhiêu phần trăm học phí thông thường?",
+    "expected_answer": "50%.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 12,
+    "evidence_quote": "Tuition fees for condensed/abbreviated courses are calculated at 50% of the regular course fee."
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "Sinh viên đại học năm cuối không bị cảnh báo học tập có bắt buộc đăng ký ít nhất 12 tín chỉ trong học kỳ chính không?",
+    "expected_answer": "Không. Ngưỡng tối thiểu 12 tín chỉ không áp dụng cho sinh viên năm cuối.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 13,
+    "evidence_quote": "Students who are not under academic probation as stipulated in Clause 1, Article 19 of these Regulations may register for a maximum of 24 credits and a minimum of 12 credits in a main semester. The minimum credit registration threshold does not apply to final-year students.",
+    "filter": {
+      "program_level": "undergraduate"
+    }
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "Trong chương trình đại học, sinh viên được đăng ký tối đa bao nhiêu tín chỉ vào học kỳ hè?",
+    "expected_answer": "8 tín chỉ.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 13,
+    "evidence_quote": "Students may register for a maximum of 8 credits in the summer semester."
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "Ở chương trình đại học, số tín chỉ được công nhận và chuyển đổi tối đa bằng bao nhiêu phần trăm toàn chương trình?",
+    "expected_answer": "Tối đa 50% tổng số tín chỉ của chương trình.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 14,
+    "evidence_quote": "The maximum number of credits that can be recognized and transferred cannot exceed 50% of the total credits of the entire academic program."
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "Kết quả học kỳ hè của sinh viên đại học được đánh giá vào học kỳ nào?",
+    "expected_answer": "Học kỳ chính kế tiếp.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 15,
+    "evidence_quote": "Academic results of the summer semester are evaluated in the next main semester."
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "Nếu người hướng dẫn hoặc người phản biện chấm dưới 5 điểm, sinh viên có được bảo vệ đồ án hoặc khóa luận cử nhân không và điểm bảo vệ được ghi thế nào?",
+    "expected_answer": "Sinh viên không được bảo vệ và điểm bảo vệ được ghi là 0.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 16,
+    "evidence_quote": "If either the supervisor’s or the reviewer’s score is below 5, the student is not allowed to defend the capstone project/thesis. In such cases, the defense score from the evaluation committee will be recorded as 0."
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "Nếu sinh viên đại học xin nghỉ học tạm thời trong kỳ thi cuối kỳ, thời gian nghỉ bắt đầu từ khi nào?",
+    "expected_answer": "Từ đầu học kỳ tiếp theo.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 18,
+    "evidence_quote": "If students apply for temporary leaves during the final exam period of a semester (as defined in the Academic Calendar), the leave will take effect from the start of the next semester."
+  },
+  {
+    "id": "q16",
+    "split": "dev",
+    "question": "Sinh viên chương trình chuẩn ở mức cảnh báo học tập 2 trở lên được đăng ký từ bao nhiêu đến bao nhiêu tín chỉ mỗi học kỳ chính theo mục giới hạn khối lượng học tập?",
+    "expected_answer": "Từ 8 đến 14 tín chỉ.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 20,
+    "evidence_quote": "Academic load limitation is enforced for students on level 2 probation or higher, requiring them to register for a reduced number of credits in the first semester of the academic year. Specific regulations are as follows:: a) Students in standard programs may register for a maximum of 14 credits and a minimum of 8 credits per main semester;"
+  },
+  {
+    "id": "q17",
+    "split": "dev",
+    "question": "Khi vẫn đang học cử nhân, sinh viên được đăng ký tối đa bao nhiêu tín chỉ thuộc chương trình kỹ sư?",
+    "expected_answer": "15 tín chỉ.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 21,
+    "evidence_quote": "During their bachelor's studies, students may register for up to 15 credits of courses in the Engineer Program .",
+    "filter": {
+      "program_level": "engineer"
+    }
+  },
+  {
+    "id": "q18",
+    "split": "dev",
+    "question": "Đồ án tốt nghiệp kỹ sư được coi là đạt khi điểm học phần từ mức nào trở lên?",
+    "expected_answer": "Từ điểm C trở lên.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 21,
+    "evidence_quote": "The ECP will be deemed satisfactory if the course grade is C or higher."
+  },
+  {
+    "id": "q19",
+    "split": "dev",
+    "question": "Học viên thạc sĩ chính quy được đăng ký tối đa bao nhiêu tín chỉ trong một học kỳ chính thông thường và trong một năm học?",
+    "expected_answer": "Tối đa 24 tín chỉ mỗi học kỳ chính thông thường và 45 tín chỉ mỗi năm học.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 24,
+    "evidence_quote": "Students enrolled in the full-time format may register for up to 24 credits per main semester, but no more than 45 credits per academic year."
+  },
+  {
+    "id": "q20",
+    "split": "dev",
+    "question": "Học viên thạc sĩ phải hoàn thành học phần bổ sung trước khi bắt đầu nhóm học phần nào?",
+    "expected_answer": "Trước khi học các học phần thuộc chương trình thạc sĩ chuẩn.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 24,
+    "evidence_quote": "Supplementary courses must be completed before taking courses in the standard master’s curriculum."
+  },
+  {
+    "id": "q21",
+    "split": "test",
+    "question": "Nếu lần bảo vệ luận văn thạc sĩ đầu tiên chưa đạt, học viên phải còn ít nhất bao nhiêu thời gian học để được bảo vệ lần hai và phải bảo vệ lại trong bao lâu?",
+    "expected_answer": "Phải còn ít nhất 3 tháng học và bảo vệ lại trong vòng 3 tháng kể từ lần bảo vệ đầu tiên.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 26,
+    "evidence_quote": "When the thesis is deemed unsatisfactory and the student still has at least 3 months of study time left, they are allowed to revise and improve the thesis to defend for the second time within 3 months from the date of the first defense.",
+    "filter": {
+      "program_level": "masters"
+    }
+  },
+  {
+    "id": "q22",
+    "split": "test",
+    "question": "Sau khi bảo vệ luận văn thạc sĩ thành công, học viên phải nộp bản cuối cho Thư viện Tạ Quang Bửu trong bao lâu?",
+    "expected_answer": "Trong vòng 20 ngày kể từ ngày bảo vệ thành công.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 27,
+    "evidence_quote": "The final version of the thesis has been submitted to the Ta Quang Buu Library in accordance with HUST’s formatting requirements, within 20 days from the date of a successful defense."
+  },
+  {
+    "id": "q23",
+    "split": "test",
+    "question": "Kể từ ngày có quyết định công nhận nghiên cứu sinh, nghiên cứu sinh phải báo cáo tiến độ định kỳ bao lâu một lần?",
+    "expected_answer": "Mỗi 6 tháng.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 29,
+    "evidence_quote": "Every six months from the date of the decision on doctoral candidate recognization, candidates must present a progress report"
+  },
+  {
+    "id": "q24",
+    "split": "test",
+    "question": "Nghiên cứu sinh phải hoàn thành tổng quan tài liệu đạt yêu cầu trong thời hạn nào tính từ ngày nhập học chính thức?",
+    "expected_answer": "Trong vòng 12 tháng kể từ ngày nhập học chính thức.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 30,
+    "evidence_quote": "The doctoral candidate must complete a satisfactory literature review within 12 months from the date of official admission."
+  },
+  {
+    "id": "q25",
+    "split": "test",
+    "question": "Nếu không thể hoàn thành luận án tiến sĩ đúng hạn, nghiên cứu sinh phải nộp đơn gia hạn trước hạn chương trình ít nhất bao nhiêu ngày?",
+    "expected_answer": "Ít nhất 60 ngày.",
+    "gold_source_id": "hust-academic-regulations-2025",
+    "gold_page": 34,
+    "evidence_quote": "If the candidate is unable to complete the dissertation on time, they must submit a request for an extension at least 60 days before the program deadline."
+  }
+]

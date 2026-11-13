@@ -1,0 +1,23 @@
+{
+  "A": {
+    "dev": {
+      "questions": 20,
+      "hit_at_1": 2,
+      "evidence_hit_at_3": 7
+    }
+  },
+  "B": {
+    "dev": {
+      "questions": 20,
+      "hit_at_1": 12,
+      "evidence_hit_at_3": 16
+    }
+  },
+  "C": {
+    "dev": {
+      "questions": 20,
+      "hit_at_1": 13,
+      "evidence_hit_at_3": 17
+    }
+  }
+}
