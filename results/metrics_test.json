@@ -1,0 +1,23 @@
+{
+  "A": {
+    "test": {
+      "questions": 5,
+      "hit_at_1": 2,
+      "evidence_hit_at_3": 2
+    }
+  },
+  "B": {
+    "test": {
+      "questions": 5,
+      "hit_at_1": 3,
+      "evidence_hit_at_3": 5
+    }
+  },
+  "C": {
+    "test": {
+      "questions": 5,
+      "hit_at_1": 3,
+      "evidence_hit_at_3": 5
+    }
+  }
+}

@@ -1,0 +1,199 @@
+[
+  {
+    "source_id": "hust-academic-regulations-2025",
+    "title": "HUST Academic Regulations 2025",
+    "publisher": "Hanoi University of Science and Technology (HUST)",
+    "version": "Final; Decision No. 5445/QĐ-ĐHBK (2025-05-28)",
+    "language": "en",
+    "source_path_or_url": "https://ctt.hust.edu.vn/Upload/Nguy%E1%BB%85n%20Qu%E1%BB%91c%20%C4%90%E1%BA%A1t/files/DTDH_QDQC/Hoctap/03_1%20HUST%27s%20ACADEMIC%20REGULATIONS-2025_Final.pdf",
+    "local_path": "starter/data/corpus/HUST's ACADEMIC REGULATIONS-2025.pdf",
+    "accessed_at": "2026-11-13",
+    "license_or_permission": "PDF được công bố công khai trên cổng thông tin HUST. Quyền tái phân phối PDF và các đoạn trích chưa được xác nhận.",
+    "physical_page_count": 36,
+    "content_page_count": 32,
+    "page_count_rule": "Số trang PDF đếm từ 1. Tính trang PDF 5–36 (trang in 1–32), loại trang bìa, hai trang mục lục và trang trống.",
+    "character_count_rule": "Đếm bằng len() trên văn bản trang sau khi trích bằng pypdf và chuẩn hóa bằng src.ingestion.normalize_text, kể cả ký tự xuống dòng còn lại.",
+    "excluded_pages": [
+      {
+        "page": 1,
+        "reason": "Bìa"
+      },
+      {
+        "page": 2,
+        "reason": "Mục lục"
+      },
+      {
+        "page": 3,
+        "reason": "Mục lục"
+      },
+      {
+        "page": 4,
+        "reason": "Trang trống, không có văn bản trích xuất"
+      }
+    ],
+    "sha256": "81be1c6e5d6577572d440504a50948cc26649695ae9197a7dd2b10eb350e1885",
+    "total_character_count": 76779,
+    "pages": [
+      {
+        "page": 5,
+        "printed_page": 1,
+        "character_count": 2566
+      },
+      {
+        "page": 6,
+        "printed_page": 2,
+        "character_count": 2735
+      },
+      {
+        "page": 7,
+        "printed_page": 3,
+        "character_count": 2665
+      },
+      {
+        "page": 8,
+        "printed_page": 4,
+        "character_count": 2504
+      },
+      {
+        "page": 9,
+        "printed_page": 5,
+        "character_count": 2627
+      },
+      {
+        "page": 10,
+        "printed_page": 6,
+        "character_count": 2286
+      },
+      {
+        "page": 11,
+        "printed_page": 7,
+        "character_count": 2966
+      },
+      {
+        "page": 12,
+        "printed_page": 8,
+        "character_count": 253
+      },
+      {
+        "page": 13,
+        "printed_page": 9,
+        "character_count": 2547
+      },
+      {
+        "page": 14,
+        "printed_page": 10,
+        "character_count": 2553
+      },
+      {
+        "page": 15,
+        "printed_page": 11,
+        "character_count": 2175
+      },
+      {
+        "page": 16,
+        "printed_page": 12,
+        "character_count": 2619
+      },
+      {
+        "page": 17,
+        "printed_page": 13,
+        "character_count": 2641
+      },
+      {
+        "page": 18,
+        "printed_page": 14,
+        "character_count": 2525
+      },
+      {
+        "page": 19,
+        "printed_page": 15,
+        "character_count": 2736
+      },
+      {
+        "page": 20,
+        "printed_page": 16,
+        "character_count": 2224
+      },
+      {
+        "page": 21,
+        "printed_page": 17,
+        "character_count": 2341
+      },
+      {
+        "page": 22,
+        "printed_page": 18,
+        "character_count": 2565
+      },
+      {
+        "page": 23,
+        "printed_page": 19,
+        "character_count": 1701
+      },
+      {
+        "page": 24,
+        "printed_page": 20,
+        "character_count": 2240
+      },
+      {
+        "page": 25,
+        "printed_page": 21,
+        "character_count": 2193
+      },
+      {
+        "page": 26,
+        "printed_page": 22,
+        "character_count": 2845
+      },
+      {
+        "page": 27,
+        "printed_page": 23,
+        "character_count": 2970
+      },
+      {
+        "page": 28,
+        "printed_page": 24,
+        "character_count": 1057
+      },
+      {
+        "page": 29,
+        "printed_page": 25,
+        "character_count": 2600
+      },
+      {
+        "page": 30,
+        "printed_page": 26,
+        "character_count": 2914
+      },
+      {
+        "page": 31,
+        "printed_page": 27,
+        "character_count": 2648
+      },
+      {
+        "page": 32,
+        "printed_page": 28,
+        "character_count": 3138
+      },
+      {
+        "page": 33,
+        "printed_page": 29,
+        "character_count": 2906
+      },
+      {
+        "page": 34,
+        "printed_page": 30,
+        "character_count": 2633
+      },
+      {
+        "page": 35,
+        "printed_page": 31,
+        "character_count": 1241
+      },
+      {
+        "page": 36,
+        "printed_page": 32,
+        "character_count": 2165
+      }
+    ]
+  }
+]
