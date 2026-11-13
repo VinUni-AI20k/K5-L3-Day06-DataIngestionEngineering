@@ -2,3 +2,7 @@
 psycopg[binary]==3.3.8
 pypdf>=5,<7
 python-dotenv>=1,<2
+# pure-Python PostgreSQL driver used by src/store.py (psycopg DLL blocked by Windows Smart App Control on author machine)
+pg8000==1.31.6
+# embedding provider SDK (text-embedding-3-small)
+openai==3.50.0

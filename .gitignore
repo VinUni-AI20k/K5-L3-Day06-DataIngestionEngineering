@@ -8,3 +8,6 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+
+# Raw corpus PDFs: redistribution licence not stated; see data/manifest.json for URLs
+starter/data/raw/

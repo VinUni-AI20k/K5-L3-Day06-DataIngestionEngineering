@@ -1,0 +1,483 @@
+{
+  "accessed_at": "2026-11-13",
+  "license_note": "World Bank Documents & Reports, marked 'Public Disclosure Authorized'. The PDF itself states no Creative Commons licence; used here for non-commercial educational processing only. Raw PDFs are not committed; download from the URL.",
+  "page_rule": "Trang PDF vật lý có nội dung phân tích; loại bìa, mục lục, trang ngăn cách, trang trống, tài liệu tham khảo.",
+  "sources": [
+    {
+      "source_id": "ts-2018-06",
+      "title": "Điểm lại: Cập nhật tình hình phát triển kinh tế Việt Nam, Tháng 6/2018. Chuyên đề: Ưu tiên cải cách nhằm giảm chi phí thương mại và tăng cường năng lực cạnh tranh của Việt Nam",
+      "source_path_or_url": "http://documents.worldbank.org/curated/en/119991529094262839/pdf/127168-VIETNAMESE-TakingStockVNfinal.pdf",
+      "local_path": "data/raw/ts-2018-06-vi.pdf",
+      "license_or_permission": "World Bank Documents & Reports, marked 'Public Disclosure Authorized'. The PDF itself states no Creative Commons licence; used here for non-commercial educational processing only. Raw PDFs are not committed; download from the URL.",
+      "edition": "2018-06",
+      "language": "vi",
+      "physical_pages": 62,
+      "counted_page_count": 47,
+      "excluded_pages": "1-8 bìa/lời cảm ơn/mục lục/danh mục hình; 13, 35 trang ngăn cách; 34 trang trống; 59-60 tham khảo; 61-62 bìa sau",
+      "char_count": 140615,
+      "pages": [
+        {
+          "page": 9,
+          "part": "overview",
+          "chars": 4041
+        },
+        {
+          "page": 10,
+          "part": "overview",
+          "chars": 3699
+        },
+        {
+          "page": 11,
+          "part": "overview",
+          "chars": 4372
+        },
+        {
+          "page": 12,
+          "part": "overview",
+          "chars": 3909
+        },
+        {
+          "page": 14,
+          "part": "I",
+          "chars": 2698
+        },
+        {
+          "page": 15,
+          "part": "I",
+          "chars": 2293
+        },
+        {
+          "page": 16,
+          "part": "I",
+          "chars": 3550
+        },
+        {
+          "page": 17,
+          "part": "I",
+          "chars": 4958
+        },
+        {
+          "page": 18,
+          "part": "I",
+          "chars": 2176
+        },
+        {
+          "page": 19,
+          "part": "I",
+          "chars": 2724
+        },
+        {
+          "page": 20,
+          "part": "I",
+          "chars": 3256
+        },
+        {
+          "page": 21,
+          "part": "I",
+          "chars": 2051
+        },
+        {
+          "page": 22,
+          "part": "I",
+          "chars": 3869
+        },
+        {
+          "page": 23,
+          "part": "I",
+          "chars": 1585
+        },
+        {
+          "page": 24,
+          "part": "I",
+          "chars": 1829
+        },
+        {
+          "page": 25,
+          "part": "I",
+          "chars": 1526
+        },
+        {
+          "page": 26,
+          "part": "I",
+          "chars": 3199
+        },
+        {
+          "page": 27,
+          "part": "I",
+          "chars": 3269
+        },
+        {
+          "page": 28,
+          "part": "I",
+          "chars": 3443
+        },
+        {
+          "page": 29,
+          "part": "I",
+          "chars": 2645
+        },
+        {
+          "page": 30,
+          "part": "I",
+          "chars": 2638
+        },
+        {
+          "page": 31,
+          "part": "I",
+          "chars": 3341
+        },
+        {
+          "page": 32,
+          "part": "I",
+          "chars": 3566
+        },
+        {
+          "page": 33,
+          "part": "I",
+          "chars": 4059
+        },
+        {
+          "page": 36,
+          "part": "II",
+          "chars": 4464
+        },
+        {
+          "page": 37,
+          "part": "II",
+          "chars": 2865
+        },
+        {
+          "page": 38,
+          "part": "II",
+          "chars": 2407
+        },
+        {
+          "page": 39,
+          "part": "II",
+          "chars": 2920
+        },
+        {
+          "page": 40,
+          "part": "II",
+          "chars": 3886
+        },
+        {
+          "page": 41,
+          "part": "II",
+          "chars": 3734
+        },
+        {
+          "page": 42,
+          "part": "II",
+          "chars": 2340
+        },
+        {
+          "page": 43,
+          "part": "II",
+          "chars": 2428
+        },
+        {
+          "page": 44,
+          "part": "II",
+          "chars": 4269
+        },
+        {
+          "page": 45,
+          "part": "II",
+          "chars": 2258
+        },
+        {
+          "page": 46,
+          "part": "II",
+          "chars": 2989
+        },
+        {
+          "page": 47,
+          "part": "II",
+          "chars": 2675
+        },
+        {
+          "page": 48,
+          "part": "II",
+          "chars": 3279
+        },
+        {
+          "page": 49,
+          "part": "II",
+          "chars": 2588
+        },
+        {
+          "page": 50,
+          "part": "II",
+          "chars": 3232
+        },
+        {
+          "page": 51,
+          "part": "II",
+          "chars": 2908
+        },
+        {
+          "page": 52,
+          "part": "II",
+          "chars": 3810
+        },
+        {
+          "page": 53,
+          "part": "II",
+          "chars": 3490
+        },
+        {
+          "page": 54,
+          "part": "II",
+          "chars": 2272
+        },
+        {
+          "page": 55,
+          "part": "II",
+          "chars": 2442
+        },
+        {
+          "page": 56,
+          "part": "II",
+          "chars": 1471
+        },
+        {
+          "page": 57,
+          "part": "II",
+          "chars": 2172
+        },
+        {
+          "page": 58,
+          "part": "II",
+          "chars": 1020
+        }
+      ]
+    },
+    {
+      "source_id": "ts-2018-12",
+      "title": "Điểm lại: Cập nhật tình hình phát triển kinh tế Việt Nam, Tháng 12/2018. Chuyên đề: Tạo thuận lợi thương mại bằng cách hợp lý hóa và cải thiện tính minh bạch của các biện pháp phi thuế quan",
+      "source_path_or_url": "http://documents.worldbank.org/curated/en/188661544471831249/pdf/132828-VIETNAMESE-REVISED-Taking-Stock-December-2018-Vietnamese.pdf",
+      "local_path": "data/raw/ts-2018-12-vi.pdf",
+      "license_or_permission": "World Bank Documents & Reports, marked 'Public Disclosure Authorized'. The PDF itself states no Creative Commons licence; used here for non-commercial educational processing only. Raw PDFs are not committed; download from the URL.",
+      "edition": "2018-12",
+      "language": "vi",
+      "physical_pages": 56,
+      "counted_page_count": 42,
+      "excluded_pages": "1-9 bìa/lời cảm ơn/mục lục/từ viết tắt; 13, 35 trang ngăn cách; 54 tham khảo; 55-56 bìa sau",
+      "char_count": 131433,
+      "pages": [
+        {
+          "page": 10,
+          "part": "overview",
+          "chars": 4019
+        },
+        {
+          "page": 11,
+          "part": "overview",
+          "chars": 3759
+        },
+        {
+          "page": 12,
+          "part": "overview",
+          "chars": 3382
+        },
+        {
+          "page": 14,
+          "part": "I",
+          "chars": 2927
+        },
+        {
+          "page": 15,
+          "part": "I",
+          "chars": 3045
+        },
+        {
+          "page": 16,
+          "part": "I",
+          "chars": 3081
+        },
+        {
+          "page": 17,
+          "part": "I",
+          "chars": 2864
+        },
+        {
+          "page": 18,
+          "part": "I",
+          "chars": 2584
+        },
+        {
+          "page": 19,
+          "part": "I",
+          "chars": 2735
+        },
+        {
+          "page": 20,
+          "part": "I",
+          "chars": 2227
+        },
+        {
+          "page": 21,
+          "part": "I",
+          "chars": 2320
+        },
+        {
+          "page": 22,
+          "part": "I",
+          "chars": 2667
+        },
+        {
+          "page": 23,
+          "part": "I",
+          "chars": 2721
+        },
+        {
+          "page": 24,
+          "part": "I",
+          "chars": 2773
+        },
+        {
+          "page": 25,
+          "part": "I",
+          "chars": 2684
+        },
+        {
+          "page": 26,
+          "part": "I",
+          "chars": 2043
+        },
+        {
+          "page": 27,
+          "part": "I",
+          "chars": 2526
+        },
+        {
+          "page": 28,
+          "part": "I",
+          "chars": 2469
+        },
+        {
+          "page": 29,
+          "part": "I",
+          "chars": 5516
+        },
+        {
+          "page": 30,
+          "part": "I",
+          "chars": 2897
+        },
+        {
+          "page": 31,
+          "part": "I",
+          "chars": 5484
+        },
+        {
+          "page": 32,
+          "part": "I",
+          "chars": 2915
+        },
+        {
+          "page": 33,
+          "part": "I",
+          "chars": 2438
+        },
+        {
+          "page": 34,
+          "part": "I",
+          "chars": 3888
+        },
+        {
+          "page": 36,
+          "part": "II",
+          "chars": 3106
+        },
+        {
+          "page": 37,
+          "part": "II",
+          "chars": 2979
+        },
+        {
+          "page": 38,
+          "part": "II",
+          "chars": 3936
+        },
+        {
+          "page": 39,
+          "part": "II",
+          "chars": 3824
+        },
+        {
+          "page": 40,
+          "part": "II",
+          "chars": 4443
+        },
+        {
+          "page": 41,
+          "part": "II",
+          "chars": 1638
+        },
+        {
+          "page": 42,
+          "part": "II",
+          "chars": 3849
+        },
+        {
+          "page": 43,
+          "part": "II",
+          "chars": 2237
+        },
+        {
+          "page": 44,
+          "part": "II",
+          "chars": 2572
+        },
+        {
+          "page": 45,
+          "part": "II",
+          "chars": 1934
+        },
+        {
+          "page": 46,
+          "part": "II",
+          "chars": 1921
+        },
+        {
+          "page": 47,
+          "part": "II",
+          "chars": 2566
+        },
+        {
+          "page": 48,
+          "part": "II",
+          "chars": 3707
+        },
+        {
+          "page": 49,
+          "part": "II",
+          "chars": 2807
+        },
+        {
+          "page": 50,
+          "part": "II",
+          "chars": 4779
+        },
+        {
+          "page": 51,
+          "part": "II",
+          "chars": 2798
+        },
+        {
+          "page": 52,
+          "part": "II",
+          "chars": 5340
+        },
+        {
+          "page": 53,
+          "part": "II",
+          "chars": 3033
+        }
+      ]
+    }
+  ],
+  "total_counted_pages": 89
+}

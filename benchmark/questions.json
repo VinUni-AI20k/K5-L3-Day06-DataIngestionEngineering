@@ -1,0 +1,179 @@
+{
+  "version": "draft-1",
+  "note": "Bản nháp do AI soạn từ text đã chuẩn hóa; học viên phải đọc và xác nhận từng câu trước khi chốt. Split dev/test chốt trước khi chạy thử bất kỳ chiến lược nào.",
+  "filter_rule": "filter chỉ dùng khi câu hỏi tự nêu ấn bản (người dùng cung cấp trước khi truy xuất); cấu hình A và B bỏ qua filter, C áp dụng filter.",
+  "questions": [
+    {
+      "id": "q01", "split": "dev", "type": "truc_tiep",
+      "question": "Tăng trưởng GDP của Việt Nam trong quý I năm 2018 là bao nhiêu?",
+      "expected_answer": "Gần 7,4% so với cùng kỳ năm trước.",
+      "gold_source_id": "ts-2018-06", "gold_page": 9,
+      "evidence_quote": "GDP theo giá so sánh tăng gần 7,4 phần trăm (so với cùng kỳ năm trước) trong quý I năm 2018",
+      "filter": null
+    },
+    {
+      "id": "q02", "split": "dev", "type": "truc_tiep",
+      "question": "Dự trữ ngoại hối của Việt Nam đạt khoảng bao nhiêu trong bốn tháng đầu năm 2018?",
+      "expected_answer": "Khoảng 63 tỷ US$, mức kỷ lục, tương đương khoảng 3,6 tháng nhập khẩu.",
+      "gold_source_id": "ts-2018-06", "gold_page": 26,
+      "evidence_quote": "dự trữ ngoại hối đạt mức kỷ lục bằng khoảng 63 tỷ US$",
+      "alternatives": [
+        {"source_id": "ts-2018-06", "page": 9, "evidence_quote": "dự trữ ngoại hối tiếp tục tăng, đạt khoảng 63 tỷ US$ cuối tháng 4, 2018"}
+      ],
+      "filter": null
+    },
+    {
+      "id": "q03", "split": "dev", "type": "dien_dat_lai",
+      "question": "Hàng điện thoại thông minh chiếm bao nhiêu phần trong tổng giá trị hàng hóa Việt Nam bán ra nước ngoài đầu năm 2018?",
+      "expected_answer": "Gần 22% tổng kim ngạch xuất khẩu.",
+      "gold_source_id": "ts-2018-06", "gold_page": 22,
+      "evidence_quote": "Kim ngạch xuất khẩu điện thoại thông minh, chiếm gần 22 phần trăm tổng kim ngạch xuất khẩu",
+      "filter": null
+    },
+    {
+      "id": "q04", "split": "dev", "type": "dieu_kien",
+      "question": "Theo mô phỏng, CPTPP làm GDP Việt Nam tăng bao nhiêu đến năm 2030, và kết quả khác đi thế nào nếu giả định năng suất tăng?",
+      "expected_answer": "Theo giả định thận trọng, GDP tăng cộng dồn 1,1% đến 2030; nếu năng suất tăng ở mức khiêm tốn, GDP tăng thêm 3,5%.",
+      "gold_source_id": "ts-2018-06", "gold_page": 27,
+      "evidence_quote": "CPTPP dự kiến sẽ làm GDP tăng cộng dồn ở mức 1,1% đến năm 2030. Giả sử năng suất chỉ tăng ở mức khiêm tốn, GDP ước tính sẽ tăng thêm 3,5% nhờ CPTPP",
+      "filter": null
+    },
+    {
+      "id": "q05", "split": "dev", "type": "truc_tiep",
+      "question": "Thời gian tuân thủ chứng từ kiểm tra chuyên ngành khi nhập khẩu ở Việt Nam là bao nhiêu giờ, so với bình quân ASEAN-4?",
+      "expected_answer": "76 giờ, so với bình quân ASEAN-4 là 28 giờ.",
+      "gold_source_id": "ts-2018-06", "gold_page": 39,
+      "evidence_quote": "thời gian tuân thủ về chứng từ kiểm tra chuyên ngành để nhập khẩu tại Việt Nam (76 giờ) cao hơn đáng kể so với mức bình quân của ASEAn-4 (28 giờ)",
+      "alternatives": [
+        {"source_id": "ts-2018-12", "page": 38, "evidence_quote": "thời gian tuân thủ về chứng từ đối với các biện pháp phi thuế quan để nhập khẩu ở Việt Nam (76 giờ) cao hơn hai lần rưỡi so với mức bình quân"}
+      ],
+      "filter": null
+    },
+    {
+      "id": "q06", "split": "dev", "type": "dien_dat_lai",
+      "question": "Khi nhập khẩu hàng vào Việt Nam, khâu nào tốn nhiều tiền nhất và chiếm bao nhiêu phần trăm tổng chi phí?",
+      "expected_answer": "Xếp dỡ và lưu kho tại cảng, chiếm 39,5% tổng chi phí nhập khẩu (phần chi tiết; phần tổng quan ghi 29,5%).",
+      "gold_source_id": "ts-2018-06", "gold_page": 41,
+      "evidence_quote": "Chi phí xếp dỡ và lưu kho tại cảng là nội dung chi lớn nhất (39,5 Phần trăm)",
+      "filter": null
+    },
+    {
+      "id": "q07", "split": "dev", "type": "truc_tiep",
+      "question": "Điểm Chỉ số Năng lực Logistics (LPI) của Việt Nam năm 2016 là bao nhiêu?",
+      "expected_answer": "2,98 trên thang điểm tối đa 5,0.",
+      "gold_source_id": "ts-2018-06", "gold_page": 36,
+      "evidence_quote": "với điểm số 2,98 trên điểm tối đa là 5,0 trong năm 2016",
+      "filter": null
+    },
+    {
+      "id": "q08", "split": "dev", "type": "dien_dat_lai",
+      "question": "Báo cáo đề xuất xây dựng hệ thống gì để có số liệu đáng tin cậy về ngành logistics?",
+      "expected_answer": "Hệ thống Thống kê Logistics ở Việt Nam (VLSS).",
+      "gold_source_id": "ts-2018-06", "gold_page": 12,
+      "evidence_quote": "cần xây dựng được Hệ thống Thống kê Logistics ở Việt Nam (VLSS)",
+      "filter": null
+    },
+    {
+      "id": "q09", "split": "dev", "type": "truc_tiep",
+      "question": "Việt Nam xếp hạng bao nhiêu trong báo cáo Môi trường kinh doanh năm 2019?",
+      "expected_answer": "Thứ 69 trên 190 nền kinh tế, giảm từ hạng 68 năm trước.",
+      "gold_source_id": "ts-2018-12", "gold_page": 32,
+      "evidence_quote": "bị rớt xuống thứ 69 trên 190 nền kinh tế so với hạng mức 68",
+      "alternatives": [
+        {"source_id": "ts-2018-12", "page": 11, "evidence_quote": "lại bị rớt xuống thứ 69 trên 190 nền kinh tế, so với thứ 68 vào năm ngoái"}
+      ],
+      "filter": null
+    },
+    {
+      "id": "q10", "split": "dev", "type": "truc_tiep",
+      "question": "Cổng Thông tin Thương mại Việt Nam (VTIP) do cơ quan nào quản lý và bắt đầu vận hành từ khi nào?",
+      "expected_answer": "Tổng cục Hải quan Việt Nam quản lý (hỗ trợ kỹ thuật của Ngân hàng Thế giới), vận hành từ tháng 7/2017.",
+      "gold_source_id": "ts-2018-12", "gold_page": 39,
+      "evidence_quote": "Cổng Thông tin Thương mại Việt Nam do Tổng cục Hải quan Việt Nam quản lý với hỗ trợ kỹ thuật của Ngân hàng Thế giới, và đã được đưa vào vận hành từ tháng 7 năm 2017",
+      "filter": null
+    },
+    {
+      "id": "q11", "split": "dev", "type": "dien_dat_lai",
+      "question": "Trong tổng số biện pháp phi thuế quan của Việt Nam, có bao nhiêu biện pháp áp dụng cho hàng nhập vào?",
+      "expected_answer": "336 biện pháp, chiếm 84% trong tổng số 402 biện pháp.",
+      "gold_source_id": "ts-2018-12", "gold_page": 42,
+      "evidence_quote": "số biện pháp áp dụng cho nhập khẩu chiếm đa số (336 biện pháp, chiếm 84% tổng số các biện pháp)",
+      "filter": null
+    },
+    {
+      "id": "q12", "split": "dev", "type": "dieu_kien",
+      "question": "Ba bộ nào quản lý nhiều biện pháp phi thuế quan nhất và gộp lại chiếm bao nhiêu phần trăm?",
+      "expected_answer": "Bộ Nông nghiệp và Phát triển Nông thôn, Bộ Công thương và Bộ Y tế; gộp lại quản lý 74% trong 402 biện pháp.",
+      "gold_source_id": "ts-2018-12", "gold_page": 44,
+      "evidence_quote": "bao gồm Bộ Nông nghiệp và Phát triển Nông thôn, Bộ Công thương, và Bộ Y tế. Riêng ba bộ này quản lý 74 phần trăm trong tổng số 402 các biện pháp phi thuế quan hiện hành",
+      "filter": null
+    },
+    {
+      "id": "q13", "split": "dev", "type": "filter",
+      "question": "Theo báo cáo Điểm lại tháng 6/2018, bội chi ngân sách năm 2018 được dự báo ở mức bao nhiêu phần trăm GDP?",
+      "expected_answer": "4,5% GDP.",
+      "gold_source_id": "ts-2018-06", "gold_page": 32,
+      "evidence_quote": "Bội chi ngân sách được dự báo vẫn ở mức 4,5 phần trăm GDP trong năm 2018",
+      "filter": {"edition": "2018-06"}
+    },
+    {
+      "id": "q14", "split": "dev", "type": "filter",
+      "question": "Theo báo cáo Điểm lại tháng 12/2018, bội chi ngân sách năm 2018 được dự báo ở mức bao nhiêu phần trăm GDP?",
+      "expected_answer": "Khoảng 4% GDP.",
+      "gold_source_id": "ts-2018-12", "gold_page": 34,
+      "evidence_quote": "Bội chi ngân sách được dự báo sẽ giảm dần xuống khoảng 4% GDP năm 2018",
+      "alternatives": [
+        {"source_id": "ts-2018-12", "page": 21, "evidence_quote": "bội chi ngân sách năm 2018 được dự báo ở mức khoảng 4% GDP"}
+      ],
+      "filter": {"edition": "2018-12"}
+    },
+    {
+      "id": "q15", "split": "dev", "type": "filter",
+      "question": "Theo báo cáo Điểm lại tháng 12/2018, tỷ lệ nợ xấu trong hệ thống ngân hàng là bao nhiêu?",
+      "expected_answer": "2,1% vào tháng 6/2018 (so với 2,5% đầu năm 2017).",
+      "gold_source_id": "ts-2018-12", "gold_page": 21,
+      "evidence_quote": "Tỷ lệ nợ xấu trong hệ thống ngân hàng giảm xuống mức tương đối thấp là 2,1% vào tháng 6/2018",
+      "filter": {"edition": "2018-12"}
+    },
+    {
+      "id": "t16", "split": "test", "type": "filter",
+      "question": "Theo báo cáo Điểm lại tháng 6/2018, kỳ hạn bình quân của trái phiếu Chính phủ phát hành trong nước đã tăng lên khoảng bao nhiêu năm?",
+      "expected_answer": "Từ 3,95 năm (2011) lên khoảng 9 năm (2017).",
+      "gold_source_id": "ts-2018-06", "gold_page": 30,
+      "evidence_quote": "kỳ hạn bình quân trái phiếu chính phủ trong nước đã tăng lên từ 3,95 năm (năm 2011) lên khoảng 9 năm (năm 2017)",
+      "filter": {"edition": "2018-06"}
+    },
+    {
+      "id": "t17", "split": "test", "type": "filter",
+      "question": "Theo báo cáo Điểm lại tháng 12/2018, dự trữ ngoại hối tương đương khoảng bao nhiêu tháng nhập khẩu?",
+      "expected_answer": "Khoảng 3,1 tháng nhập khẩu vào cuối Quý 2/2018 (so với 2,8 tháng vào tháng 12/2017).",
+      "gold_source_id": "ts-2018-12", "gold_page": 24,
+      "evidence_quote": "NHNN nâng dự trữ ngoại hối lên khoảng 3,1 tháng nhập khẩu vào cuối Quý 2, 2018",
+      "filter": {"edition": "2018-12"}
+    },
+    {
+      "id": "t18", "split": "test", "type": "dien_dat_lai",
+      "question": "Năm 2017, dòng tiền khu vực có vốn nước ngoài chuyển thu nhập ra khỏi Việt Nam lớn đến mức nào?",
+      "expected_answer": "Khoảng 10,8 tỷ US$, tương đương 4,9% GDP.",
+      "gold_source_id": "ts-2018-06", "gold_page": 25,
+      "evidence_quote": "tăng mạnh lên tới 10,8 tỷ US$, tương đương 4,9 phần trăm GDP trong năm 2017",
+      "filter": null
+    },
+    {
+      "id": "t19", "split": "test", "type": "dieu_kien",
+      "question": "Thuế quan trị giá tương đương (AVE) của rào cản kỹ thuật (TBT) ở Việt Nam là bao nhiêu, so với bình quân ASEAN?",
+      "expected_answer": "TBT của Việt Nam là 16,6%, so với bình quân ASEAN 4,34% (SPS: Việt Nam 5,4% so với ASEAN 8,36%).",
+      "gold_source_id": "ts-2018-12", "gold_page": 42,
+      "evidence_quote": "giá trị AVE trung bình của các rào cản kỹ thuật cho thương mại (TBT) các nước ASEAN là 4,34 phần trăm, và giá trị AVE trung bình của các biện pháp kiểm dịch động thực vật14 (SPS) là 8,36 phần trăm so với AVE trung bình của các biện pháp SPS and TBT của Việt Nam lần lượt là 5,4 và 16,6 phần trăm",
+      "filter": null
+    },
+    {
+      "id": "t20", "split": "test", "type": "truc_tiep",
+      "question": "Tỷ trọng thương mại trên GDP của Việt Nam năm 2017 là bao nhiêu?",
+      "expected_answer": "190% GDP, cao nhất trong số các quốc gia đang phát triển.",
+      "gold_source_id": "ts-2018-06", "gold_page": 36,
+      "evidence_quote": "Tỷ trọng thương mại trên GDP của Việt Nam hiện đạt mức cao nhất trong số các quốc gia đang phát triển, 190 phần trăm (năm 2017)",
+      "filter": null
+    }
+  ]
+}
