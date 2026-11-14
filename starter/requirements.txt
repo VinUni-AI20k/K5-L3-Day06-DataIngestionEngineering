@@ -1,4 +1,8 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
-psycopg[binary]==3.3.8
-pypdf>=5,<7
-python-dotenv>=1,<2
+# Versions verified in the author's Python 3.11.9 environment.
+# Vector store: self-hosted Qdrant (server 1.19.1). Replaces the pgvector starter.
+qdrant-client==1.15.1
+# Embedding: google/gemini-embedding-2 via the OpenRouter REST API.
+requests==2.34.2
+# PDF text extraction (PyMuPDF / fitz) and config
+PyMuPDF==1.26.4
+python-dotenv==1.0.1
