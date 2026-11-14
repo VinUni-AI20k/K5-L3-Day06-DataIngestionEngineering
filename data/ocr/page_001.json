@@ -1,0 +1,1727 @@
+{
+  "pdf_page": 1,
+  "tool": "EasyOCR",
+  "tool_version": "1.7.2",
+  "languages": [
+    "vi"
+  ],
+  "render_dpi": 200,
+  "params": {
+    "canvas_size": 1700,
+    "mag_ratio": 1.0,
+    "paragraph": false
+  },
+  "line_tolerance_px": 22,
+  "seconds": 3.9,
+  "n_boxes": 69,
+  "mean_confidence": 0.8114,
+  "low_confidence_boxes": [
+    "Số:3/08 IQĐ-BYT",
+    "Hà Nội; ngày2gtháng } năm 2015",
+    "Điều 2. Tài liệu ~Hướng dẫn chẩn đoán và điều trị một số bệnh về",
+    "Cục Quản lý Khám, chữa bệnh; Cục",
+    "tế, Giám đốc các bệnh viện trực thuộc Bộ Y tế, Giám đỗc Sở Ytế các tỉnh, thành",
+    "trực thuộc trung ương; Thủ trưởng Y tế các Bộ; Ngành và Thủ",
+    "các đơn",
+    "Nơi nhận:",
+    "Như Điều 4;",
+    "\"Hướng",
+    "Răng"
+  ],
+  "lines_raw": [
+    "BỘYTÉ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
+    "Độc lập Tự do Hạnh phúc",
+    "Số:3/08 IQĐ-BYT Hà Nội; ngày2gtháng } năm 2015",
+    "QUYẾT ĐỊNH",
+    "Về việc ban hành tài liệu chuyên môn",
+    "-Hướng dẫn chẩn đoán và điều trị một số bệnh về Răng Hàm Mặt",
+    "BỘ TRƯỞNG BỘ Y TẾ",
+    "Căn cứ Luật khám bệnh, chữa bệnh năm 2009;",
+    "Căn cứ Nghị định số 63/2012/NĐ-CP ngày 31/8/2012 của Chính Phủ quy",
+    "định chức năng nhiệm vụ; quyền hạn và cơ cấu tổ chức của Bộ Y tế;",
+    "Theo đề nghị của Cục trưởng Cục Quản lý Khám; chữa bệnh,",
+    "QUYẾT ĐỊNH:",
+    "Điều 1. Ban hành kèm theo Quyết định này tài liệu chuyên môn \"Hướng dẫn",
+    "chẩn đoán và điều trị một số bệnh về Răng Hàm Mặt .",
+    "Điều 2. Tài liệu ~Hướng dẫn chẩn đoán và điều trị một số bệnh về Răng Hàm",
+    "Mặt\" ban hành kèm theo Quyết định này được áp dụng tại các cơ sở khám bệnh;",
+    "chữa bệnh có tổ chức khám bệnh, chữa bệnh về Răng Hàm Mặt.",
+    "Căn cứ vào tài liệu này và điều kiện cụ thể của đơn vị, Giám đốc cơ sở khám",
+    "bệnh; chữa bệnh xây dựng và ban hành tài liệu hướng dẫn chẩn doán và điều trị",
+    "một số bệnh về Răng Hàm Mặt phù hợp để thực hiện tại đơn vị.",
+    "Điều 3. Quyết định này có hiệu lực kể từ ngày ký ban hành.",
+    "Điều 4. Các ông bà: Chánh Văn phòng Bộ, Chánh Thanh tra Bộ, Cục trưởng",
+    "Cục Quản lý Khám, chữa bệnh; Cục trưởng và Vụ trưởng các Cục;, Vụ thuộc Bộ Y",
+    "tế, Giám đốc các bệnh viện trực thuộc Bộ Y tế, Giám đỗc Sở Ytế các tỉnh, thành",
+    "phố trực thuộc trung ương; Thủ trưởng Y tế các Bộ; Ngành và Thủ trưởng các đơn",
+    "vị có liên quan chịu trách nhiệm thi hành Quyết định này / .",
+    "Nơi nhận: KT. BỘ TRƯỞNG",
+    "Như Điều 4; THỨ TRƯỞNG",
+    "Bộ trưởng Bộ Ytế (để blc);",
+    "Các Thứ trưởng BYT;",
+    "Bảo hiểm Xã hội Việt Nam (để phối hợp);",
+    "Cổng thông tin điện tử BYT;",
+    "Website Cục KCB;",
+    "Lưu VT, KCB_",
+    "Nguỷễn Thị Xuyên"
+  ],
+  "text_raw": "BỘYTÉ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM\nĐộc lập Tự do Hạnh phúc\nSố:3/08 IQĐ-BYT Hà Nội; ngày2gtháng } năm 2015\nQUYẾT ĐỊNH\nVề việc ban hành tài liệu chuyên môn\n-Hướng dẫn chẩn đoán và điều trị một số bệnh về Răng Hàm Mặt\nBỘ TRƯỞNG BỘ Y TẾ\nCăn cứ Luật khám bệnh, chữa bệnh năm 2009;\nCăn cứ Nghị định số 63/2012/NĐ-CP ngày 31/8/2012 của Chính Phủ quy\nđịnh chức năng nhiệm vụ; quyền hạn và cơ cấu tổ chức của Bộ Y tế;\nTheo đề nghị của Cục trưởng Cục Quản lý Khám; chữa bệnh,\nQUYẾT ĐỊNH:\nĐiều 1. Ban hành kèm theo Quyết định này tài liệu chuyên môn \"Hướng dẫn\nchẩn đoán và điều trị một số bệnh về Răng Hàm Mặt .\nĐiều 2. Tài liệu ~Hướng dẫn chẩn đoán và điều trị một số bệnh về Răng Hàm\nMặt\" ban hành kèm theo Quyết định này được áp dụng tại các cơ sở khám bệnh;\nchữa bệnh có tổ chức khám bệnh, chữa bệnh về Răng Hàm Mặt.\nCăn cứ vào tài liệu này và điều kiện cụ thể của đơn vị, Giám đốc cơ sở khám\nbệnh; chữa bệnh xây dựng và ban hành tài liệu hướng dẫn chẩn doán và điều trị\nmột số bệnh về Răng Hàm Mặt phù hợp để thực hiện tại đơn vị.\nĐiều 3. Quyết định này có hiệu lực kể từ ngày ký ban hành.\nĐiều 4. Các ông bà: Chánh Văn phòng Bộ, Chánh Thanh tra Bộ, Cục trưởng\nCục Quản lý Khám, chữa bệnh; Cục trưởng và Vụ trưởng các Cục;, Vụ thuộc Bộ Y\ntế, Giám đốc các bệnh viện trực thuộc Bộ Y tế, Giám đỗc Sở Ytế các tỉnh, thành\nphố trực thuộc trung ương; Thủ trưởng Y tế các Bộ; Ngành và Thủ trưởng các đơn\nvị có liên quan chịu trách nhiệm thi hành Quyết định này / .\nNơi nhận: KT. BỘ TRƯỞNG\nNhư Điều 4; THỨ TRƯỞNG\nBộ trưởng Bộ Ytế (để blc);\nCác Thứ trưởng BYT;\nBảo hiểm Xã hội Việt Nam (để phối hợp);\nCổng thông tin điện tử BYT;\nWebsite Cục KCB;\nLưu VT, KCB_\nNguỷễn Thị Xuyên",
+  "boxes": [
+    {
+      "text": "BỘYTÉ",
+      "confidence": 0.6901,
+      "x_left": 356,
+      "y_center": 203.0,
+      "bbox": [
+        [
+          356,
+          172
+        ],
+        [
+          523,
+          172
+        ],
+        [
+          523,
+          234
+        ],
+        [
+          356,
+          234
+        ]
+      ]
+    },
+    {
+      "text": "CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM",
+      "confidence": 0.8265,
+      "x_left": 663,
+      "y_center": 202.0,
+      "bbox": [
+        [
+          663,
+          174
+        ],
+        [
+          1445,
+          174
+        ],
+        [
+          1445,
+          230
+        ],
+        [
+          663,
+          230
+        ]
+      ]
+    },
+    {
+      "text": "Độc lập",
+      "confidence": 0.7252,
+      "x_left": 821,
+      "y_center": 248.5,
+      "bbox": [
+        [
+          821,
+          226
+        ],
+        [
+          955,
+          226
+        ],
+        [
+          955,
+          271
+        ],
+        [
+          821,
+          271
+        ]
+      ]
+    },
+    {
+      "text": "Tự do",
+      "confidence": 0.9309,
+      "x_left": 972,
+      "y_center": 248.5,
+      "bbox": [
+        [
+          972,
+          226
+        ],
+        [
+          1078,
+          226
+        ],
+        [
+          1078,
+          271
+        ],
+        [
+          972,
+          271
+        ]
+      ]
+    },
+    {
+      "text": "Hạnh phúc",
+      "confidence": 0.6257,
+      "x_left": 1097,
+      "y_center": 248.5,
+      "bbox": [
+        [
+          1097,
+          226
+        ],
+        [
+          1288,
+          226
+        ],
+        [
+          1288,
+          271
+        ],
+        [
+          1097,
+          271
+        ]
+      ]
+    },
+    {
+      "text": "Số:3/08 IQĐ-BYT",
+      "confidence": 0.4777,
+      "x_left": 297,
+      "y_center": 313.5,
+      "bbox": [
+        [
+          297,
+          285
+        ],
+        [
+          585,
+          285
+        ],
+        [
+          585,
+          342
+        ],
+        [
+          297,
+          342
+        ]
+      ]
+    },
+    {
+      "text": "Hà Nội; ngày2gtháng } năm 2015",
+      "confidence": 0.5045,
+      "x_left": 794,
+      "y_center": 316.5,
+      "bbox": [
+        [
+          794,
+          286
+        ],
+        [
+          1312,
+          286
+        ],
+        [
+          1312,
+          347
+        ],
+        [
+          794,
+          347
+        ]
+      ]
+    },
+    {
+      "text": "QUYẾT ĐỊNH",
+      "confidence": 0.9865,
+      "x_left": 736,
+      "y_center": 450.0,
+      "bbox": [
+        [
+          736,
+          419
+        ],
+        [
+          988,
+          419
+        ],
+        [
+          988,
+          481
+        ],
+        [
+          736,
+          481
+        ]
+      ]
+    },
+    {
+      "text": "Về việc ban hành tài liệu chuyên môn",
+      "confidence": 0.9349,
+      "x_left": 563,
+      "y_center": 494.0,
+      "bbox": [
+        [
+          563,
+          468
+        ],
+        [
+          1160,
+          468
+        ],
+        [
+          1160,
+          520
+        ],
+        [
+          563,
+          520
+        ]
+      ]
+    },
+    {
+      "text": "-Hướng dẫn chẩn đoán và điều trị một số bệnh về Răng Hàm Mặt",
+      "confidence": 0.7435,
+      "x_left": 322,
+      "y_center": 537.0,
+      "bbox": [
+        [
+          322,
+          506
+        ],
+        [
+          1402,
+          506
+        ],
+        [
+          1402,
+          568
+        ],
+        [
+          322,
+          568
+        ]
+      ]
+    },
+    {
+      "text": "BỘ TRƯỞNG BỘ Y TẾ",
+      "confidence": 0.7891,
+      "x_left": 666,
+      "y_center": 663.0,
+      "bbox": [
+        [
+          666,
+          635
+        ],
+        [
+          1062,
+          635
+        ],
+        [
+          1062,
+          691
+        ],
+        [
+          666,
+          691
+        ]
+      ]
+    },
+    {
+      "text": "Căn cứ Luật khám bệnh, chữa bệnh năm 2009;",
+      "confidence": 0.8204,
+      "x_left": 336,
+      "y_center": 725.0,
+      "bbox": [
+        [
+          336,
+          700
+        ],
+        [
+          1041,
+          700
+        ],
+        [
+          1041,
+          750
+        ],
+        [
+          336,
+          750
+        ]
+      ]
+    },
+    {
+      "text": "Căn cứ Nghị định số 63/2012/NĐ-CP ngày 31/8/2012 của Chính Phủ quy",
+      "confidence": 0.7693,
+      "x_left": 336,
+      "y_center": 783.5,
+      "bbox": [
+        [
+          336,
+          756
+        ],
+        [
+          1484,
+          756
+        ],
+        [
+          1484,
+          811
+        ],
+        [
+          336,
+          811
+        ]
+      ]
+    },
+    {
+      "text": "định chức",
+      "confidence": 0.8992,
+      "x_left": 242,
+      "y_center": 828.0,
+      "bbox": [
+        [
+          242,
+          807
+        ],
+        [
+          396,
+          807
+        ],
+        [
+          396,
+          849
+        ],
+        [
+          242,
+          849
+        ]
+      ]
+    },
+    {
+      "text": "nhiệm vụ; quyền hạn và cơ cấu tổ chức của Bộ Y tế;",
+      "confidence": 0.6724,
+      "x_left": 484,
+      "y_center": 828.5,
+      "bbox": [
+        [
+          484,
+          800
+        ],
+        [
+          1272,
+          800
+        ],
+        [
+          1272,
+          857
+        ],
+        [
+          484,
+          857
+        ]
+      ]
+    },
+    {
+      "text": "Theo đề nghị của Cục trưởng Cục Quản lý Khám; chữa bệnh,",
+      "confidence": 0.7093,
+      "x_left": 336,
+      "y_center": 884.5,
+      "bbox": [
+        [
+          336,
+          856
+        ],
+        [
+          1258,
+          856
+        ],
+        [
+          1258,
+          913
+        ],
+        [
+          336,
+          913
+        ]
+      ]
+    },
+    {
+      "text": "QUYẾT ĐỊNH:",
+      "confidence": 0.9958,
+      "x_left": 730,
+      "y_center": 981.0,
+      "bbox": [
+        [
+          730,
+          950
+        ],
+        [
+          996,
+          950
+        ],
+        [
+          996,
+          1012
+        ],
+        [
+          730,
+          1012
+        ]
+      ]
+    },
+    {
+      "text": "Điều 1. Ban hành kèm theo Quyết định này tài liệu chuyên môn",
+      "confidence": 0.6912,
+      "x_left": 325,
+      "y_center": 1061.5,
+      "bbox": [
+        [
+          325,
+          1035
+        ],
+        [
+          1292,
+          1035
+        ],
+        [
+          1292,
+          1088
+        ],
+        [
+          325,
+          1088
+        ]
+      ]
+    },
+    {
+      "text": "dẫn",
+      "confidence": 0.9999,
+      "x_left": 1422,
+      "y_center": 1058.5,
+      "bbox": [
+        [
+          1422,
+          1036
+        ],
+        [
+          1486,
+          1036
+        ],
+        [
+          1486,
+          1081
+        ],
+        [
+          1422,
+          1081
+        ]
+      ]
+    },
+    {
+      "text": "chẩn đoán và điều trị một số bệnh về",
+      "confidence": 0.8309,
+      "x_left": 241,
+      "y_center": 1103.5,
+      "bbox": [
+        [
+          241,
+          1077
+        ],
+        [
+          797,
+          1077
+        ],
+        [
+          797,
+          1130
+        ],
+        [
+          241,
+          1130
+        ]
+      ]
+    },
+    {
+      "text": "Hàm Mặt .",
+      "confidence": 0.9523,
+      "x_left": 882,
+      "y_center": 1104.5,
+      "bbox": [
+        [
+          882,
+          1086
+        ],
+        [
+          1050,
+          1086
+        ],
+        [
+          1050,
+          1123
+        ],
+        [
+          882,
+          1123
+        ]
+      ]
+    },
+    {
+      "text": "Điều 2. Tài liệu ~Hướng dẫn chẩn đoán và điều trị một số bệnh về",
+      "confidence": 0.5497,
+      "x_left": 325,
+      "y_center": 1161.5,
+      "bbox": [
+        [
+          325,
+          1133
+        ],
+        [
+          1320,
+          1133
+        ],
+        [
+          1320,
+          1190
+        ],
+        [
+          325,
+          1190
+        ]
+      ]
+    },
+    {
+      "text": "Hàm",
+      "confidence": 1.0,
+      "x_left": 1405,
+      "y_center": 1160.5,
+      "bbox": [
+        [
+          1405,
+          1142
+        ],
+        [
+          1483,
+          1142
+        ],
+        [
+          1483,
+          1179
+        ],
+        [
+          1405,
+          1179
+        ]
+      ]
+    },
+    {
+      "text": "Mặt\" ban hành kèm theo Quyết định này được áp dụng tại các cơ sở khám bệnh;",
+      "confidence": 0.7312,
+      "x_left": 244,
+      "y_center": 1207.5,
+      "bbox": [
+        [
+          244,
+          1180
+        ],
+        [
+          1482,
+          1180
+        ],
+        [
+          1482,
+          1235
+        ],
+        [
+          244,
+          1235
+        ]
+      ]
+    },
+    {
+      "text": "chữa bệnh có tổ chức khám bệnh, chữa bệnh về",
+      "confidence": 0.7792,
+      "x_left": 240,
+      "y_center": 1248.5,
+      "bbox": [
+        [
+          240,
+          1222
+        ],
+        [
+          956,
+          1222
+        ],
+        [
+          956,
+          1275
+        ],
+        [
+          240,
+          1275
+        ]
+      ]
+    },
+    {
+      "text": "Hàm Mặt.",
+      "confidence": 0.8532,
+      "x_left": 1042,
+      "y_center": 1250.0,
+      "bbox": [
+        [
+          1042,
+          1229
+        ],
+        [
+          1201,
+          1229
+        ],
+        [
+          1201,
+          1271
+        ],
+        [
+          1042,
+          1271
+        ]
+      ]
+    },
+    {
+      "text": "Căn cứ vào tài liệu này và điều kiện cụ thể của đơn vị, Giám đốc cơ sở khám",
+      "confidence": 0.8471,
+      "x_left": 325,
+      "y_center": 1304.5,
+      "bbox": [
+        [
+          325,
+          1278
+        ],
+        [
+          1487,
+          1278
+        ],
+        [
+          1487,
+          1331
+        ],
+        [
+          325,
+          1331
+        ]
+      ]
+    },
+    {
+      "text": "bệnh; chữa bệnh xây",
+      "confidence": 0.7962,
+      "x_left": 241,
+      "y_center": 1353.0,
+      "bbox": [
+        [
+          241,
+          1328
+        ],
+        [
+          571,
+          1328
+        ],
+        [
+          571,
+          1378
+        ],
+        [
+          241,
+          1378
+        ]
+      ]
+    },
+    {
+      "text": "và ban hành tài liệu",
+      "confidence": 0.7992,
+      "x_left": 659,
+      "y_center": 1350.5,
+      "bbox": [
+        [
+          659,
+          1329
+        ],
+        [
+          975,
+          1329
+        ],
+        [
+          975,
+          1372
+        ],
+        [
+          659,
+          1372
+        ]
+      ]
+    },
+    {
+      "text": "dẫn chẩn doán và điều trị",
+      "confidence": 0.6905,
+      "x_left": 1082,
+      "y_center": 1348.0,
+      "bbox": [
+        [
+          1082,
+          1323
+        ],
+        [
+          1484,
+          1323
+        ],
+        [
+          1484,
+          1373
+        ],
+        [
+          1082,
+          1373
+        ]
+      ]
+    },
+    {
+      "text": "một số bệnh về Răng Hàm Mặt phù hợp để thực hiện tại đơn vị.",
+      "confidence": 0.8473,
+      "x_left": 241,
+      "y_center": 1393.5,
+      "bbox": [
+        [
+          241,
+          1365
+        ],
+        [
+          1194,
+          1365
+        ],
+        [
+          1194,
+          1422
+        ],
+        [
+          241,
+          1422
+        ]
+      ]
+    },
+    {
+      "text": "Điều 3. Quyết định này có hiệu lực kể từ ngày ký ban hành.",
+      "confidence": 0.7295,
+      "x_left": 325,
+      "y_center": 1451.0,
+      "bbox": [
+        [
+          325,
+          1423
+        ],
+        [
+          1216,
+          1423
+        ],
+        [
+          1216,
+          1479
+        ],
+        [
+          325,
+          1479
+        ]
+      ]
+    },
+    {
+      "text": "Điều 4. Các",
+      "confidence": 0.96,
+      "x_left": 325,
+      "y_center": 1507.0,
+      "bbox": [
+        [
+          325,
+          1482
+        ],
+        [
+          520,
+          1482
+        ],
+        [
+          520,
+          1532
+        ],
+        [
+          325,
+          1532
+        ]
+      ]
+    },
+    {
+      "text": "bà: Chánh Văn phòng Bộ, Chánh Thanh",
+      "confidence": 0.838,
+      "x_left": 588,
+      "y_center": 1511.5,
+      "bbox": [
+        [
+          588,
+          1485
+        ],
+        [
+          1197,
+          1485
+        ],
+        [
+          1197,
+          1538
+        ],
+        [
+          588,
+          1538
+        ]
+      ]
+    },
+    {
+      "text": "Bộ, Cục",
+      "confidence": 0.9923,
+      "x_left": 1245,
+      "y_center": 1511.5,
+      "bbox": [
+        [
+          1245,
+          1489
+        ],
+        [
+          1380,
+          1489
+        ],
+        [
+          1380,
+          1534
+        ],
+        [
+          1245,
+          1534
+        ]
+      ]
+    },
+    {
+      "text": "Cục Quản lý Khám, chữa bệnh; Cục",
+      "confidence": 0.5896,
+      "x_left": 241,
+      "y_center": 1553.0,
+      "bbox": [
+        [
+          241,
+          1529
+        ],
+        [
+          797,
+          1529
+        ],
+        [
+          797,
+          1577
+        ],
+        [
+          241,
+          1577
+        ]
+      ]
+    },
+    {
+      "text": "và Vụ",
+      "confidence": 0.9848,
+      "x_left": 899,
+      "y_center": 1554.5,
+      "bbox": [
+        [
+          899,
+          1533
+        ],
+        [
+          1003,
+          1533
+        ],
+        [
+          1003,
+          1576
+        ],
+        [
+          899,
+          1576
+        ]
+      ]
+    },
+    {
+      "text": "các Cục;, Vụ thuộc Bộ Y",
+      "confidence": 0.6797,
+      "x_left": 1108,
+      "y_center": 1553.0,
+      "bbox": [
+        [
+          1108,
+          1529
+        ],
+        [
+          1482,
+          1529
+        ],
+        [
+          1482,
+          1577
+        ],
+        [
+          1108,
+          1577
+        ]
+      ]
+    },
+    {
+      "text": "tế, Giám đốc các bệnh viện trực thuộc Bộ Y tế, Giám đỗc Sở Ytế các tỉnh, thành",
+      "confidence": 0.5836,
+      "x_left": 239,
+      "y_center": 1592.5,
+      "bbox": [
+        [
+          239,
+          1566
+        ],
+        [
+          1484,
+          1566
+        ],
+        [
+          1484,
+          1619
+        ],
+        [
+          239,
+          1619
+        ]
+      ]
+    },
+    {
+      "text": "trực thuộc trung ương; Thủ trưởng Y tế các Bộ; Ngành và Thủ",
+      "confidence": 0.5688,
+      "x_left": 304,
+      "y_center": 1638.5,
+      "bbox": [
+        [
+          304,
+          1611
+        ],
+        [
+          1252,
+          1611
+        ],
+        [
+          1252,
+          1666
+        ],
+        [
+          304,
+          1666
+        ]
+      ]
+    },
+    {
+      "text": "các đơn",
+      "confidence": 0.4948,
+      "x_left": 1360,
+      "y_center": 1635.5,
+      "bbox": [
+        [
+          1360,
+          1617
+        ],
+        [
+          1483,
+          1617
+        ],
+        [
+          1483,
+          1654
+        ],
+        [
+          1360,
+          1654
+        ]
+      ]
+    },
+    {
+      "text": "vị có liên quan chịu trách nhiệm thi hành Quyết định này / .",
+      "confidence": 0.8419,
+      "x_left": 244,
+      "y_center": 1680.0,
+      "bbox": [
+        [
+          244,
+          1652
+        ],
+        [
+          1118,
+          1652
+        ],
+        [
+          1118,
+          1708
+        ],
+        [
+          244,
+          1708
+        ]
+      ]
+    },
+    {
+      "text": "Nơi nhận:",
+      "confidence": 0.572,
+      "x_left": 245,
+      "y_center": 1778.0,
+      "bbox": [
+        [
+          245,
+          1760
+        ],
+        [
+          388,
+          1760
+        ],
+        [
+          388,
+          1796
+        ],
+        [
+          245,
+          1796
+        ]
+      ]
+    },
+    {
+      "text": "KT. BỘ TRƯỞNG",
+      "confidence": 0.689,
+      "x_left": 1041,
+      "y_center": 1779.5,
+      "bbox": [
+        [
+          1041,
+          1753
+        ],
+        [
+          1353,
+          1753
+        ],
+        [
+          1353,
+          1806
+        ],
+        [
+          1041,
+          1806
+        ]
+      ]
+    },
+    {
+      "text": "Như Điều 4;",
+      "confidence": 0.589,
+      "x_left": 259,
+      "y_center": 1813.0,
+      "bbox": [
+        [
+          259,
+          1793
+        ],
+        [
+          413,
+          1793
+        ],
+        [
+          413,
+          1833
+        ],
+        [
+          259,
+          1833
+        ]
+      ]
+    },
+    {
+      "text": "THỨ TRƯỞNG",
+      "confidence": 0.8675,
+      "x_left": 1057,
+      "y_center": 1823.0,
+      "bbox": [
+        [
+          1057,
+          1798
+        ],
+        [
+          1328,
+          1798
+        ],
+        [
+          1328,
+          1848
+        ],
+        [
+          1057,
+          1848
+        ]
+      ]
+    },
+    {
+      "text": "Bộ trưởng Bộ Ytế (để blc);",
+      "confidence": 0.773,
+      "x_left": 258,
+      "y_center": 1847.0,
+      "bbox": [
+        [
+          258,
+          1823
+        ],
+        [
+          593,
+          1823
+        ],
+        [
+          593,
+          1871
+        ],
+        [
+          258,
+          1871
+        ]
+      ]
+    },
+    {
+      "text": "Các Thứ trưởng BYT;",
+      "confidence": 0.7678,
+      "x_left": 259,
+      "y_center": 1882.5,
+      "bbox": [
+        [
+          259,
+          1861
+        ],
+        [
+          529,
+          1861
+        ],
+        [
+          529,
+          1904
+        ],
+        [
+          259,
+          1904
+        ]
+      ]
+    },
+    {
+      "text": "Bảo hiểm Xã hội Việt Nam (để phối hợp);",
+      "confidence": 0.9017,
+      "x_left": 259,
+      "y_center": 1914.0,
+      "bbox": [
+        [
+          259,
+          1892
+        ],
+        [
+          760,
+          1892
+        ],
+        [
+          760,
+          1936
+        ],
+        [
+          259,
+          1936
+        ]
+      ]
+    },
+    {
+      "text": "tin điện tử BYT;",
+      "confidence": 0.7488,
+      "x_left": 402,
+      "y_center": 1948.5,
+      "bbox": [
+        [
+          402,
+          1930
+        ],
+        [
+          606,
+          1930
+        ],
+        [
+          606,
+          1967
+        ],
+        [
+          402,
+          1967
+        ]
+      ]
+    },
+    {
+      "text": "Website Cục KCB;",
+      "confidence": 0.8053,
+      "x_left": 265,
+      "y_center": 1982.0,
+      "bbox": [
+        [
+          265,
+          1963
+        ],
+        [
+          496,
+          1963
+        ],
+        [
+          496,
+          2001
+        ],
+        [
+          265,
+          2001
+        ]
+      ]
+    },
+    {
+      "text": "Lưu VT, KCB_",
+      "confidence": 0.9006,
+      "x_left": 260,
+      "y_center": 2017.0,
+      "bbox": [
+        [
+          260,
+          2001
+        ],
+        [
+          437,
+          2001
+        ],
+        [
+          437,
+          2033
+        ],
+        [
+          260,
+          2033
+        ]
+      ]
+    },
+    {
+      "text": "Nguỷễn Thị Xuyên",
+      "confidence": 0.7996,
+      "x_left": 1029,
+      "y_center": 2084.0,
+      "bbox": [
+        [
+          1029,
+          2051
+        ],
+        [
+          1346,
+          2051
+        ],
+        [
+          1346,
+          2117
+        ],
+        [
+          1029,
+          2117
+        ]
+      ]
+    },
+    {
+      "text": "năng",
+      "confidence": 0.9765,
+      "x_left": 390,
+      "y_center": 829.0,
+      "bbox": [
+        [
+          399,
+          800
+        ],
+        [
+          491,
+          816
+        ],
+        [
+          483,
+          857
+        ],
+        [
+          390,
+          841
+        ]
+      ]
+    },
+    {
+      "text": "\"Hướng",
+      "confidence": 0.4815,
+      "x_left": 1286,
+      "y_center": 1060.8,
+      "bbox": [
+        [
+          1293,
+          1031
+        ],
+        [
+          1426,
+          1048
+        ],
+        [
+          1418,
+          1089
+        ],
+        [
+          1286,
+          1073
+        ]
+      ]
+    },
+    {
+      "text": "Răng",
+      "confidence": 0.88,
+      "x_left": 790,
+      "y_center": 1106.2,
+      "bbox": [
+        [
+          798,
+          1077
+        ],
+        [
+          889,
+          1089
+        ],
+        [
+          881,
+          1135
+        ],
+        [
+          790,
+          1122
+        ]
+      ]
+    },
+    {
+      "text": "Răng",
+      "confidence": 0.9664,
+      "x_left": 1312,
+      "y_center": 1164.5,
+      "bbox": [
+        [
+          1321,
+          1134
+        ],
+        [
+          1411,
+          1149
+        ],
+        [
+          1401,
+          1194
+        ],
+        [
+          1312,
+          1179
+        ]
+      ]
+    },
+    {
+      "text": "Răng",
+      "confidence": 0.5494,
+      "x_left": 946,
+      "y_center": 1251.0,
+      "bbox": [
+        [
+          956,
+          1221
+        ],
+        [
+          1047,
+          1236
+        ],
+        [
+          1038,
+          1280
+        ],
+        [
+          946,
+          1265
+        ]
+      ]
+    },
+    {
+      "text": "dựng",
+      "confidence": 0.9998,
+      "x_left": 567,
+      "y_center": 1353.5,
+      "bbox": [
+        [
+          574,
+          1325
+        ],
+        [
+          664,
+          1337
+        ],
+        [
+          657,
+          1381
+        ],
+        [
+          567,
+          1369
+        ]
+      ]
+    },
+    {
+      "text": "hướng",
+      "confidence": 0.9986,
+      "x_left": 970,
+      "y_center": 1349.5,
+      "bbox": [
+        [
+          977,
+          1321
+        ],
+        [
+          1085,
+          1335
+        ],
+        [
+          1078,
+          1377
+        ],
+        [
+          970,
+          1363
+        ]
+      ]
+    },
+    {
+      "text": "ông",
+      "confidence": 1.0,
+      "x_left": 510,
+      "y_center": 1512.0,
+      "bbox": [
+        [
+          518,
+          1484
+        ],
+        [
+          595,
+          1498
+        ],
+        [
+          586,
+          1539
+        ],
+        [
+          510,
+          1525
+        ]
+      ]
+    },
+    {
+      "text": "trưởng",
+      "confidence": 0.9996,
+      "x_left": 1372,
+      "y_center": 1509.2,
+      "bbox": [
+        [
+          1379,
+          1481
+        ],
+        [
+          1490,
+          1494
+        ],
+        [
+          1483,
+          1537
+        ],
+        [
+          1372,
+          1523
+        ]
+      ]
+    },
+    {
+      "text": "tra",
+      "confidence": 0.9999,
+      "x_left": 1191,
+      "y_center": 1510.0,
+      "bbox": [
+        [
+          1197,
+          1489
+        ],
+        [
+          1248,
+          1496
+        ],
+        [
+          1243,
+          1530
+        ],
+        [
+          1191,
+          1523
+        ]
+      ]
+    },
+    {
+      "text": "trưởng",
+      "confidence": 0.9994,
+      "x_left": 786,
+      "y_center": 1552.2,
+      "bbox": [
+        [
+          794,
+          1522
+        ],
+        [
+          904,
+          1536
+        ],
+        [
+          896,
+          1581
+        ],
+        [
+          786,
+          1568
+        ]
+      ]
+    },
+    {
+      "text": "trưởng",
+      "confidence": 0.9974,
+      "x_left": 993,
+      "y_center": 1553.5,
+      "bbox": [
+        [
+          1002,
+          1521
+        ],
+        [
+          1117,
+          1536
+        ],
+        [
+          1109,
+          1585
+        ],
+        [
+          993,
+          1570
+        ]
+      ]
+    },
+    {
+      "text": "phố",
+      "confidence": 0.9963,
+      "x_left": 238,
+      "y_center": 1638.5,
+      "bbox": [
+        [
+          238,
+          1616
+        ],
+        [
+          310,
+          1607
+        ],
+        [
+          313,
+          1660
+        ],
+        [
+          242,
+          1669
+        ]
+      ]
+    },
+    {
+      "text": "trưởng",
+      "confidence": 0.9995,
+      "x_left": 1247,
+      "y_center": 1637.5,
+      "bbox": [
+        [
+          1253,
+          1609
+        ],
+        [
+          1365,
+          1623
+        ],
+        [
+          1358,
+          1665
+        ],
+        [
+          1247,
+          1651
+        ]
+      ]
+    },
+    {
+      "text": "Cổng",
+      "confidence": 0.9954,
+      "x_left": 256,
+      "y_center": 1948.8,
+      "bbox": [
+        [
+          263,
+          1925
+        ],
+        [
+          336,
+          1935
+        ],
+        [
+          329,
+          1972
+        ],
+        [
+          256,
+          1961
+        ]
+      ]
+    },
+    {
+      "text": "thông",
+      "confidence": 1.0,
+      "x_left": 326,
+      "y_center": 1948.8,
+      "bbox": [
+        [
+          332,
+          1925
+        ],
+        [
+          408,
+          1935
+        ],
+        [
+          402,
+          1971
+        ],
+        [
+          326,
+          1962
+        ]
+      ]
+    }
+  ]
+}

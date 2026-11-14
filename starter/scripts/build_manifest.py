@@ -26,7 +26,7 @@ CONTENT_FIRST, CONTENT_LAST = 8, 201
 TOC_PAGES = (5, 6)
 
 EXCLUDED = {
-    1: "blank cover (image only, no text)",
+    1: "scanned decision Quyết định 3108/QĐ-BYT (image only, text via OCR)",
     2: "title page",
     3: "editorial board",
     4: "editorial board",
@@ -40,8 +40,12 @@ EXCLUDED.update({p: "references" for p in range(202, 209)})
 # becomes exactly ONE chunk in every strategy (A/B/C) and is never split, so the
 # table of contents (2 pages) or editorial board (2 pages) stays whole.
 SPECIAL_SECTIONS = [
-    {"special_id": "quyet_dinh", "section": "QUYẾT ĐỊNH BAN HÀNH", "pages": [2],
-     "note": "Title page citing Quyết định 3108/QĐ-BYT ngày 28/7/2015; the PDF has no full decision text."},
+    {"special_id": "quyet_dinh", "section": "QUYẾT ĐỊNH BAN HÀNH", "pages": [1], "text_source": "ocr",
+     "note": ("Scanned Quyết định 3108/QĐ-BYT ngày 28/7/2015 (4 articles, signed by Thứ trưởng "
+              "Nguyễn Thị Xuyên). No text layer: text from scripts/ocr_scanned_pages.py + "
+              "data/ocr/page_001_corrections.json.")},
+    {"special_id": "trang_ten_sach", "section": "TRANG TÊN SÁCH", "pages": [2], "text_source": "pdf_text",
+     "note": "Title page: Bộ Y tế, document title, 'Ban hành kèm theo Quyết định số 3108/QĐ-BYT', Hà Nội 2015."},
     {"special_id": "ban_bien_soan", "section": "CHỦ BIÊN VÀ BAN BIÊN SOẠN", "pages": [3, 4],
      "note": "Editors, authors/reviewers and secretaries (public publication credits)."},
     {"special_id": "muc_luc", "section": "MỤC LỤC", "pages": [5, 6],
@@ -158,6 +162,8 @@ def main() -> None:
         "content_pages": len(content),
         "content_chars_raw": sum(p["raw_chars"] for p in content),
         "known_issues": [
+            "PDF page 1 (the decision) is a scan with no text layer; OCR'd with EasyOCR and "
+            "26 reviewed corrections (handwritten number/date, punctuation, column order).",
             "Font maps 'ư/Ư' to 'ƣ/Ƣ' (U+01A3/U+01A2) throughout; fixed during normalization.",
             "Some words are split by stray spaces (e.g. 'b ệnh'); worse in diseases 8 and 43-47.",
             "Comparison tables (e.g. PDF pages 23-26) are linearized cell by cell.",
@@ -165,9 +171,9 @@ def main() -> None:
         ],
         "ingestion_scope": (
             "Ingest the 194 content pages plus the front-matter parts in special_sections "
-            "(PDF pages 2-7). Front matter is ingested but NOT counted toward the 30-page "
-            "content minimum. Each special section is one unsplit chunk in every strategy, "
-            "with disease=null. Page 1 (blank) and references (202-208) are not ingested."
+            "(PDF pages 1-7; page 1 via OCR). Front matter is ingested but NOT counted toward "
+            "the 30-page content minimum. Each special section is one unsplit chunk in every "
+            "strategy, with disease=null. References (202-208) are not ingested."
         ),
         "special_sections": [
             {**s, "chars_raw": sum(pages[p - 1]["raw_chars"] for p in s["pages"])}

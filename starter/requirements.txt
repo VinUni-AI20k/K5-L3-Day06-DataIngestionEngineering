@@ -6,3 +6,8 @@ requests==2.34.2
 # PDF text extraction (PyMuPDF / fitz) and config
 PyMuPDF==1.26.4
 python-dotenv==1.0.1
+# Only for scripts/ocr_scanned_pages.py (PDF page 1 is a scan). The pipeline reads the
+# committed OCR output in data/ocr/, so these are not needed to run src/.
+easyocr==1.7.2
+torch==2.6.0
+numpy==2.3.5

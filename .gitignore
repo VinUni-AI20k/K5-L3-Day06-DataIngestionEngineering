@@ -11,3 +11,5 @@ __pycache__/
 
 # Source PDF: redistribution permission not verified; download via data/manifest.json
 data/*.pdf
+# Full normalized text of the source PDF: regenerate with python -m src.ingestion
+starter/results/pages_normalized.jsonl

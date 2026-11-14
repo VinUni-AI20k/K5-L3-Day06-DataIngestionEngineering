@@ -37,20 +37,32 @@
   "content_pages": 194,
   "content_chars_raw": 215252,
   "known_issues": [
+    "PDF page 1 (the decision) is a scan with no text layer; OCR'd with EasyOCR and 26 reviewed corrections (handwritten number/date, punctuation, column order).",
     "Font maps 'ư/Ư' to 'ƣ/Ƣ' (U+01A3/U+01A2) throughout; fixed during normalization.",
     "Some words are split by stray spaces (e.g. 'b ệnh'); worse in diseases 8 and 43-47.",
     "Comparison tables (e.g. PDF pages 23-26) are linearized cell by cell.",
     "Short content pages (<200 chars) are section tails, not extraction failures."
   ],
-  "ingestion_scope": "Ingest the 194 content pages plus the front-matter parts in special_sections (PDF pages 2-7). Front matter is ingested but NOT counted toward the 30-page content minimum. Each special section is one unsplit chunk in every strategy, with disease=null. Page 1 (blank) and references (202-208) are not ingested.",
+  "ingestion_scope": "Ingest the 194 content pages plus the front-matter parts in special_sections (PDF pages 1-7; page 1 via OCR). Front matter is ingested but NOT counted toward the 30-page content minimum. Each special section is one unsplit chunk in every strategy, with disease=null. References (202-208) are not ingested.",
   "special_sections": [
     {
       "special_id": "quyet_dinh",
       "section": "QUYẾT ĐỊNH BAN HÀNH",
       "pages": [
+        1
+      ],
+      "text_source": "ocr",
+      "note": "Scanned Quyết định 3108/QĐ-BYT ngày 28/7/2015 (4 articles, signed by Thứ trưởng Nguyễn Thị Xuyên). No text layer: text from scripts/ocr_scanned_pages.py + data/ocr/page_001_corrections.json.",
+      "chars_raw": 0
+    },
+    {
+      "special_id": "trang_ten_sach",
+      "section": "TRANG TÊN SÁCH",
+      "pages": [
         2
       ],
-      "note": "Title page citing Quyết định 3108/QĐ-BYT ngày 28/7/2015; the PDF has no full decision text.",
+      "text_source": "pdf_text",
+      "note": "Title page: Bộ Y tế, document title, 'Ban hành kèm theo Quyết định số 3108/QĐ-BYT', Hà Nội 2015.",
       "chars_raw": 220
     },
     {
@@ -660,9 +672,9 @@
       "pdf_page": 1,
       "printed_page": null,
       "counted": false,
-      "exclusion_reason": "blank cover (image only, no text)",
-      "ingested": false,
-      "special_id": null,
+      "exclusion_reason": "scanned decision Quyết định 3108/QĐ-BYT (image only, text via OCR)",
+      "ingested": true,
+      "special_id": "quyet_dinh",
       "raw_chars": 0,
       "raw_chars_no_ws": 0,
       "has_images": true
@@ -673,7 +685,7 @@
       "counted": false,
       "exclusion_reason": "title page",
       "ingested": true,
-      "special_id": "quyet_dinh",
+      "special_id": "trang_ten_sach",
       "raw_chars": 220,
       "raw_chars_no_ws": 128,
       "has_images": false

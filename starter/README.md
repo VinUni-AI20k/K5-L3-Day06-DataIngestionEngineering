@@ -1,65 +1,93 @@
-# Starter · PostgreSQL + pgvector
+# Pipeline · Qdrant + Gemini Embedding 2
 
-Bộ khởi động **tùy chọn** cho lab cá nhân. Docker Compose tạo PostgreSQL + pgvector local; các file trong `src/` là **khung pseudocode có TODO**, chưa đọc tài liệu, tạo embedding, lưu vector hay chạy benchmark. Bạn cần tự hiện thực. Vẫn có thể chọn Qdrant, Chroma hoặc vector store tương đương theo [GUIDE.md](../GUIDE.md).
+Pipeline cá nhân cho lab Day 06. Bản starter gốc dùng PostgreSQL + pgvector; bài này **thay bằng Qdrant tự host** và **`google/gemini-embedding-2` qua OpenRouter** (GUIDE cho phép vector store tương đương). `docker-compose.yml` và `init.sql` của starter không còn dùng.
+
+| Thành phần | Lựa chọn |
+|---|---|
+| Corpus | *Hướng dẫn chẩn đoán và điều trị một số bệnh về Răng Hàm Mặt* (Bộ Y tế, QĐ 3108/QĐ-BYT, 2015), 208 trang PDF, 194 trang nội dung |
+| Đọc PDF | PyMuPDF (`fitz`) 1.26.4; trang 1 (bản scan) dùng EasyOCR 1.7.2 |
+| Embedding | `google/gemini-embedding-2` qua OpenRouter, 3072 chiều |
+| Vector store | Qdrant server 1.19.1 (tự host, HTTPS), `qdrant-client` 1.15.1, metric cosine |
+| Python | 3.11.9, môi trường mặc định (không dùng venv) |
 
 ## Cấu trúc
 
 ```text
+data/
+├── manifest.json                 # nguồn, quyền, quy tắc đếm trang, 57 bệnh → trang PDF
+├── ocr/page_001.json             # kết quả OCR thô trang Quyết định (box + độ tin cậy)
+├── ocr/page_001_corrections.json # 26 sửa lỗi OCR đã đối chiếu ảnh scan
+└── tai_lieu_huong_dan_kham_rang_ham_mat.pdf   # KHÔNG commit, tải theo manifest
 starter/
-├── docker-compose.yml     # PostgreSQL 16 + pgvector, chỉ mở cổng local
-├── init.sql               # bật extension khi tạo database mới
-├── requirements.txt       # psycopg, pypdf và python-dotenv
-├── .env.example           # cấu hình mẫu; copy thành .env
-├── scripts/check_setup.py # kiểm tra kết nối và extension (đã chạy được)
-├── src/
-│   ├── models.py          # cấu trúc dữ liệu mẫu
-│   ├── ingestion.py       # TODO: đọc / chuẩn hóa tài liệu
-│   ├── chunking.py        # TODO: chia chunk
-│   ├── embeddings.py      # TODO: chọn model API hoặc local
-│   ├── store.py           # TODO: lưu vector, metadata và filter
-│   ├── evaluation.py      # TODO: chấm truy xuất, lưu trace
-│   └── run.py             # TODO: kết nối các bước thành pipeline
-├── data/                  # bạn tự chuẩn bị corpus được phép sử dụng
-└── results/               # lưu kết quả của bạn
+├── scripts/check_setup.py        # kiểm tra Qdrant + 1 lần gọi embedding thật
+├── scripts/build_manifest.py     # sinh data/manifest.json
+├── scripts/ocr_scanned_pages.py  # OCR trang scan (chỉ cần chạy lại khi đổi OCR)
+├── src/ingestion.py              # ✅ đọc, chuẩn hóa, gắn bệnh/mục/tiểu mục
+├── src/chunking.py               # TODO: A fixed-size, B theo mục
+├── src/embeddings.py             # TODO: OpenRouter adapter
+├── src/store.py                  # TODO: Qdrant upsert/search/filter
+├── src/evaluation.py             # TODO: Hit@1, Evidence Hit@3, trace
+├── src/run.py                    # TODO: điều phối A/B/C
+└── results/
+    ├── ingestion_log.json        # thống kê + lỗi + mọi chỗ ghép chữ
+    └── pages_normalized.jsonl    # text đã chuẩn hóa (không commit, sinh lại được)
 ```
 
-## 1. Cài và kiểm tra database
+## 1. Setup
 
-Cần Docker Desktop hoặc Docker Engine + Compose, Python **3.11–3.14**, và mạng để tải image/dependencies lần đầu. Các lệnh sau chạy từ thư mục `starter/`:
-
-```bash
-cd starter
-python3 -m venv .venv
-```
-
-Kích hoạt `.venv`: macOS/Linux dùng `source .venv/bin/activate`; Windows PowerShell dùng `.venv\Scripts\Activate.ps1`. Sau đó:
+Chạy từ thư mục `starter/`:
 
 ```bash
-python -m pip install -r requirements.txt
-# macOS/Linux: cp .env.example .env
-# Windows PowerShell: Copy-Item .env.example .env
-docker compose -p day6_student_starter up -d --wait
+python -m pip install -r requirements.txt      # easyocr/torch chỉ cần nếu chạy lại OCR
+# Windows PowerShell: Copy-Item .env.example .env ; macOS/Linux: cp .env.example .env
+# điền QDRANT_URL, QDRANT_API_KEY, OPENROUTER_API_KEY vào .env (không commit .env)
 python scripts/check_setup.py
 ```
 
-Kỳ vọng: hiện tên database, phiên bản PostgreSQL và pgvector, sau đó `Setup OK`. Đây **chỉ là kiểm tra hạ tầng**, không phải kết quả benchmark. Docker dùng cổng `127.0.0.1:55433` và mật khẩu cố định **chỉ dùng local cho lab**; nếu cổng bận, sửa đồng thời port trong `docker-compose.yml` và `DATABASE_URL` trong `.env`. `init.sql` chỉ chạy khi volume mới được tạo; nếu database sẵn có chưa bật extension, xem log Docker và kiểm tra cấu hình thay vì xóa volume chứa dữ liệu.
+Kỳ vọng: dòng `Qdrant: ... | server 1.19.1`, dòng `Embedding: google/gemini-embedding-2 ... | dim 3072`, rồi `Setup OK`. Một lần chạy tốn khoảng USD 0.000001. Client 1.15.1 với server 1.19.1 sinh cảnh báo lệch phiên bản; các lệnh cơ bản vẫn chạy.
 
-Dừng container nhưng giữ dữ liệu:
+> `qdrant-client` mặc định dùng cổng 6333 khi URL không ghi cổng. Server sau HTTPS reverse proxy cần `port=443`; `check_setup.py` tự suy ra từ URL.
+
+## 2. Dữ liệu
+
+Tải PDF về `data/tai_lieu_huong_dan_kham_rang_ham_mat.pdf` từ `download_url` trong [manifest](../data/manifest.json) và kiểm tra SHA-256 khớp `snapshot.sha256`. File không được commit vì chưa xác minh quyền phát tán lại.
 
 ```bash
-docker compose -p day6_student_starter stop
+python scripts/build_manifest.py   # sinh lại manifest (không cần mạng)
+python scripts/ocr_scanned_pages.py   # tùy chọn: OCR lại trang 1 (~20 s, GPU 4 GB hoặc CPU)
 ```
 
-## 2. Chọn embedding model
+**Quy tắc đếm trang:** tính trang PDF 8–201 (57 bệnh, số in 7–200). Không tính trang 1–7 (Quyết định, trang tên sách, ban biên soạn, mục lục, từ viết tắt) và 202–208 (tài liệu tham khảo). `gold_page` trong benchmark dùng **số trang PDF**, tức số in + 1.
 
-Điền key tương ứng trong `.env` nếu dùng OpenRouter, OpenAI hoặc Gemini; **không commit `.env`**. Model local không cần API key. `requirements.txt` chỉ có dependencies cơ bản: tự cài SDK hoặc thư viện local phù hợp với model bạn chọn và ghi lại version/lệnh cài trong báo cáo. Ghi tên model và số chiều; dùng cùng model cho toàn bộ chiến lược và vector query tương thích vector document.
+**Phạm vi ingest:** 194 trang nội dung + 6 trang phần mở đầu (trang 1–7). Mỗi phần mở đầu là **một chunk nguyên vẹn ở mọi cấu hình**: `quyet_dinh` (tr.1), `trang_ten_sach` (tr.2), `ban_bien_soan` (tr.3–4), `muc_luc` (tr.5–6), `tu_viet_tat` (tr.7). Phần mở đầu được ingest nhưng **không tính** vào 30 trang tối thiểu.
 
-## 3. Hoàn thiện pipeline
+## 3. Đọc và chuẩn hóa (bước 2)
 
-1. Đặt corpus vào `data/` hoặc cung cấp manifest/hướng dẫn truy cập. Đọc [GUIDE.md](../GUIDE.md) về **30 trang nội dung**, quyền dữ liệu và metadata.
-2. Hoàn thiện từng hàm TODO trong `src/`. Lưu ID tài liệu, nguồn, trang/vị trí và ít nhất một trường filter có ích.
-3. Xây ít nhất ba cấu hình; ví dụ A fixed-size, B theo đoạn, C như B nhưng có filter. Cần cùng corpus, model và benchmark; nạp lại không nhân đôi và xử lý chunk cũ khi dữ liệu đổi.
-4. Tự viết ít nhất 20 câu hỏi kèm evidence, tách dev/test trước khi thử theo [BENCHMARK.md](../BENCHMARK.md). Lưu trace top-3 và báo cáo đủ năm tiêu chí.
-5. Sau khi hoàn thiện, chạy `python -m src.run` từ thư mục `starter/`. Trước khi làm TODO, lệnh này **chủ động báo `NotImplementedError`**.
+```bash
+python -m src.ingestion
+```
 
-Lưu code, cấu hình, kết quả và lệnh chạy để người chấm tái lập; không commit key, dữ liệu mật hoặc dữ liệu không có quyền chia sẻ.
+Kết quả lần chạy 2026-11-14: 201 trang ingest, 194 trang tính, 205.742 ký tự nội dung sau chuẩn hóa, 0 lỗi trích xuất, 339 chỗ ghép chữ trên 22 trang, đủ 57/57 bệnh có tiêu đề mục.
+
+| Bước | Vấn đề trong PDF | Cách xử lý |
+|---|---|---|
+| Ký tự | Font Word 2007 mã hóa `ư/Ư` thành `ƣ/Ƣ` (≈2.800 lần) | Thay ký tự, rồi Unicode NFC |
+| Khoảng trắng | Dòng trống, khoảng trắng kép, NBSP | Gộp khoảng trắng, bỏ dòng trống, **giữ ngắt dòng** để nhận tiêu đề |
+| Chữ bị tách | Lớp text tách âm tiết: `tuyế n`, `b ệnh` (nặng ở bệnh 8, 43–47) | Ghép theo **từ vựng của chính corpus** (xem dưới) |
+| Số trang in | Dòng đầu mỗi trang là số in | Bỏ nếu khớp `printed_page`; cả 194 trang đều khớp |
+| Tiêu đề bệnh | 5 tên bị tách chữ trong cả mục lục lẫn trang | Thay dòng tiêu đề bằng tên trong manifest khi **chỉ khác khoảng trắng** |
+| Trang scan | Trang 1 không có lớp text | EasyOCR + 26 sửa lỗi đã đối chiếu ảnh, mỗi sửa lỗi phải khớp đúng 1 lần |
+
+**Quy tắc ghép chữ:** ghép hai token `a b` khi `ab` xuất hiện ≥3 lần trong corpus và một trong hai: (1) `a` hoặc `b` chưa từng đứng riêng, hoặc (2) `b` là âm cuối tiếng Việt (`c ch m n ng nh p t i y o u`) và `ab` phổ biến hơn `a` trên 1,5 lần. Ngưỡng 1,5 được chọn sau khi liệt kê đủ 32 chỗ ghép thêm so với ngưỡng 3 và kiểm tra tay đều đúng. Quy tắc giữ nguyên `là u` (khối u) vì `làu` không tồn tại. Mọi chỗ ghép được ghi trong `results/ingestion_log.json` để kiểm tra lại.
+
+**Metadata mỗi trang** (chunk kế thừa ở bước 5): `document_id`, `source`, `page` (PDF), `printed_page`, `disease_no`, `disease`, `special_id`, `section_at_start`, `subsection_at_start`, và `headings` = danh sách tiêu đề trong trang kèm vị trí ký tự (`disease` / `section` / `subsection`). Hàm `section_at(page, offset)` trả về mục và tiểu mục đang có hiệu lực tại một vị trí, nên chunk vắt qua ranh giới mục vẫn được gán đúng.
+
+**Hạn chế đã biết** (ghi trong log):
+- Bệnh 25 (tr.105) **thiếu tiêu đề "III. CHẨN ĐOÁN" trong bản gốc** (đã kiểm tra ảnh render). Phần chẩn đoán mang `section = II. NGUYÊN NHÂN`; không tự thêm cấu trúc.
+- Bảng so sánh (trang 21, 24, 26, 42, 172, 176, 180; trang 6 là mục lục) bị trải thành từng ô một dòng.
+- Vẫn còn một số chữ bị tách mà quy tắc không ghép được an toàn, ví dụ `đầ y`, `là m`, `mụ n`, `bù ng` (trang 30–39) và `HỖ N` trong mục lục (trang 6). Ở `là m` và `đầ y`, mảnh đầu cũng là một từ có nghĩa, nên ghép sẽ rủi ro.
+- 7 trang nội dung ngắn (<200 ký tự) là phần cuối của một mục, không phải lỗi trích xuất.
+
+## 4. Các bước tiếp theo
+
+Chunking A/B/C, embedding, Qdrant, benchmark và đánh giá: xem [GUIDE.md](../GUIDE.md). Benchmark phải được viết và commit **trước** khi chạy retrieval.
