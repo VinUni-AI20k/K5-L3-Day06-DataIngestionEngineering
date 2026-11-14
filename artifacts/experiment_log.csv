@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed-size character windows inside each page (front-matter sections kept whole),500,50,"document_id, source, page, pages, printed_page, disease_no, disease, section, subsection, sections, special_id",none,"google/gemini-embedding-2 via OpenRouter, 3072-d, cosine, Qdrant","Baseline. Cuts mid-sentence and mixes sections, so evidence is more often split across chunks and Hit@1 is lowest.",,,,,Selection rule fixed before any run: see artifacts/selection_criteria.md
+B,"structure-aware: split at disease/section/subsection headings, merge units <150 chars forward, split units >1000 chars at paragraph then sentence boundaries; may span a page break",max 1000 (min 150),0,same as A,none,same as A,"Chunks keep one subsection's idea, so Evidence Hit@3 and coherence beat A; larger chunks may lower Hit@1 precision. A-B changes chunking (boundaries and size together).",,,,,
+C,identical to B (same Qdrant collection and vectors),max 1000 (min 150),0,same as A,"disease_no from question context, only when the question has one (5/24); otherwise identical to B",same as A,"Only difference from B is the filter. Filter questions (d07-d09, t01, t02) improve because near-identical chapters (abscess 29-34, malocclusion 13-22) are excluded; unfiltered questions are unchanged.",,,,,
