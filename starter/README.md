@@ -25,8 +25,9 @@ starter/
 ├── scripts/verify_benchmark.py   # kiểm chứng evidence + ràng buộc benchmark
 ├── src/ingestion.py              # ✅ đọc, chuẩn hóa, gắn bệnh/mục/tiểu mục
 ├── src/chunking.py               # ✅ A fixed-size, B theo mục (C dùng lại B)
-├── src/embeddings.py             # TODO: OpenRouter adapter
-├── src/store.py                  # TODO: Qdrant upsert/search/filter
+├── src/embeddings.py             # ✅ OpenRouter adapter (retry, đếm token/chi phí)
+├── src/store.py                  # ✅ Qdrant: schema, upsert, xóa chunk cũ, search + filter
+├── src/index.py                  # ✅ embed + nạp tăng dần, ghi index_log.jsonl
 ├── src/evaluation.py             # TODO: Hit@1, Evidence Hit@3, trace
 ├── src/run.py                    # TODO: điều phối A/B/C
 └── results/
@@ -125,6 +126,42 @@ Cả hai cấu hình đều giữ 5 phần mở đầu nguyên vẹn (mỗi ph�
 
 **Ảnh hưởng tới so sánh:** độ dài trung bình của A và B gần bằng nhau (419 so với 402), nên khác biệt A–B chủ yếu do **ranh giới cắt**. Phân bố độ dài thì khác: B có nhiều chunk ngắn hơn và vài chunk gần 1000 ký tự.
 
-## 6. Các bước tiếp theo
+## 6. Embedding và Qdrant (bước 6)
 
-Embedding, Qdrant và đánh giá: xem [GUIDE.md](../GUIDE.md).
+```bash
+python -m src.index            # embed + nạp A và B (chỉ embed chunk chưa có)
+python -m src.index --force    # embed + upsert lại toàn bộ với cùng id
+```
+
+| | Giá trị |
+|---|---|
+| Model | `google/gemini-embedding-2` qua OpenRouter, 3072 chiều, batch 64 |
+| Query và document | Embed **cùng một cách**: endpoint OpenRouter không có tham số task type (khác API Gemini gốc có `RETRIEVAL_QUERY`/`RETRIEVAL_DOCUMENT`) |
+| Collection | `day06_rhm_a` (A), `day06_rhm_b` (B, C dùng chung) |
+| Metric / search | Cosine, **exact search** (`SearchParams(exact=True)`): kết quả tất định, và filter không làm thiếu ứng viên như khi dùng HNSW xấp xỉ |
+| Payload index | `disease_no` (integer), `document_id`, `special_id`, `section` (keyword). Lọc theo trường khác bị từ chối |
+| Lỗi | Lỗi tạm thời (HTTP 429/5xx, timeout) thử lại có backoff; lỗi khác dừng ngay. **Không bao giờ dùng vector giả** |
+
+**Lần nạp đầu (2026-11-14), từ [results/index_log.jsonl](results/index_log.jsonl):**
+
+| | Chunk | Token | Chi phí | Thời gian embed / tổng |
+|---|---:|---:|---:|---:|
+| A | 547 | 77.898 | $0.0156 | 37,6 s / 49,4 s |
+| B (= C) | 526 | 71.443 | $0.0143 | 32,2 s / 40,9 s |
+
+Thời gian phụ thuộc mạng tới OpenRouter và server Qdrant, nên chỉ để tham khảo, không phải benchmark hiệu năng.
+
+**Kiểm tra nạp lại không nhân đôi** (các lần chạy đều được ghi trong `index_log.jsonl`):
+
+| Lần chạy | Kết quả |
+|---|---|
+| 2: chạy lại bình thường | 0 chunk embed, 0 upsert, $0; số điểm giữ nguyên 547 / 526 |
+| 3: `--force` | Upsert lại 1.073 điểm với cùng id; số điểm vẫn 547 / 526 |
+| 4: sửa nội dung 1 chunk của A | Embed 1 chunk mới, **xóa 1 chunk cũ**, tổng vẫn 547 |
+| 5: khôi phục chunk đó | Embed 1, xóa 1, collection trở lại như ban đầu |
+
+Cách hoạt động: `chunk_id` là UUID5 tính từ nội dung. Chunk không đổi giữ nguyên id nên được bỏ qua. Id có trong collection mà không còn trong chunking hiện tại sẽ bị xóa theo `document_id`, nên khi tài liệu thay đổi thì chunk cũ không còn sót lại.
+
+## 7. Các bước tiếp theo
+
+Chạy truy xuất top-3 cho 24 câu × 3 cấu hình và tính Hit@1/Evidence Hit@3: xem [GUIDE.md](../GUIDE.md).
