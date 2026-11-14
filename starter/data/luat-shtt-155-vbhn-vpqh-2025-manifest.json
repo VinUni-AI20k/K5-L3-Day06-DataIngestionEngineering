@@ -1,0 +1,295 @@
+{
+  "source_id": "luat-shtt-155-vbhn-vpqh-2025",
+  "title": "Luật Sở hữu trí tuệ Văn bản hợp nhất số 155/VBHN-VPQH",
+  "source_path_or_url": "https://vanban.chinhphu.vn/?pageid=27160&docid=215309",
+  "license_or_permission": "Công khai",
+  "accessed_at": "2026-11-14",
+  "document_date": "2025-09-09",
+  "currentness": "User confirms this is the latest document for the lab.",
+  "page_id_definition": "page is the 1-based physical page number in the original PDF; selected pages are 2 through 31. unit_id identifies one original PDF page.",
+  "selection_method": "Selected 30 consecutive content pages from the supplied PDF. Excluded original PDF page 1 (title/introductory page). Text extracted and whitespace normalized per physical page; no page was merged with another.",
+  "original_pdf": "155-vbhn-vpqh.pdf",
+  "selected_pdf": "luat-shtt-155-vbhn-vpqh-2025-pages-002-031.pdf",
+  "jsonl_file": "luat-shtt-155-vbhn-vpqh-2025-units.jsonl",
+  "selected_source_pdf_pages": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31
+  ],
+  "page_count": 30,
+  "minimum_characters_per_page": 1649,
+  "maximum_characters_per_page": 2950,
+  "total_normalized_characters": 73902,
+  "pages": [
+    {
+      "page": 2,
+      "unit_id": "pdf_page_002",
+      "section": "Phần thứ nhất",
+      "article_start": 1,
+      "article_end": 4,
+      "characters": 2268
+    },
+    {
+      "page": 3,
+      "unit_id": "pdf_page_003",
+      "section": "Phần thứ nhất",
+      "article_start": null,
+      "article_end": null,
+      "characters": 2857
+    },
+    {
+      "page": 4,
+      "unit_id": "pdf_page_004",
+      "section": "Phần thứ nhất",
+      "article_start": null,
+      "article_end": null,
+      "characters": 2950
+    },
+    {
+      "page": 5,
+      "unit_id": "pdf_page_005",
+      "section": "Phần thứ nhất",
+      "article_start": null,
+      "article_end": null,
+      "characters": 2516
+    },
+    {
+      "page": 6,
+      "unit_id": "pdf_page_006",
+      "section": "Phần thứ nhất",
+      "article_start": 5,
+      "article_end": 6,
+      "characters": 2411
+    },
+    {
+      "page": 7,
+      "unit_id": "pdf_page_007",
+      "section": "Phần thứ nhất",
+      "article_start": 7,
+      "article_end": 7,
+      "characters": 2706
+    },
+    {
+      "page": 8,
+      "unit_id": "pdf_page_008",
+      "section": "Phần thứ nhất",
+      "article_start": 8,
+      "article_end": 10,
+      "characters": 2570
+    },
+    {
+      "page": 9,
+      "unit_id": "pdf_page_009",
+      "section": "Phần thứ nhất",
+      "article_start": 11,
+      "article_end": 11,
+      "characters": 2542
+    },
+    {
+      "page": 10,
+      "unit_id": "pdf_page_010",
+      "section": "Phần thứ hai",
+      "article_start": 12,
+      "article_end": 13,
+      "characters": 2358
+    },
+    {
+      "page": 11,
+      "unit_id": "pdf_page_011",
+      "section": "Phần thứ hai",
+      "article_start": 14,
+      "article_end": 15,
+      "characters": 1961
+    },
+    {
+      "page": 12,
+      "unit_id": "pdf_page_012",
+      "section": "Phần thứ hai",
+      "article_start": 16,
+      "article_end": 17,
+      "characters": 2089
+    },
+    {
+      "page": 13,
+      "unit_id": "pdf_page_013",
+      "section": "Phần thứ hai",
+      "article_start": 18,
+      "article_end": 19,
+      "characters": 1649
+    },
+    {
+      "page": 14,
+      "unit_id": "pdf_page_014",
+      "section": "Phần thứ hai",
+      "article_start": 20,
+      "article_end": 20,
+      "characters": 2331
+    },
+    {
+      "page": 15,
+      "unit_id": "pdf_page_015",
+      "section": "Phần thứ hai",
+      "article_start": 21,
+      "article_end": 21,
+      "characters": 2618
+    },
+    {
+      "page": 16,
+      "unit_id": "pdf_page_016",
+      "section": "Phần thứ hai",
+      "article_start": 22,
+      "article_end": 23,
+      "characters": 2631
+    },
+    {
+      "page": 17,
+      "unit_id": "pdf_page_017",
+      "section": "Phần thứ hai",
+      "article_start": 24,
+      "article_end": 25,
+      "characters": 2780
+    },
+    {
+      "page": 18,
+      "unit_id": "pdf_page_018",
+      "section": "Phần thứ hai",
+      "article_start": null,
+      "article_end": null,
+      "characters": 2534
+    },
+    {
+      "page": 19,
+      "unit_id": "pdf_page_019",
+      "section": "Phần thứ hai",
+      "article_start": 26,
+      "article_end": 26,
+      "characters": 2673
+    },
+    {
+      "page": 20,
+      "unit_id": "pdf_page_020",
+      "section": "Phần thứ hai",
+      "article_start": 27,
+      "article_end": 27,
+      "characters": 2700
+    },
+    {
+      "page": 21,
+      "unit_id": "pdf_page_021",
+      "section": "Phần thứ hai",
+      "article_start": 28,
+      "article_end": 28,
+      "characters": 2309
+    },
+    {
+      "page": 22,
+      "unit_id": "pdf_page_022",
+      "section": "Phần thứ hai",
+      "article_start": 29,
+      "article_end": 29,
+      "characters": 2385
+    },
+    {
+      "page": 23,
+      "unit_id": "pdf_page_023",
+      "section": "Phần thứ hai",
+      "article_start": 30,
+      "article_end": 30,
+      "characters": 2651
+    },
+    {
+      "page": 24,
+      "unit_id": "pdf_page_024",
+      "section": "Phần thứ hai",
+      "article_start": 31,
+      "article_end": 31,
+      "characters": 2308
+    },
+    {
+      "page": 25,
+      "unit_id": "pdf_page_025",
+      "section": "Phần thứ hai",
+      "article_start": 32,
+      "article_end": 32,
+      "characters": 2355
+    },
+    {
+      "page": 26,
+      "unit_id": "pdf_page_026",
+      "section": "Phần thứ hai",
+      "article_start": 33,
+      "article_end": 34,
+      "characters": 2695
+    },
+    {
+      "page": 27,
+      "unit_id": "pdf_page_027",
+      "section": "Phần thứ hai",
+      "article_start": 35,
+      "article_end": 35,
+      "characters": 2484
+    },
+    {
+      "page": 28,
+      "unit_id": "pdf_page_028",
+      "section": "Phần thứ hai",
+      "article_start": 36,
+      "article_end": 39,
+      "characters": 2164
+    },
+    {
+      "page": 29,
+      "unit_id": "pdf_page_029",
+      "section": "Phần thứ hai",
+      "article_start": 40,
+      "article_end": 42,
+      "characters": 2600
+    },
+    {
+      "page": 30,
+      "unit_id": "pdf_page_030",
+      "section": "Phần thứ hai",
+      "article_start": 43,
+      "article_end": 43,
+      "characters": 2320
+    },
+    {
+      "page": 31,
+      "unit_id": "pdf_page_031",
+      "section": "Phần thứ hai",
+      "article_start": 44,
+      "article_end": 44,
+      "characters": 2487
+    }
+  ],
+  "caveats": [
+    "This corpus is for the lab and not legal advice. The latest-version status and public availability are recorded per the user confirmation."
+  ]
+}

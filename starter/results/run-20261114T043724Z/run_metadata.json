@@ -1,0 +1,188 @@
+{
+  "created_at_utc": "2026-11-14T04:37:24.233229+00:00",
+  "runtime_seconds": 45.06792050000513,
+  "python_version": "3.10.0",
+  "package_versions": {
+    "psycopg": "3.3.8",
+    "pypdf": "6.21.4",
+    "python-dotenv": "1.2.4"
+  },
+  "corpus_file": "data\\luat-shtt-155-vbhn-vpqh-2025-units.jsonl",
+  "manifest_file": "data\\luat-shtt-155-vbhn-vpqh-2025-manifest.json",
+  "corpus_pages": 30,
+  "corpus_characters": 73902,
+  "benchmark_file": "benchmark\\questions.jsonl",
+  "question_count": 20,
+  "filtered_question_count": 3,
+  "split_counts": {
+    "dev": 15,
+    "test": 5
+  },
+  "metadata_schema": {
+    "document_id": "string; stable source document identifier",
+    "source": "string; source location carried from corpus record",
+    "page": "integer; 1-based original PDF physical page",
+    "section": {
+      "type": "string",
+      "values": [
+        "Phần thứ hai",
+        "Phần thứ nhất"
+      ],
+      "source": "section values recorded in the selected-page corpus metadata",
+      "purpose": "filter retrieval to a section when a question supplies that scope"
+    }
+  },
+  "strategies": {
+    "A": "fixed-size, 500 characters with 50-character overlap, no filter",
+    "B": "legal article/clause-aware grouping, maximum 1000 characters, no filter",
+    "C": "same article/clause-aware chunks as B, metadata filter only when question supplies one"
+  },
+  "embedding": {
+    "provider": "OpenRouter",
+    "model": "openai/text-embedding-3-large",
+    "dimensions": 3072,
+    "unique_document_chunks_embedded": 275,
+    "embedding_seconds": 17.960236099985195,
+    "query_count": 20,
+    "query_embedding_seconds": 23.098068799998146,
+    "cost_usd": 0.010363859999999999,
+    "cost_note": "Provider-reported usage.",
+    "input_tokens": 79722
+  },
+  "vector_store": {
+    "database": "day6_lab",
+    "postgresql_version": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector_version": "0.8.7",
+    "search_metric": "cosine distance (<=>)",
+    "search_mode": "exact scan; no approximate vector index configured"
+  },
+  "ingest": {
+    "A": {
+      "chunk_count": 177,
+      "total_chunk_characters": 81180,
+      "min_chunk_characters": 57,
+      "median_chunk_characters": 500,
+      "max_chunk_characters": 500,
+      "upsert_seconds": 1.232839200005401
+    },
+    "B": {
+      "chunk_count": 98,
+      "total_chunk_characters": 75079,
+      "min_chunk_characters": 205,
+      "median_chunk_characters": 814.5,
+      "max_chunk_characters": 1000,
+      "upsert_seconds": 0.6331556999939494
+    },
+    "C": {
+      "chunk_count": 98,
+      "total_chunk_characters": 75079,
+      "min_chunk_characters": 205,
+      "median_chunk_characters": 814.5,
+      "max_chunk_characters": 1000,
+      "upsert_seconds": 0.5119869000045583
+    }
+  },
+  "search_seconds_by_strategy": {
+    "A": 0.5245491000532638,
+    "B": 0.4847919000312686,
+    "C": 0.478035500011174
+  },
+  "automatic_metrics": {
+    "A": {
+      "dev": {
+        "total": 15,
+        "hit_at_1": {
+          "hits": 3,
+          "total": 15,
+          "rate": 0.2
+        },
+        "evidence_hit_at_3": {
+          "hits": 5,
+          "total": 15,
+          "rate": 0.3333333333333333
+        }
+      },
+      "test": {
+        "total": 5,
+        "hit_at_1": {
+          "hits": 2,
+          "total": 5,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "hits": 2,
+          "total": 5,
+          "rate": 0.4
+        }
+      }
+    },
+    "B": {
+      "dev": {
+        "total": 15,
+        "hit_at_1": {
+          "hits": 6,
+          "total": 15,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "hits": 10,
+          "total": 15,
+          "rate": 0.6666666666666666
+        }
+      },
+      "test": {
+        "total": 5,
+        "hit_at_1": {
+          "hits": 2,
+          "total": 5,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "hits": 3,
+          "total": 5,
+          "rate": 0.6
+        }
+      }
+    },
+    "C": {
+      "dev": {
+        "total": 15,
+        "hit_at_1": {
+          "hits": 6,
+          "total": 15,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "hits": 10,
+          "total": 15,
+          "rate": 0.6666666666666666
+        }
+      },
+      "test": {
+        "total": 5,
+        "hit_at_1": {
+          "hits": 2,
+          "total": 5,
+          "rate": 0.4
+        },
+        "evidence_hit_at_3": {
+          "hits": 3,
+          "total": 5,
+          "rate": 0.6
+        }
+      }
+    }
+  },
+  "manual_assessment": {
+    "scores_assigned": true,
+    "chunk_coherence_review_rows": 30,
+    "grounding_review_rows": 15,
+    "metadata_review_rows": 45,
+    "rubric": "Coherence/grounding: score 0-2 with reason; metadata: complete-and-correct boolean with reason. Labels are assistant-proposed preliminary reviews; student review pending.",
+    "scoring_method": "Assistant-proposed preliminary labels and reasons; student review pending. Metadata compared with retrieval traces and selected source-page corpus records."
+  },
+  "reingestion": {
+    "idempotency": "Primary key (strategy, chunk_id) with ON CONFLICT UPDATE.",
+    "stale_chunks": "Old chunks for each supplied document_id are removed during upsert."
+  }
+}
