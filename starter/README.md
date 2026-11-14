@@ -24,14 +24,16 @@ starter/
 ├── scripts/ocr_scanned_pages.py  # OCR trang scan (chỉ cần chạy lại khi đổi OCR)
 ├── scripts/verify_benchmark.py   # kiểm chứng evidence + ràng buộc benchmark
 ├── src/ingestion.py              # ✅ đọc, chuẩn hóa, gắn bệnh/mục/tiểu mục
-├── src/chunking.py               # TODO: A fixed-size, B theo mục
+├── src/chunking.py               # ✅ A fixed-size, B theo mục (C dùng lại B)
 ├── src/embeddings.py             # TODO: OpenRouter adapter
 ├── src/store.py                  # TODO: Qdrant upsert/search/filter
 ├── src/evaluation.py             # TODO: Hit@1, Evidence Hit@3, trace
 ├── src/run.py                    # TODO: điều phối A/B/C
 └── results/
     ├── ingestion_log.json        # thống kê + lỗi + mọi chỗ ghép chữ
-    └── pages_normalized.jsonl    # text đã chuẩn hóa (không commit, sinh lại được)
+    ├── chunk_stats.json          # số chunk, phân bố độ dài, độ phủ evidence trên dev
+    ├── pages_normalized.jsonl    # text đã chuẩn hóa (không commit, sinh lại được)
+    └── chunks_A.jsonl, chunks_B.jsonl   # chunk + metadata (không commit, sinh lại được)
 ```
 
 ## 1. Setup
@@ -60,7 +62,7 @@ python scripts/ocr_scanned_pages.py   # tùy chọn: OCR lại trang 1 (~20 s, G
 
 **Quy tắc đếm trang:** tính trang PDF 8–201 (57 bệnh, số in 7–200). Không tính trang 1–7 (Quyết định, trang tên sách, ban biên soạn, mục lục, từ viết tắt) và 202–208 (tài liệu tham khảo). `gold_page` trong benchmark dùng **số trang PDF**, tức số in + 1.
 
-**Phạm vi ingest:** 194 trang nội dung + 6 trang phần mở đầu (trang 1–7). Mỗi phần mở đầu là **một chunk nguyên vẹn ở mọi cấu hình**: `quyet_dinh` (tr.1), `trang_ten_sach` (tr.2), `ban_bien_soan` (tr.3–4), `muc_luc` (tr.5–6), `tu_viet_tat` (tr.7). Phần mở đầu được ingest nhưng **không tính** vào 30 trang tối thiểu.
+**Phạm vi ingest:** 194 trang nội dung + 7 trang phần mở đầu (trang 1–7, gồm 5 phần). Mỗi phần mở đầu là **một chunk nguyên vẹn ở mọi cấu hình**: `quyet_dinh` (tr.1), `trang_ten_sach` (tr.2), `ban_bien_soan` (tr.3–4), `muc_luc` (tr.5–6), `tu_viet_tat` (tr.7). Phần mở đầu được ingest nhưng **không tính** vào 30 trang tối thiểu.
 
 ## 3. Đọc và chuẩn hóa (bước 2)
 
@@ -97,6 +99,32 @@ python scripts/verify_benchmark.py   # cần chạy python -m src.ingestion trư
 
 24 câu trong [benchmark/questions.json](../benchmark/questions.json): 18 dev / 6 test, tách theo bệnh, 5 câu có filter `disease_no` (2 câu trong test). Script kiểm tra evidence nằm đúng trang gold sau chuẩn hóa, cảnh báo nếu evidence xuất hiện ở trang khác, và kiểm tra các ràng buộc số lượng cùng việc không rò rỉ bệnh giữa dev và test. Thiết kế và các quyết định về gold: [benchmark/README.md](../benchmark/README.md). Benchmark được commit **trước** khi chạy bất kỳ retrieval nào.
 
-## 5. Các bước tiếp theo
+## 5. Cấu hình và chunking (bước 4–5)
 
-Chunking A/B/C, embedding, Qdrant và đánh giá: xem [GUIDE.md](../GUIDE.md).
+Tiêu chí chọn cấu hình được chốt **trước** khi chạy: [artifacts/selection_criteria.md](../artifacts/selection_criteria.md) (dev Evidence Hit@3 → dev Hit@1 nếu chênh ≤1 câu → ít chunk hơn). Tham số và giả thuyết: [artifacts/experiment_log.csv](../artifacts/experiment_log.csv).
+
+```bash
+python -m src.chunking   # cần results/pages_normalized.jsonl
+```
+
+| | A | B | C |
+|---|---|---|---|
+| Cách cắt | Cửa sổ 500 ký tự, overlap 50, trong từng trang, không căn theo từ | Cắt tại tiêu đề mục/tiểu mục; gộp mục <150 ký tự vào mục sau; mục >1000 ký tự tách ở ý lớn (`-`, `a.`, `1.`), rồi ý con (`+`), rồi cuối câu | Giống B |
+| Truy xuất | Không lọc | Không lọc | Lọc `disease_no` khi câu hỏi có filter |
+| Số chunk | 547 | 526 | (dùng chung với B) |
+| Độ dài trung vị / trung bình | 499 / 419 | 304 / 402 | |
+| Chunk vắt qua 2 trang | 2 (chỉ phần mở đầu) | 121 | |
+| Chunk chạm >1 mục | 228 | 69 | |
+| Độ phủ evidence dev | 17/18 (d04 bị cắt đôi) | 18/18 | |
+
+Cả hai cấu hình đều giữ 5 phần mở đầu nguyên vẹn (mỗi phần 1 chunk). "Độ phủ evidence" là cận trên của Hit@k: có chunk nào trên trang gold chứa **trọn** evidence hay không. Chỉ số này chỉ tính trên **dev**, để không tinh chỉnh chunking theo test.
+
+**Một thay đổi dựa trên dev:** bản đầu của B cắt mục dài ở bất kỳ dòng nào, nên tách "- Gãy mỏm khẩu cái…" khỏi các ý con "+" của nó (d10 không thể hit). Bản hiện tại ưu tiên cắt ở ý lớn trước, và độ phủ dev tăng từ 17 lên 18/18.
+
+**Metadata mỗi chunk:** `document_id`, `source`, `page` (trang đầu), `page_end`, `pages`, `printed_page`, `disease_no`, `disease`, `special_id`, `section` và `subsection` tại đầu chunk, `sections` (mọi mục chunk chạm tới), `char_start`, `chars`, `strategy`, `chunk_index`. `chunk_id` là UUID5 tính từ (cấu hình, tài liệu, trang:vị trí bắt đầu, hash nội dung): chạy lại cho ra đúng ID cũ, còn nội dung đổi thì ID đổi.
+
+**Ảnh hưởng tới so sánh:** độ dài trung bình của A và B gần bằng nhau (419 so với 402), nên khác biệt A–B chủ yếu do **ranh giới cắt**. Phân bố độ dài thì khác: B có nhiều chunk ngắn hơn và vài chunk gần 1000 ký tự.
+
+## 6. Các bước tiếp theo
+
+Embedding, Qdrant và đánh giá: xem [GUIDE.md](../GUIDE.md).

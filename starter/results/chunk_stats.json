@@ -1,0 +1,58 @@
+{
+  "params": {
+    "A": {
+      "size": 500,
+      "overlap": 50
+    },
+    "B": {
+      "max_size": 1000,
+      "min_size": 150
+    }
+  },
+  "strategies": {
+    "A": {
+      "chunks": 547,
+      "chars_total": 229017,
+      "len_min": 53,
+      "len_p10": 148,
+      "len_median": 499,
+      "len_mean": 419,
+      "len_p90": 500,
+      "len_max": 1855,
+      "multi_page_chunks": 2,
+      "multi_section_chunks": 228,
+      "special_chunks": 5,
+      "dev_evidence_coverage": {
+        "split": "dev",
+        "covered": 17,
+        "total": 18,
+        "not_coverable": [
+          "d04"
+        ]
+      }
+    },
+    "B": {
+      "chunks": 526,
+      "chars_total": 211334,
+      "len_min": 47,
+      "len_p10": 163,
+      "len_median": 304,
+      "len_mean": 402,
+      "len_p90": 844,
+      "len_max": 1855,
+      "multi_page_chunks": 121,
+      "multi_section_chunks": 69,
+      "special_chunks": 5,
+      "dev_evidence_coverage": {
+        "split": "dev",
+        "covered": 18,
+        "total": 18,
+        "not_coverable": []
+      }
+    },
+    "C": {
+      "same_as": "B",
+      "note": "C reuses B's chunks and vectors; it only adds a disease_no filter at query time."
+    }
+  }
+}

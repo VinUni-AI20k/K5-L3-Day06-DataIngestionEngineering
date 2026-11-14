@@ -13,3 +13,4 @@ __pycache__/
 data/*.pdf
 # Full normalized text of the source PDF: regenerate with python -m src.ingestion
 starter/results/pages_normalized.jsonl
+starter/results/chunks_*.jsonl
