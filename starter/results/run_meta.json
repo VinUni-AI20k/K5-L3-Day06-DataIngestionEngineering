@@ -1,0 +1,22 @@
+{
+  "document_id": "fpt_esg_report_2025",
+  "pdf_path": "/Users/hale/Code/AI in action lab/Lab day 6/K5-L3B-DAY06-LeThanhHa-2A202603901-DataIngestion/data/fpt_esg_report_2025.pdf",
+  "benchmark_path": "/Users/hale/Code/AI in action lab/Lab day 6/K5-L3B-DAY06-LeThanhHa-2A202603901-DataIngestion/data/benchmark.json",
+  "n_pages": 49,
+  "n_questions": 20,
+  "n_dev": 15,
+  "n_test": 5,
+  "n_chunks_A": 293,
+  "n_chunks_B": 198,
+  "n_chunks_C": 198,
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_dimensions": 1024,
+  "vector_store": "PostgreSQL + pgvector (cosine / HNSW)",
+  "strategies": {
+    "A": "fixed_size(size=500, overlap=50), không filter",
+    "B": "by_paragraph(max_size=800), không filter",
+    "C": "giống B + metadata filter (pillar) khi câu hỏi có filter"
+  },
+  "elapsed_seconds": 59.1,
+  "note": "Hit@1/Hit@3 tự động trong summary.json + traces.json. Audit thủ công coherence/metadata/grounding: artifacts/manual_audit.md (GUIDE §4)."
+}

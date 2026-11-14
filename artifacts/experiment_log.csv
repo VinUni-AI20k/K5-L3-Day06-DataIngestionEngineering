@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed_size,500,50,"document_id,source,page,pillar",none,BAAI/bge-m3 (local SentenceTransformers dim=1024 normalize=True),"Baseline: cửa sổ cố định dễ cắt giữa ý → Hit có thể ổn nhờ embedding mạnh nhưng coherence thấp hơn B",9/15,10/15,2/5,3/5,"chunks=293; pgvector cosine/HNSW; tổng pipeline ~59s (local CPU); chi phí API=0; trace=starter/results/traces.json; re-upsert cùng batch không nhân đôi (PK strategy+chunk_id)"
+B,by_paragraph,800,,"document_id,source,page,pillar",none,BAAI/bge-m3 (cùng model A),"Theo đoạn/bullet + giới hạn size → coherence và Evidence Hit@3 tốt hơn A trên dev; Hit@1 có thể gần parity vì bge-m3",9/15,11/15,2/5,3/5,"chunks=198; khác A đúng một yếu tố chunking; không filter lúc search"
+C,by_paragraph (reuse B),800,,"document_id,source,page,pillar",pillar when question.filter present,BAAI/bge-m3 (cùng model A/B),"Giống B; filter pillar chỉ khi câu có filter → cải thiện tuân thủ metadata/top-3 sạch hơn trên câu filter; Hit tổng có thể ≈ B vì chỉ 4/20 câu có filter",9/15,11/15,2/5,3/5,"chunks=198 (copy B); B–C chỉ khác filter; test filter q17: C top-3 toàn Environment (A/B lẫn Social)"

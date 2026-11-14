@@ -8,3 +8,5 @@ __pycache__/
 .DS_Store
 .pytest_cache/
 *.sqlite
+
+cursor-chat-ui/
