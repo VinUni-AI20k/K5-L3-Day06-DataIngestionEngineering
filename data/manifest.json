@@ -1,0 +1,19 @@
+{
+  "source_id": "fpt_esg_report_2025",
+  "title": "Báo cáo Phát triển Bền vững FPT 2025 (ESG Report)",
+  "source_path": "data/fpt_esg_report_2025.pdf",
+  "source_url": "https://fpt.com",
+  "license_or_permission": "Public corporate report published by FPT Corporation",
+  "accessed_at": "2026-11-13",
+  "total_physical_pages": 52,
+  "valid_content_pages": 49,
+  "excluded_pages": [1, 2, 52],
+  "page_counting_rule": "Loại bỏ trang bìa trước (trang 1, 2) và trang bìa sau/kết (trang 52). Tính 49 trang nội dung hợp lệ từ trang 3 đến trang 51.",
+  "metadata_fields": {
+    "pillar": {
+      "type": "string",
+      "values": ["Environment", "Social", "Governance"],
+      "description": "Ba trụ cột ESG chính của FPT: Môi trường (E), Xã hội (S), Quản trị (G). Gán theo trang: Environment={7,12,37-46}; Social={11,15,17,30-36,47-51}; Governance=các trang nội dung còn lại. Trang 12 có nội dung lẫn — gán Environment theo chủ đề thống trị/filter benchmark."
+    }
+  }
+}

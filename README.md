@@ -12,6 +12,25 @@ Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, r�
 
 Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
 
+## Cách chạy bài nộp (học viên)
+
+Corpus: [`data/fpt_esg_report_2025.pdf`](data/fpt_esg_report_2025.pdf) · Manifest: [`data/manifest.json`](data/manifest.json) · Benchmark: [`data/benchmark.json`](data/benchmark.json) (15 dev / 5 test).
+
+```bash
+cd starter
+python3 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+cp .env.example .env               # nếu chưa có .env
+docker compose -p day6_student_starter up -d --wait
+python scripts/check_setup.py
+python -m src.run                  # A/B/C → embed bge-m3 → pgvector → chấm Hit
+```
+
+Kết quả: `starter/results/` (`summary.json`, `traces.json`, `run_meta.json`).  
+Audit thủ công + nhật ký: `artifacts/manual_audit.md`, `artifacts/experiment_log.csv`.  
+Báo cáo: [`report/individual/2A202603901_LeThanhHa.md`](report/individual/2A202603901_LeThanhHa.md).
+
 ## 1. Xây pipeline
 
 ![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)
@@ -29,7 +48,7 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 ## 3. Chuẩn bị bài nộp
 
 1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
+2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và báo cáo cá nhân [`report/individual/2A202603901_LeThanhHa.md`](report/individual/2A202603901_LeThanhHa.md).
 3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
 
 ## Tài liệu hướng dẫn

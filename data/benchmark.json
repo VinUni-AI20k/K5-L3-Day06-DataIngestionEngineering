@@ -1,0 +1,221 @@
+{
+  "corpus_id": "fpt_esg_report_2025",
+  "title": "Benchmark RAG — Báo cáo Phát triển Bền vững FPT 2025",
+  "created_at": "2026-11-14",
+  "split_policy": "Chia trước khi chạy thí nghiệm: 15 dev / 5 test. Không dùng test để chỉnh chiến lược.",
+  "filter_field": "pillar",
+  "filter_values": ["Environment", "Social", "Governance"],
+  "notes": "evidence_quote đã kiểm chứng trên text PDF sau chuẩn hóa khoảng trắng. gold_page là số trang PDF vật lý (1-indexed).",
+  "stats": {
+    "total": 20,
+    "dev": 15,
+    "test": 5,
+    "with_filter": 4
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "FPT đặt mục tiêu Net Zero vào năm nào?",
+      "expected_answer": "Năm 2040",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 7,
+      "evidence_quote": "đặt mục tiêu đến năm 2030 giảm 15,8% tổng lượng phát thải khí nhà kính và hướng tới mục tiêu Net Zero vào năm 2040."
+    },
+    {
+      "id": "q02",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Năm 2025 là lần thứ bao nhiêu FPT thực hiện Báo cáo ESG?",
+      "expected_answer": "Lần thứ 05 (năm thứ 05)",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 5,
+      "evidence_quote": "2025 là năm thứ 05, FPT thực hiện Báo cáo Môi trường – Trách nhiệm xã hội – Quản trị (Báo cáo ESG)."
+    },
+    {
+      "id": "q03",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Kỳ báo cáo ESG năm 2025 của FPT bao phủ khoảng thời gian nào?",
+      "expected_answer": "Từ 01/01/2025 đến 31/12/2025",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 5,
+      "evidence_quote": "Thời gian báo cáo: 01/01/2025-31/12/2025."
+    },
+    {
+      "id": "q04",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "Đến năm 2030, FPT muốn cắt giảm tổng phát thải khí nhà kính bao nhiêu phần trăm so với lộ trình đã công bố?",
+      "expected_answer": "Giảm 15,8%",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 7,
+      "evidence_quote": "đặt mục tiêu đến năm 2030 giảm 15,8% tổng lượng phát thải khí nhà kính và hướng tới mục tiêu Net Zero vào năm 2040."
+    },
+    {
+      "id": "q05",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Tính đến hết năm 2025, FPT có bao nhiêu nhân sự và bao nhiêu nhân sự người nước ngoài đến từ bao nhiêu quốc tịch?",
+      "expected_answer": "54.110 nhân sự; 4.124 nhân sự nước ngoài với 82 quốc tịch",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 30,
+      "evidence_quote": "Tính đến hết năm 2025, FPT có 54.110 nhân sự làm việc tại hơn 30 quốc gia, trong đó, có 4.124 nhân sự người nước ngoài với 82 quốc tịch"
+    },
+    {
+      "id": "q06",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Đến ngày 31/12/2025, tỷ lệ lao động nữ và tỷ lệ nữ trong đội ngũ quản lý tại FPT là bao nhiêu?",
+      "expected_answer": "Lao động nữ 37,7%; nữ trong đội ngũ quản lý 36,4%",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 30,
+      "evidence_quote": "đến ngày 31/12/2025, tỷ lệ lao động nữ tại FPT đạt 37,7%, cao hơn mức trung bình toàn cầu của ngành CNTT (25% – ILO); nữ giới chiếm 36,4% đội ngũ quản lý, bao gồm cả các vị trí lãnh đạo cấp cao tại các công ty thành viên."
+    },
+    {
+      "id": "q07",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "Hệ thống học trực tuyến MOOCs của FPT ghi nhận quy mô giờ học và tỷ lệ hoàn thành như thế nào trong năm 2025?",
+      "expected_answer": "Hơn 3 triệu giờ học; tỷ lệ hoàn thành 99,7%",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 31,
+      "evidence_quote": "hệ thống MOOCs với hơn 3 triệu giờ học, tỷ lệ hoàn thành đạt 99,7%"
+    },
+    {
+      "id": "q08",
+      "type": "metadata_filter",
+      "split": "dev",
+      "question": "Trong quản trị chuỗi cung ứng, tỷ lệ nhà cung cấp trọng yếu tham gia đánh giá CSR năm 2025 là bao nhiêu và so với năm 2024 thế nào?",
+      "expected_answer": "42% năm 2025, tăng so với 18% năm 2024",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 21,
+      "evidence_quote": "42% nhà cung cấp trọng yếu tham gia đánh giá CSR trên Cổng Hệ thống mua sắm FPT, tăng mạnh so với tỷ lệ 18% của năm 2024",
+      "filter": {"pillar": "Governance"}
+    },
+    {
+      "id": "q09",
+      "type": "dieu_kien_ngoai_le",
+      "split": "dev",
+      "question": "Đối với phát triển bền vững, FPT xác định bao nhiêu nhóm rủi ro chính và gồm những nhóm nào?",
+      "expected_answer": "05 nhóm: Rủi ro chiến lược; Rủi ro hoạt động; Rủi ro tài chính; Rủi ro luật định; Rủi ro môi trường – thiên tai – dịch bệnh",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 24,
+      "evidence_quote": "đối với phát triển bền vững, Tập đoàn xác định có 05 nhóm rủi ro chính bao gồm: Rủi ro chiến lược, Rủi ro hoạt động, Rủi ro tài chính và Rủi ro luật định, Rủi ro môi trường – thiên tai – dịch bệnh."
+    },
+    {
+      "id": "q10",
+      "type": "metadata_filter",
+      "split": "dev",
+      "question": "FPT đã triển khai bao nhiêu hệ thống điện mặt trời mái nhà và tổng sản lượng đạt bao nhiêu?",
+      "expected_answer": "02 hệ thống; tổng sản lượng 842.749 kWh",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 12,
+      "evidence_quote": "Triển khai 02 hệ thống điện mặt trời mái nhà với tổng sản lượng 842.749 kWh",
+      "filter": {"pillar": "Environment"}
+    },
+    {
+      "id": "q11",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Năm 2025, chỉ số tiêu thụ nước của FPT thay đổi như thế nào so với năm 2024?",
+      "expected_answer": "Chỉ tăng 0,48%",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 42,
+      "evidence_quote": "Năm 2025, chỉ số tiêu thụ nước của FPT chỉ tăng 0,48% so với năm 2024."
+    },
+    {
+      "id": "q12",
+      "type": "dien_dat_lai",
+      "split": "dev",
+      "question": "Trung tâm bồi dưỡng tài năng trẻ FPT (FYT) hiện có bao nhiêu thành viên và năm 2025 đã cấp bao nhiêu suất học bổng?",
+      "expected_answer": "646 thành viên; 38 suất học bổng trong năm 2025",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 48,
+      "evidence_quote": "FYT hiện có 646 thành viên, trong đó, có rất nhiều thành viên đã trưởng thành và trở thành những nhà sáng lập, nhà quản lý, nhà khoa học và chuyên gia có tầm ảnh hưởng trong và ngoài nước. Trong năm 2025, FYT đã cấp 38 suất học bổng"
+    },
+    {
+      "id": "q13",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "Chiến dịch “Cùng đồng bào vượt lũ” thu được bao nhiêu tiền hỗ trợ và tái thiết bao nhiêu điểm trường?",
+      "expected_answer": "Hơn 05 tỷ đồng; tái thiết 26 điểm trường",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 50,
+      "evidence_quote": "số tiền hỗ trợ hơn 05 tỷ đồng, giúp tái thiết 26 điểm trường tại Nghệ An, Thanh Hóa, Lào Cai (cũ), Tuyên Quang (cũ)"
+    },
+    {
+      "id": "q14",
+      "type": "dieu_kien_ngoai_le",
+      "split": "dev",
+      "question": "Về độ tuổi lao động, FPT có cam kết loại trừ nhóm đối tượng nào?",
+      "expected_answer": "Cam kết không sử dụng lao động dưới 18 tuổi",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 30,
+      "evidence_quote": "cam kết không sử dụng lao động dưới 18 tuổi.",
+      "filter": {"pillar": "Social"}
+    },
+    {
+      "id": "q15",
+      "type": "truc_tiep",
+      "split": "dev",
+      "question": "FPT nhận được chứng chỉ ISO/IEC nào liên quan đến hệ thống quản lý trí tuệ nhân tạo?",
+      "expected_answer": "ISO/IEC 42001:2023",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 19,
+      "evidence_quote": "FPT nhận được chứng chỉ ISO/IEC 42001:2023 - tiêu chuẩn toàn cầu đầu tiên về Hệ thống quản lý Trí tuệ nhân tạo."
+    },
+    {
+      "id": "q16",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "FPT đứng ở vị trí nào trong xếp hạng doanh nghiệp Việt Nam có chất lượng quản trị công ty tốt nhất ASEAN?",
+      "expected_answer": "Top 5",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 9,
+      "evidence_quote": "Top 5 Doanh nghiệp Việt Nam có chất lượng quản trị công ty tốt nhất ASEAN, Top 8 Doanh nghiệp vốn hóa lớn có quản trị công ty tốt nhất"
+    },
+    {
+      "id": "q17",
+      "type": "metadata_filter",
+      "split": "test",
+      "question": "Các hoạt động trồng rừng của FPT tại Sóc Trăng (cũ), Tp.Huế và Thanh Hóa đã trồng bao nhiêu cây?",
+      "expected_answer": "4.500 cây",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 41,
+      "evidence_quote": "Tiên phong thực hiện thành công các hoạt động trồng rừng tại Sóc Trăng (cũ), Tp.Huế, Thanh Hóa với 4.500 cây được trồng tại các khu vực rừng ngập mặn, khu bảo tồn thiên nhiên",
+      "filter": {"pillar": "Environment"}
+    },
+    {
+      "id": "q18",
+      "type": "dien_dat_lai",
+      "split": "test",
+      "question": "FPT hợp tác với tổ chức nào để triển khai dự án “Bếp Xanh – Sống Lành”, và dự án được thực hiện tại đâu?",
+      "expected_answer": "World Vision; tại xã Sín Chải, tỉnh Điện Biên",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 51,
+      "evidence_quote": "Tổ chức World Vision và FPT ký kết Biên bản ghi nhớ hợp tác triển khai Dự án “Bếp Xanh – Sống Lành” tại xã Sín Chải, tỉnh Điện Biên."
+    },
+    {
+      "id": "q19",
+      "type": "dieu_kien_ngoai_le",
+      "split": "test",
+      "question": "FPT có quy tắc nào về việc ký hợp đồng với nhà cung cấp liên quan đến sức khỏe, an toàn lao động và môi trường?",
+      "expected_answer": "Không ký hợp đồng với các nhà cung cấp có hoạt động ảnh hưởng đến sức khỏe, an toàn lao động và môi trường",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 8,
+      "evidence_quote": "Không ký hợp đồng với các nhà cung cấp có các hoạt động ảnh hưởng đến sức khoẻ, an toàn lao động và môi trường."
+    },
+    {
+      "id": "q20",
+      "type": "truc_tiep",
+      "split": "test",
+      "question": "Năm 2025, FPT ghi nhận tổng số giờ đào tạo và số giờ học trung bình trên mỗi CBNV/năm là bao nhiêu?",
+      "expected_answer": "Trên 7,1 triệu giờ đào tạo; 151 giờ học trung bình/năm/CBNV",
+      "gold_source_id": "fpt_esg_report_2025",
+      "gold_page": 11,
+      "evidence_quote": "Ghi nhận trên 7,1 triệu giờ đào tạo, đạt 151 giờ học trung bình/năm/CBNV"
+    }
+  ]
+}
