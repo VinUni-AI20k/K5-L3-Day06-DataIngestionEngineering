@@ -1,0 +1,233 @@
+[
+  {
+    "document_id": "vaswani-2017-transformer",
+    "source": "data/raw/vaswani_2017_transformer.pdf",
+    "page": 11,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3216)."
+  },
+  {
+    "document_id": "vaswani-2017-transformer",
+    "source": "data/raw/vaswani_2017_transformer.pdf",
+    "page": 12,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3220)."
+  },
+  {
+    "document_id": "vaswani-2017-transformer",
+    "source": "data/raw/vaswani_2017_transformer.pdf",
+    "page": 13,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=812)."
+  },
+  {
+    "document_id": "vaswani-2017-transformer",
+    "source": "data/raw/vaswani_2017_transformer.pdf",
+    "page": 14,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=815)."
+  },
+  {
+    "document_id": "vaswani-2017-transformer",
+    "source": "data/raw/vaswani_2017_transformer.pdf",
+    "page": 15,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=818)."
+  },
+  {
+    "document_id": "lewis-2020-rag",
+    "source": "data/raw/lewis_2020_rag.pdf",
+    "page": 11,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3767)."
+  },
+  {
+    "document_id": "lewis-2020-rag",
+    "source": "data/raw/lewis_2020_rag.pdf",
+    "page": 12,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3990)."
+  },
+  {
+    "document_id": "lewis-2020-rag",
+    "source": "data/raw/lewis_2020_rag.pdf",
+    "page": 13,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=4010)."
+  },
+  {
+    "document_id": "lewis-2020-rag",
+    "source": "data/raw/lewis_2020_rag.pdf",
+    "page": 14,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3984)."
+  },
+  {
+    "document_id": "lewis-2020-rag",
+    "source": "data/raw/lewis_2020_rag.pdf",
+    "page": 15,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=4006)."
+  },
+  {
+    "document_id": "lewis-2020-rag",
+    "source": "data/raw/lewis_2020_rag.pdf",
+    "page": 16,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=1138)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 2,
+    "event": "GARBLED_FIGURE_CMAP_CLEANED",
+    "detail": "Stripped 156 embedded figure lines containing ASCII control bytes."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 11,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3751)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 12,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3792)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 13,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=1223)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 14,
+    "event": "GARBLED_FIGURE_CMAP_CLEANED",
+    "detail": "Stripped 96 embedded figure lines containing ASCII control bytes."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 15,
+    "event": "GARBLED_FIGURE_CMAP_CLEANED",
+    "detail": "Stripped 109 embedded figure lines containing ASCII control bytes."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 16,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3326)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 17,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3984)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 18,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=4377)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 19,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=645)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 20,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3262)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 21,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3553)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 22,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3267)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 23,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=1739)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 24,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=2189)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 25,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=2406)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 26,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=2684)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 27,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=1125)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 28,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=2661)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 29,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=3267)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 30,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=2034)."
+  },
+  {
+    "document_id": "yao-2022-react",
+    "source": "data/raw/yao_2022_react.pdf",
+    "page": 31,
+    "event": "EXCLUDED_NON_CONTENT_PAGE",
+    "detail": "Excluded per manifest rules (raw_chars=2944)."
+  }
+]

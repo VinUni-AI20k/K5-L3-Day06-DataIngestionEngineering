@@ -1,0 +1,33 @@
+[EXCLUDED_NON_CONTENT_PAGE] doc=vaswani-2017-transformer page=11 source=data/raw/vaswani_2017_transformer.pdf | Excluded per manifest rules (raw_chars=3216).
+[EXCLUDED_NON_CONTENT_PAGE] doc=vaswani-2017-transformer page=12 source=data/raw/vaswani_2017_transformer.pdf | Excluded per manifest rules (raw_chars=3220).
+[EXCLUDED_NON_CONTENT_PAGE] doc=vaswani-2017-transformer page=13 source=data/raw/vaswani_2017_transformer.pdf | Excluded per manifest rules (raw_chars=812).
+[EXCLUDED_NON_CONTENT_PAGE] doc=vaswani-2017-transformer page=14 source=data/raw/vaswani_2017_transformer.pdf | Excluded per manifest rules (raw_chars=815).
+[EXCLUDED_NON_CONTENT_PAGE] doc=vaswani-2017-transformer page=15 source=data/raw/vaswani_2017_transformer.pdf | Excluded per manifest rules (raw_chars=818).
+[EXCLUDED_NON_CONTENT_PAGE] doc=lewis-2020-rag page=11 source=data/raw/lewis_2020_rag.pdf | Excluded per manifest rules (raw_chars=3767).
+[EXCLUDED_NON_CONTENT_PAGE] doc=lewis-2020-rag page=12 source=data/raw/lewis_2020_rag.pdf | Excluded per manifest rules (raw_chars=3990).
+[EXCLUDED_NON_CONTENT_PAGE] doc=lewis-2020-rag page=13 source=data/raw/lewis_2020_rag.pdf | Excluded per manifest rules (raw_chars=4010).
+[EXCLUDED_NON_CONTENT_PAGE] doc=lewis-2020-rag page=14 source=data/raw/lewis_2020_rag.pdf | Excluded per manifest rules (raw_chars=3984).
+[EXCLUDED_NON_CONTENT_PAGE] doc=lewis-2020-rag page=15 source=data/raw/lewis_2020_rag.pdf | Excluded per manifest rules (raw_chars=4006).
+[EXCLUDED_NON_CONTENT_PAGE] doc=lewis-2020-rag page=16 source=data/raw/lewis_2020_rag.pdf | Excluded per manifest rules (raw_chars=1138).
+[GARBLED_FIGURE_CMAP_CLEANED] doc=yao-2022-react page=02 source=data/raw/yao_2022_react.pdf | Stripped 156 embedded figure lines containing ASCII control bytes.
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=11 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3751).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=12 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3792).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=13 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=1223).
+[GARBLED_FIGURE_CMAP_CLEANED] doc=yao-2022-react page=14 source=data/raw/yao_2022_react.pdf | Stripped 96 embedded figure lines containing ASCII control bytes.
+[GARBLED_FIGURE_CMAP_CLEANED] doc=yao-2022-react page=15 source=data/raw/yao_2022_react.pdf | Stripped 109 embedded figure lines containing ASCII control bytes.
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=16 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3326).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=17 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3984).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=18 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=4377).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=19 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=645).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=20 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3262).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=21 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3553).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=22 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3267).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=23 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=1739).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=24 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=2189).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=25 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=2406).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=26 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=2684).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=27 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=1125).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=28 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=2661).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=29 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=3267).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=30 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=2034).
+[EXCLUDED_NON_CONTENT_PAGE] doc=yao-2022-react page=31 source=data/raw/yao_2022_react.pdf | Excluded per manifest rules (raw_chars=2944).

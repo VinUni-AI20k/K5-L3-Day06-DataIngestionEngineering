@@ -1,0 +1,114 @@
+{
+  "timestamp": "2026-11-14T03:08:36Z",
+  "corpus_valid_pages": 37,
+  "embedding_model": {
+    "provider": "SentenceTransformers (Local HuggingFace)",
+    "model_name": "google/embeddinggemma-2",
+    "dimensions": 768,
+    "normalize_embeddings": true,
+    "model_load_sec": 10.3122,
+    "api_cost_usd": 0.0
+  },
+  "vector_store": {
+    "backend": "Qdrant Local Persistent (qdrant-client 1.20.0)",
+    "storage_path": "results\\qdrant_db",
+    "collection_name": "day06_document_chunks",
+    "distance_metric": "Cosine (Distance.COSINE)",
+    "search_mode": "Exact Cosine similarity + structured payload Filter"
+  },
+  "idempotency_verification": {
+    "strategy_tested": "B",
+    "expected_count": 232,
+    "count_before_reingest": 232,
+    "count_after_reingest": 232,
+    "idempotent_passed": true
+  },
+  "strategies": {
+    "A": {
+      "description": "Fixed-size chunking (size=500 chars, overlap=50 chars), no metadata filtering",
+      "chunking_method": "fixed_size",
+      "parameters": {
+        "size": 500,
+        "overlap": 50,
+        "metadata_filter_enabled": false
+      },
+      "chunk_stats": {
+        "chunk_count": 300,
+        "total_chars": 141538,
+        "total_approx_tokens": 35397,
+        "min_chars": 56,
+        "p25_chars": 499,
+        "median_chars": 500,
+        "mean_chars": 471.8,
+        "p75_chars": 500,
+        "max_chars": 500
+      },
+      "timings_sec": {
+        "pdf_ingest_and_normalize": 2.0374,
+        "chunking": 0.0071,
+        "embedding": 168.2452,
+        "upsert": 13.033,
+        "search_20_queries": 0.1946
+      },
+      "cost_usd": 0.0
+    },
+    "B": {
+      "description": "Paragraph/Heading-aware chunking (max_size=800 chars), no metadata filtering",
+      "chunking_method": "by_paragraph",
+      "parameters": {
+        "max_size": 800,
+        "metadata_filter_enabled": false
+      },
+      "chunk_stats": {
+        "chunk_count": 232,
+        "total_chars": 128437,
+        "total_approx_tokens": 32109,
+        "min_chars": 47,
+        "p25_chars": 385,
+        "median_chars": 620,
+        "mean_chars": 553.6,
+        "p75_chars": 722,
+        "max_chars": 799
+      },
+      "timings_sec": {
+        "pdf_ingest_and_normalize": 2.0374,
+        "chunking": 0.0023,
+        "embedding": 144.6698,
+        "upsert": 5.5219,
+        "search_20_queries": 0.1684
+      },
+      "cost_usd": 0.0
+    },
+    "C": {
+      "description": "Paragraph/Heading-aware chunking (max_size=800 chars) + Metadata Filtering on filter-eligible queries",
+      "chunking_method": "by_paragraph",
+      "parameters": {
+        "max_size": 800,
+        "metadata_filter_enabled": true,
+        "filter_fields": [
+          "category",
+          "year"
+        ]
+      },
+      "chunk_stats": {
+        "chunk_count": 232,
+        "total_chars": 128437,
+        "total_approx_tokens": 32109,
+        "min_chars": 47,
+        "p25_chars": 385,
+        "median_chars": 620,
+        "mean_chars": 553.6,
+        "p75_chars": 722,
+        "max_chars": 799
+      },
+      "timings_sec": {
+        "pdf_ingest_and_normalize": 2.0374,
+        "chunking": 0.0023,
+        "embedding": 144.6698,
+        "upsert": 3.603,
+        "search_20_queries": 0.1618
+      },
+      "cost_usd": 0.0
+    }
+  }
+}

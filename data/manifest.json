@@ -1,0 +1,670 @@
+{
+  "corpus_name": "Foundational Architectures for Modern AI Systems: Transformer, RAG, and ReAct Agents",
+  "generated_at": "2026-11-14T02:48:24Z",
+  "page_counting_rule": "Count only physical PDF pages containing substantive technical prose, mathematical formulations, architectural descriptions, or experimental analysis. Exclude pages consisting solely of bibliographic references, isolated attention visualization heatmaps without prose, or verbatim few-shot prompt/trajectory dumps.",
+  "summary": {
+    "total_documents": 3,
+    "total_physical_pages": 67,
+    "total_valid_content_pages": 37,
+    "minimum_required_valid_pages": 30,
+    "meets_minimum_requirement": true,
+    "total_valid_raw_chars": 136721,
+    "total_valid_normalized_chars": 136604
+  },
+  "metadata_schema": {
+    "required_fields": [
+      "document_id",
+      "source",
+      "page"
+    ],
+    "filterable_fields": {
+      "category": {
+        "type": "string",
+        "allowed_values": [
+          "architecture",
+          "rag",
+          "agent"
+        ],
+        "source_of_value": "Document domain classification in manifest",
+        "rationale": "Distinguishes between core neural sequence transduction (architecture), retrieval-augmented generation (rag), and reasoning-acting agent loops (agent)."
+      },
+      "year": {
+        "type": "integer",
+        "allowed_values": [
+          2017,
+          2020,
+          2022
+        ],
+        "source_of_value": "Original publication year on arXiv",
+        "rationale": "Allows temporal filtering across foundational milestones (2017 vs 2020 vs 2022)."
+      },
+      "section": {
+        "type": "string",
+        "source_of_value": "Extracted from document section headings during ingestion",
+        "rationale": "Tracks structural context within each paper (e.g., Abstract, Introduction, Model Architecture, Experiments)."
+      }
+    }
+  },
+  "documents": [
+    {
+      "source_id": "vaswani-2017-transformer",
+      "title": "Attention Is All You Need",
+      "authors": "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin",
+      "year": 2017,
+      "category": "architecture",
+      "source_path_or_url": "https://arxiv.org/pdf/1706.03762.pdf",
+      "local_path": "data/raw/vaswani_2017_transformer.pdf",
+      "license_or_permission": "arXiv.org perpetual, non-exclusive license to distribute (Open Access)",
+      "version_or_snapshot": "arXiv:1706.03762v7",
+      "accessed_at": "2026-11-14T02:48:24Z",
+      "physical_pages_count": 15,
+      "valid_content_pages_count": 10,
+      "valid_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "valid_page_ids": [
+        "vaswani-2017-transformer_p01",
+        "vaswani-2017-transformer_p02",
+        "vaswani-2017-transformer_p03",
+        "vaswani-2017-transformer_p04",
+        "vaswani-2017-transformer_p05",
+        "vaswani-2017-transformer_p06",
+        "vaswani-2017-transformer_p07",
+        "vaswani-2017-transformer_p08",
+        "vaswani-2017-transformer_p09",
+        "vaswani-2017-transformer_p10"
+      ],
+      "excluded_pages": {
+        "11-12": "Pure bibliography / References section ([1]-[40])",
+        "13-15": "Appendix Attention Visualizations consisting only of isolated word tokens in heatmap figures"
+      },
+      "valid_pages_raw_chars": 30734,
+      "valid_pages_normalized_chars": 30710,
+      "pages": [
+        {
+          "page": 1,
+          "page_id": "vaswani-2017-transformer_p01",
+          "included": true,
+          "raw_chars": 2860,
+          "normalized_chars": 2856
+        },
+        {
+          "page": 2,
+          "page_id": "vaswani-2017-transformer_p02",
+          "included": true,
+          "raw_chars": 4258,
+          "normalized_chars": 4252
+        },
+        {
+          "page": 3,
+          "page_id": "vaswani-2017-transformer_p03",
+          "included": true,
+          "raw_chars": 1827,
+          "normalized_chars": 1825
+        },
+        {
+          "page": 4,
+          "page_id": "vaswani-2017-transformer_p04",
+          "included": true,
+          "raw_chars": 2508,
+          "normalized_chars": 2506
+        },
+        {
+          "page": 5,
+          "page_id": "vaswani-2017-transformer_p05",
+          "included": true,
+          "raw_chars": 3199,
+          "normalized_chars": 3197
+        },
+        {
+          "page": 6,
+          "page_id": "vaswani-2017-transformer_p06",
+          "included": true,
+          "raw_chars": 3477,
+          "normalized_chars": 3475
+        },
+        {
+          "page": 7,
+          "page_id": "vaswani-2017-transformer_p07",
+          "included": true,
+          "raw_chars": 3324,
+          "normalized_chars": 3322
+        },
+        {
+          "page": 8,
+          "page_id": "vaswani-2017-transformer_p08",
+          "included": true,
+          "raw_chars": 3195,
+          "normalized_chars": 3195
+        },
+        {
+          "page": 9,
+          "page_id": "vaswani-2017-transformer_p09",
+          "included": true,
+          "raw_chars": 2974,
+          "normalized_chars": 2974
+        },
+        {
+          "page": 10,
+          "page_id": "vaswani-2017-transformer_p10",
+          "included": true,
+          "raw_chars": 3112,
+          "normalized_chars": 3108
+        },
+        {
+          "page": 11,
+          "page_id": "vaswani-2017-transformer_p11",
+          "included": false,
+          "raw_chars": 3216,
+          "normalized_chars": 3208
+        },
+        {
+          "page": 12,
+          "page_id": "vaswani-2017-transformer_p12",
+          "included": false,
+          "raw_chars": 3220,
+          "normalized_chars": 3218
+        },
+        {
+          "page": 13,
+          "page_id": "vaswani-2017-transformer_p13",
+          "included": false,
+          "raw_chars": 812,
+          "normalized_chars": 812
+        },
+        {
+          "page": 14,
+          "page_id": "vaswani-2017-transformer_p14",
+          "included": false,
+          "raw_chars": 815,
+          "normalized_chars": 815
+        },
+        {
+          "page": 15,
+          "page_id": "vaswani-2017-transformer_p15",
+          "included": false,
+          "raw_chars": 818,
+          "normalized_chars": 818
+        }
+      ]
+    },
+    {
+      "source_id": "lewis-2020-rag",
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "authors": "Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela",
+      "year": 2020,
+      "category": "rag",
+      "source_path_or_url": "https://arxiv.org/pdf/2005.11401.pdf",
+      "local_path": "data/raw/lewis_2020_rag.pdf",
+      "license_or_permission": "arXiv.org perpetual, non-exclusive license to distribute (Open Access)",
+      "version_or_snapshot": "arXiv:2005.11401v4",
+      "accessed_at": "2026-11-14T02:48:24Z",
+      "physical_pages_count": 19,
+      "valid_content_pages_count": 13,
+      "valid_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        17,
+        18,
+        19
+      ],
+      "valid_page_ids": [
+        "lewis-2020-rag_p01",
+        "lewis-2020-rag_p02",
+        "lewis-2020-rag_p03",
+        "lewis-2020-rag_p04",
+        "lewis-2020-rag_p05",
+        "lewis-2020-rag_p06",
+        "lewis-2020-rag_p07",
+        "lewis-2020-rag_p08",
+        "lewis-2020-rag_p09",
+        "lewis-2020-rag_p10",
+        "lewis-2020-rag_p17",
+        "lewis-2020-rag_p18",
+        "lewis-2020-rag_p19"
+      ],
+      "excluded_pages": {
+        "11-16": "Pure bibliography / References section ([7]-[68])"
+      },
+      "valid_pages_raw_chars": 48161,
+      "valid_pages_normalized_chars": 48096,
+      "pages": [
+        {
+          "page": 1,
+          "page_id": "lewis-2020-rag_p01",
+          "included": true,
+          "raw_chars": 2899,
+          "normalized_chars": 2881
+        },
+        {
+          "page": 2,
+          "page_id": "lewis-2020-rag_p02",
+          "included": true,
+          "raw_chars": 4545,
+          "normalized_chars": 4528
+        },
+        {
+          "page": 3,
+          "page_id": "lewis-2020-rag_p03",
+          "included": true,
+          "raw_chars": 3655,
+          "normalized_chars": 3655
+        },
+        {
+          "page": 4,
+          "page_id": "lewis-2020-rag_p04",
+          "included": true,
+          "raw_chars": 4205,
+          "normalized_chars": 4201
+        },
+        {
+          "page": 5,
+          "page_id": "lewis-2020-rag_p05",
+          "included": true,
+          "raw_chars": 4556,
+          "normalized_chars": 4550
+        },
+        {
+          "page": 6,
+          "page_id": "lewis-2020-rag_p06",
+          "included": true,
+          "raw_chars": 4110,
+          "normalized_chars": 4108
+        },
+        {
+          "page": 7,
+          "page_id": "lewis-2020-rag_p07",
+          "included": true,
+          "raw_chars": 4335,
+          "normalized_chars": 4331
+        },
+        {
+          "page": 8,
+          "page_id": "lewis-2020-rag_p08",
+          "included": true,
+          "raw_chars": 3186,
+          "normalized_chars": 3184
+        },
+        {
+          "page": 9,
+          "page_id": "lewis-2020-rag_p09",
+          "included": true,
+          "raw_chars": 4124,
+          "normalized_chars": 4122
+        },
+        {
+          "page": 10,
+          "page_id": "lewis-2020-rag_p10",
+          "included": true,
+          "raw_chars": 3778,
+          "normalized_chars": 3776
+        },
+        {
+          "page": 11,
+          "page_id": "lewis-2020-rag_p11",
+          "included": false,
+          "raw_chars": 3767,
+          "normalized_chars": 3759
+        },
+        {
+          "page": 12,
+          "page_id": "lewis-2020-rag_p12",
+          "included": false,
+          "raw_chars": 3990,
+          "normalized_chars": 3970
+        },
+        {
+          "page": 13,
+          "page_id": "lewis-2020-rag_p13",
+          "included": false,
+          "raw_chars": 4010,
+          "normalized_chars": 4006
+        },
+        {
+          "page": 14,
+          "page_id": "lewis-2020-rag_p14",
+          "included": false,
+          "raw_chars": 3984,
+          "normalized_chars": 3980
+        },
+        {
+          "page": 15,
+          "page_id": "lewis-2020-rag_p15",
+          "included": false,
+          "raw_chars": 4006,
+          "normalized_chars": 4002
+        },
+        {
+          "page": 16,
+          "page_id": "lewis-2020-rag_p16",
+          "included": false,
+          "raw_chars": 1138,
+          "normalized_chars": 1132
+        },
+        {
+          "page": 17,
+          "page_id": "lewis-2020-rag_p17",
+          "included": true,
+          "raw_chars": 2560,
+          "normalized_chars": 2558
+        },
+        {
+          "page": 18,
+          "page_id": "lewis-2020-rag_p18",
+          "included": true,
+          "raw_chars": 4246,
+          "normalized_chars": 4242
+        },
+        {
+          "page": 19,
+          "page_id": "lewis-2020-rag_p19",
+          "included": true,
+          "raw_chars": 1962,
+          "normalized_chars": 1960
+        }
+      ]
+    },
+    {
+      "source_id": "yao-2022-react",
+      "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+      "authors": "Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao",
+      "year": 2022,
+      "category": "agent",
+      "source_path_or_url": "https://arxiv.org/pdf/2210.03629.pdf",
+      "local_path": "data/raw/yao_2022_react.pdf",
+      "license_or_permission": "Creative Commons Attribution 4.0 International (CC-BY 4.0)",
+      "version_or_snapshot": "arXiv:2210.03629v3 (Published at ICLR 2023)",
+      "accessed_at": "2026-11-14T02:48:24Z",
+      "physical_pages_count": 33,
+      "valid_content_pages_count": 14,
+      "valid_page_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        14,
+        15,
+        32,
+        33
+      ],
+      "valid_page_ids": [
+        "yao-2022-react_p01",
+        "yao-2022-react_p02",
+        "yao-2022-react_p03",
+        "yao-2022-react_p04",
+        "yao-2022-react_p05",
+        "yao-2022-react_p06",
+        "yao-2022-react_p07",
+        "yao-2022-react_p08",
+        "yao-2022-react_p09",
+        "yao-2022-react_p10",
+        "yao-2022-react_p14",
+        "yao-2022-react_p15",
+        "yao-2022-react_p32",
+        "yao-2022-react_p33"
+      ],
+      "excluded_pages": {
+        "11-13": "Pure bibliography / References section",
+        "16-31": "Appendices C & D containing verbatim few-shot prompt dumps and raw trajectory logs (non-explanatory boilerplate)"
+      },
+      "valid_pages_raw_chars": 57826,
+      "valid_pages_normalized_chars": 57798,
+      "pages": [
+        {
+          "page": 1,
+          "page_id": "yao-2022-react_p01",
+          "included": true,
+          "raw_chars": 3600,
+          "normalized_chars": 3596
+        },
+        {
+          "page": 2,
+          "page_id": "yao-2022-react_p02",
+          "included": true,
+          "raw_chars": 5759,
+          "normalized_chars": 5759
+        },
+        {
+          "page": 3,
+          "page_id": "yao-2022-react_p03",
+          "included": true,
+          "raw_chars": 5183,
+          "normalized_chars": 5179
+        },
+        {
+          "page": 4,
+          "page_id": "yao-2022-react_p04",
+          "included": true,
+          "raw_chars": 4287,
+          "normalized_chars": 4283
+        },
+        {
+          "page": 5,
+          "page_id": "yao-2022-react_p05",
+          "included": true,
+          "raw_chars": 3664,
+          "normalized_chars": 3664
+        },
+        {
+          "page": 6,
+          "page_id": "yao-2022-react_p06",
+          "included": true,
+          "raw_chars": 4618,
+          "normalized_chars": 4614
+        },
+        {
+          "page": 7,
+          "page_id": "yao-2022-react_p07",
+          "included": true,
+          "raw_chars": 4066,
+          "normalized_chars": 4066
+        },
+        {
+          "page": 8,
+          "page_id": "yao-2022-react_p08",
+          "included": true,
+          "raw_chars": 4111,
+          "normalized_chars": 4105
+        },
+        {
+          "page": 9,
+          "page_id": "yao-2022-react_p09",
+          "included": true,
+          "raw_chars": 4991,
+          "normalized_chars": 4989
+        },
+        {
+          "page": 10,
+          "page_id": "yao-2022-react_p10",
+          "included": true,
+          "raw_chars": 3809,
+          "normalized_chars": 3805
+        },
+        {
+          "page": 11,
+          "page_id": "yao-2022-react_p11",
+          "included": false,
+          "raw_chars": 3751,
+          "normalized_chars": 3743
+        },
+        {
+          "page": 12,
+          "page_id": "yao-2022-react_p12",
+          "included": false,
+          "raw_chars": 3792,
+          "normalized_chars": 3788
+        },
+        {
+          "page": 13,
+          "page_id": "yao-2022-react_p13",
+          "included": false,
+          "raw_chars": 1223,
+          "normalized_chars": 1221
+        },
+        {
+          "page": 14,
+          "page_id": "yao-2022-react_p14",
+          "included": true,
+          "raw_chars": 4359,
+          "normalized_chars": 4359
+        },
+        {
+          "page": 15,
+          "page_id": "yao-2022-react_p15",
+          "included": true,
+          "raw_chars": 4269,
+          "normalized_chars": 4269
+        },
+        {
+          "page": 16,
+          "page_id": "yao-2022-react_p16",
+          "included": false,
+          "raw_chars": 3326,
+          "normalized_chars": 3326
+        },
+        {
+          "page": 17,
+          "page_id": "yao-2022-react_p17",
+          "included": false,
+          "raw_chars": 3984,
+          "normalized_chars": 3984
+        },
+        {
+          "page": 18,
+          "page_id": "yao-2022-react_p18",
+          "included": false,
+          "raw_chars": 4377,
+          "normalized_chars": 4377
+        },
+        {
+          "page": 19,
+          "page_id": "yao-2022-react_p19",
+          "included": false,
+          "raw_chars": 645,
+          "normalized_chars": 645
+        },
+        {
+          "page": 20,
+          "page_id": "yao-2022-react_p20",
+          "included": false,
+          "raw_chars": 3262,
+          "normalized_chars": 3262
+        },
+        {
+          "page": 21,
+          "page_id": "yao-2022-react_p21",
+          "included": false,
+          "raw_chars": 3553,
+          "normalized_chars": 3553
+        },
+        {
+          "page": 22,
+          "page_id": "yao-2022-react_p22",
+          "included": false,
+          "raw_chars": 3267,
+          "normalized_chars": 3267
+        },
+        {
+          "page": 23,
+          "page_id": "yao-2022-react_p23",
+          "included": false,
+          "raw_chars": 1739,
+          "normalized_chars": 1739
+        },
+        {
+          "page": 24,
+          "page_id": "yao-2022-react_p24",
+          "included": false,
+          "raw_chars": 2189,
+          "normalized_chars": 2189
+        },
+        {
+          "page": 25,
+          "page_id": "yao-2022-react_p25",
+          "included": false,
+          "raw_chars": 2406,
+          "normalized_chars": 2404
+        },
+        {
+          "page": 26,
+          "page_id": "yao-2022-react_p26",
+          "included": false,
+          "raw_chars": 2684,
+          "normalized_chars": 2684
+        },
+        {
+          "page": 27,
+          "page_id": "yao-2022-react_p27",
+          "included": false,
+          "raw_chars": 1125,
+          "normalized_chars": 1125
+        },
+        {
+          "page": 28,
+          "page_id": "yao-2022-react_p28",
+          "included": false,
+          "raw_chars": 2661,
+          "normalized_chars": 2661
+        },
+        {
+          "page": 29,
+          "page_id": "yao-2022-react_p29",
+          "included": false,
+          "raw_chars": 3267,
+          "normalized_chars": 3267
+        },
+        {
+          "page": 30,
+          "page_id": "yao-2022-react_p30",
+          "included": false,
+          "raw_chars": 2034,
+          "normalized_chars": 2034
+        },
+        {
+          "page": 31,
+          "page_id": "yao-2022-react_p31",
+          "included": false,
+          "raw_chars": 2944,
+          "normalized_chars": 2944
+        },
+        {
+          "page": 32,
+          "page_id": "yao-2022-react_p32",
+          "included": true,
+          "raw_chars": 3276,
+          "normalized_chars": 3276
+        },
+        {
+          "page": 33,
+          "page_id": "yao-2022-react_p33",
+          "included": true,
+          "raw_chars": 1834,
+          "normalized_chars": 1834
+        }
+      ]
+    }
+  ]
+}

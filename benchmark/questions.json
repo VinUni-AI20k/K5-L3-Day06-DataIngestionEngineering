@@ -1,0 +1,368 @@
+{
+  "benchmark_name": "Day 06 Data Ingestion Engineering Benchmark (Transformer 2017, RAG 2020, ReAct 2022)",
+  "created_before_experiment_run": true,
+  "selection_criteria_locked_before_test": "Primary selection criterion on Dev split (15 questions): highest Evidence Hit@3, followed by Hit@1, then Chunk Coherence (/2.0) and Metadata Filter Compliance, while considering ingestion time and chunk count trade-offs.",
+  "summary": {
+    "total_questions": 20,
+    "dev_questions": 15,
+    "test_questions": 5,
+    "filtered_questions_total": 5,
+    "filtered_questions_dev": 3,
+    "filtered_questions_test": 2,
+    "by_type": {
+      "truc_tiep": 9,
+      "dien_dat_lai": 4,
+      "dieu_kien_ngoai_le": 7
+    }
+  },
+  "questions": [
+    {
+      "id": "q01",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "How many identical layers make up the Encoder stack in the Transformer architecture, and what is the output dimension dmodel produced by all sub-layers and embedding layers?",
+      "expected_answer": "The encoder is composed of a stack of N = 6 identical layers, and all sub-layers as well as embedding layers produce outputs of dimension dmodel = 512.",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 3,
+      "evidence_quote": "Encoder: The encoder is composed of a stack of N = 6 identical layers. Each layer has two sub-layers. The first is a multi-head self-attention mechanism, and the second is a simple, positionwise fully connected feed-forward network. We employ a residual connection [11] around each of the two sub-layers, followed by layer normalization [ 1]. That is, the output of each sub-layer is LayerNorm(x + Sublayer(x)), where Sublayer(x) is the function implemented by the sub-layer itself. To facilitate these residual connections, all sub-layers in the model, as well as the embedding layers, produce outputs of dimension dmodel = 512.",
+      "evidence_anchors": [
+        "N = 6 identical layers",
+        "dmodel = 512"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q02",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "When comparing dot-product attention and additive attention, under what condition on dk does additive attention outperform unscaled dot-product attention, and why does this happen?",
+      "expected_answer": "For small values of dk the two mechanisms perform similarly, but for larger values of dk additive attention outperforms dot-product attention without scaling because the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients. Scaling by 1/sqrt(dk) counteracts this effect.",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 4,
+      "evidence_quote": "While for small values of dk the two mechanisms perform similarly, additive attention outperforms dot product attention without scaling for larger values of dk [3]. We suspect that for large values of dk, the dot products grow large in magnitude, pushing the softmax function into regions where it has extremely small gradients 4. To counteract this effect, we scale the dot products by 1√dk .",
+      "evidence_anchors": [
+        "small values of dk",
+        "extremely small gradients",
+        "scale the dot products"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q03",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "In Multi-Head Attention and Position-wise Feed-Forward Networks of the base Transformer, how many parallel attention heads h are used, what are dk and dv, and what is the inner-layer dimensionality dff?",
+      "expected_answer": "Multi-Head Attention uses h = 8 parallel attention layers (heads) with dk = dv = dmodel/h = 64, and the Position-wise Feed-Forward Network has input/output dimension dmodel = 512 and inner-layer dimensionality dff = 2048.",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 5,
+      "evidence_quote": "In this work we employ h = 8 parallel attention layers, or heads. For each of these we use dk = dv = dmodel/h = 64.",
+      "evidence_anchors": [
+        "h = 8 parallel attention layers",
+        "dk = dv = dmodel/h = 64"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q04",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "In terms of computational complexity per layer, under what condition is a self-attention layer faster than a recurrent layer, and how can self-attention be modified when sequences are very long?",
+      "expected_answer": "Self-attention layers are faster than recurrent layers when the sequence length n is smaller than the representation dimensionality d. For tasks involving very long sequences, self-attention can be restricted to considering only a neighborhood of size r in the input sequence centered around the respective output position, which increases the maximum path length to O(n/r).",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 7,
+      "evidence_quote": "length n is smaller than the representation dimensionality d, which is most often the case with sentence representations used by state-of-the-art models in machine translations, such as word-piece [38] and byte-pair [31] representations. To improve computational performance for tasks involving very long sequences, self-attention could be restricted to considering only a neighborhood of size r in the input sequence centered around the respective output position. This would increase the maximum path length to O(n/r).",
+      "evidence_anchors": [
+        "length n is smaller than the representation dimensionality d",
+        "neighborhood of size r",
+        "O(n/r)"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q05",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "How did the authors configure the learning rate schedule, Adam hyperparameters, and warmup steps when training the Transformer?",
+      "expected_answer": "They used the Adam optimizer with beta1 = 0.9, beta2 = 0.98, and epsilon = 10^-9, increasing the learning rate linearly for the first warmup_steps = 4000 steps and then decreasing it proportionally to the inverse square root of the step number.",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 7,
+      "evidence_quote": "We used the Adam optimizer [20] with β1 = 0.9, β2 = 0.98 and ε = 10 −9. We varied the learning rate over the course of training, according to the formula:\n\nlrate = d−0.5 model · min(step_num−0.5, step_num · warmup_steps−1.5) (3) This corresponds to increasing the learning rate linearly for the first warmup_steps training steps, and decreasing it thereafter proportionally to the inverse square root of the step number. We used warmup_steps = 4000.",
+      "evidence_anchors": [
+        "β1 = 0.9, β2 = 0.98",
+        "warmup_steps = 4000"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q06",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "How do the RAG-Sequence and RAG-Token architectures differ in how they condition on retrieved latent passages during text generation, and when do the two formulations become identical?",
+      "expected_answer": "RAG-Sequence uses the same single retrieved document across the entire generated sequence, whereas RAG-Token can draw a different latent document for each target token so the generator can combine content from multiple passages. The two models are equivalent on sequence classification tasks where the target sequence has length one.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 3,
+      "evidence_quote": "RAG-Sequence Model The RAG-Sequence model uses the same retrieved document to generate the complete sequence. Technically, it treats the retrieved document as a single latent variable that is marginalized to get the seq2seq probability p(y|x) via a top-K approximation.",
+      "evidence_anchors": [
+        "RAG-Sequence model uses the same retrieved document",
+        "complete sequence"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q07",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "Why does RAG keep the document encoder BERTd and the document index fixed during fine-tuning instead of updating them like REALM?",
+      "expected_answer": "Updating the document encoder BERTd during training is costly because it requires periodically rebuilding/updating the document index as REALM does during pre-training. The authors found this step unnecessary for strong performance, so they keep the document encoder and index fixed and only fine-tune the query encoder BERTq and the BART generator.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 4,
+      "evidence_quote": "Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator.",
+      "evidence_anchors": [
+        "Updating the document encoder BERTd during training is costly",
+        "keep the document encoder (and index) fixed",
+        "only fine-tuning the query encoder BERTq and the BART generator"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q08",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "How was the Wikipedia non-parametric knowledge source segmented and indexed in the RAG experiments?",
+      "expected_answer": "They used the December 2018 Wikipedia dump, split each Wikipedia article into disjoint 100-word chunks producing 21M documents, computed embeddings with the document encoder, and built a single MIPS index using FAISS with an HNSW (Hierarchical Navigable Small World) approximation.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 4,
+      "evidence_quote": "Following Lee et al. [31] and Karpukhin et al. [26], we use the December 2018 dump. Each Wikipedia article is split into disjoint 100-word chunks, to make a total of 21M documents. We use the document encoder to compute an embedding for each document, and build a single MIPS index using FAISS [23] with a Hierarchical Navigable Small World approximation for fast retrieval [37].",
+      "evidence_anchors": [
+        "December 2018 dump",
+        "disjoint 100-word chunks",
+        "21M documents",
+        "FAISS",
+        "Hierarchical Navigable Small World"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q09",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "In the RAG retrieval ablations comparing dense differentiable retrieval against a fixed BM25 retriever, on which task does BM25 perform best and why?",
+      "expected_answer": "BM25 performs best on FEVER fact verification, likely because FEVER claims are heavily entity-centric and therefore well-suited for word overlap-based retrieval, whereas differentiable dense retrieval improves results on all other tasks, especially Open-Domain QA.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 7,
+      "evidence_quote": "We compare RAG’s dense retriever to a word overlap-based BM25 retriever [53]. Here, we replace RAG’s retriever with a fixed BM25 system, and use BM25 retrieval scores as logits when calculating p(z|x). Table 6 shows the results. For FEVER, BM25 performs best, perhaps since FEVER claims are heavily entity-centric and thus well-suited for word overlap-based retrieval. Differentiable retrieval improves results on all other tasks, especially for Open-Domain QA, where it is crucial.",
+      "evidence_anchors": [
+        "For FEVER, BM25 performs best",
+        "entity-centric",
+        "Differentiable retrieval improves results on all other tasks"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q10",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "How many total trainable parameters does the RAG model have, and how many vectors and dimensions are in its non-parametric memory index?",
+      "expected_answer": "RAG has 626M trainable parameters in total (110M for the DPR BERT-base query encoder, 110M for the document encoder though not trained, and 406M from BART-large), and its non-parametric memory index consists of 21M 728-dimensional vectors (15.3B values).",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 18,
+      "alternative_gold_pages": [
+        19
+      ],
+      "evidence_quote": "Our RAG models contain the trainable parameters for the BERT-base query and document encoder of DPR, with 110M parameters each (although we do not train the document encoder ourselves) and 406M trainable parameters from BART-large, 406M parameters, making a total of 626M trainable",
+      "evidence_anchors": [
+        "110M parameters each",
+        "406M",
+        "total of 626M trainable"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q11",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "What three action types are defined in the Wikipedia web API used by ReAct for knowledge-intensive reasoning tasks, and what does each action return?",
+      "expected_answer": "The three actions are: (1) search[entity], which returns the first 5 sentences from the entity's wiki page if it exists or suggests top-5 similar entities; (2) lookup[string], which returns the next sentence in the page containing the string (simulating Ctrl+F); and (3) finish[answer], which finishes the current task with the answer.",
+      "gold_source_id": "yao-2022-react",
+      "gold_page": 4,
+      "evidence_quote": "Action Space We design a simple Wikipedia web API with three types of actions to support interactive information retrieval: (1) search[entity], which returns the first 5 sentences from the corresponding entity wiki page if it exists, or else suggests top-5 similar entities from the Wikipedia search engine, (2) lookup[string], which would return the next sentence in the page containing string, simulating Ctrl+F functionality on the browser. (3) finish[answer], which would finish the current task withanswer.",
+      "evidence_anchors": [
+        "search[entity]",
+        "first 5 sentences",
+        "lookup[string]",
+        "Ctrl+F",
+        "finish[answer]"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q12",
+      "split": "dev",
+      "type": "dieu_kien_ngoai_le",
+      "question": "When combining ReAct and CoT-SC, under what specific heuristic conditions do ReAct -> CoT-SC and CoT-SC -> ReAct switch from one method to the other?",
+      "expected_answer": "In ReAct -> CoT-SC, the model backs off to CoT-SC when ReAct fails to return an answer within a fixed number of steps (7 steps for HotpotQA and 5 steps for FEVER). In CoT-SC -> ReAct, the model backs off to ReAct when the majority answer among n CoT-SC samples appears fewer than n/2 times.",
+      "gold_source_id": "yao-2022-react",
+      "gold_page": 5,
+      "evidence_quote": "A) ReAct→ CoT-SC: when ReAct fails to return an answer within given steps, back off to CoT-SC. We set 7 and 5 steps for HotpotQA and FEVER respectively as we find more steps will not improveReAct performance3. B) CoT-SC→ ReAct: when the majority answer among n CoT-SC samples occurs less thann/2 times (i.e. internal knowledge might not support the task confidently), back off toReAct.",
+      "evidence_anchors": [
+        "ReAct fails to return an answer within given steps",
+        "7 and 5 steps for HotpotQA and FEVER",
+        "majority answer among n CoT-SC samples occurs less thann/2 times"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q13",
+      "split": "dev",
+      "type": "dien_dat_lai",
+      "question": "How is theFEVER classification claim processed and marginalized across retrieved documents in this model, and why is the evidence sentence extraction sub-task not directly tackled?",
+      "expected_answer": "For FEVER classification (in the 2020 RAG paper), the model first re-generates the claim, classifies using the representation of the final hidden state, and marginalizes across documents to obtain class probabilities. The evidence extraction sub-task is not directly tackled because FEVER uses a different Wikipedia dump than RAG.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 18,
+      "evidence_quote": "For FEVER classification, we follow the practice from [ 32], and first re-generate the claim, and then classify using the representation of the final hidden state, before finally marginalizing across documents to obtain the class probabilities. The FEVER task traditionally has two sub-tasks. The first is to classify the claim as either \"Supported\", \"Refuted\" or \"Not Enough Info\", which is the task we explore in the main paper. FEVER’s other sub-task involves extracting sentences from Wikipedia as evidence supporting the classification prediction. As FEVER uses a different Wikipedia dump to us, directly tackling this task is not straightforward.",
+      "evidence_anchors": [
+        "first re-generate the claim",
+        "representation of the final hidden state",
+        "FEVER uses a different Wikipedia dump to us"
+      ],
+      "filter": {
+        "category": "rag",
+        "year": 2020
+      }
+    },
+    {
+      "id": "q14",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "What beam size and decoding algorithm are used at test time for generation tasks and open-domain QA in this architecture?",
+      "expected_answer": "In the RAG implementation details (2020), Open-domain QA uses greedy decoding (as beam search did not improve results) with 15 retrieved documents for RAG-Token and 50 retrieved documents with Thorough Decoding for RAG-Sequence; for Open-MSMarco and Jeopardy question generation, it uses 10 retrieved documents, a beam size of four, and Fast Decoding for RAG-Sequence.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 17,
+      "evidence_quote": "For Open-domain QA we report test numbers using 15 retrieved documents for RAG-Token models. For RAG-Sequence models, we report test results using 50 retrieved documents, and we use the Thorough Decoding approach since answers are generally short. We use greedy decoding for QA as we did not find beam search improved results. For Open-MSMarco and Jeopardy question generation, we report test numbers using ten retrieved documents for both RAG-Token and RAG-Sequence, and we also train a BART-large model as a baseline. We use a beam size of four, and use the Fast Decoding approach for RAG-Sequence models, as Thorough Decoding did not improve performance.",
+      "evidence_anchors": [
+        "15 retrieved documents for RAG-Token",
+        "50 retrieved documents",
+        "greedy decoding for QA",
+        "beam size of four",
+        "Fast Decoding"
+      ],
+      "filter": {
+        "category": "rag",
+        "year": 2020
+      }
+    },
+    {
+      "id": "q15",
+      "split": "dev",
+      "type": "truc_tiep",
+      "question": "What is the batch size and exact number of training steps used when fine-tuning the models on HotpotQA?",
+      "expected_answer": "In the ReAct HotpotQA fine-tuning setup (2022), all fine-tuning uses a batch size of 64. On PaLM-8B, ReAct and Act are fine-tuned for 4,000 steps while Standard and CoT are fine-tuned for 2,000 steps; on PaLM-62B, ReAct and Act are fine-tuned for 4,000 steps while Standard and CoT are fine-tuned for 1,000 steps.",
+      "gold_source_id": "yao-2022-react",
+      "gold_page": 15,
+      "evidence_quote": "For all finetuning we use a batch size of 64. On PaLM-8B, we finetuneReAct and Act methods for 4, 000 steps and Standard and CoT methods for 2, 000 steps. On PaLM-62B, we finetune ReAct and Act methods for 4, 000 steps and Standard and CoT methods for 1, 000 steps. We findReAct and Act methods generally benefit from more training steps (and more training data), while Standard and CoT methods degrade soon after finetuning.",
+      "evidence_anchors": [
+        "batch size of 64",
+        "PaLM-8B",
+        "4, 000 steps",
+        "PaLM-62B",
+        "1, 000 steps"
+      ],
+      "filter": {
+        "category": "agent",
+        "year": 2022
+      }
+    },
+    {
+      "id": "q16",
+      "split": "test",
+      "type": "dieu_kien_ngoai_le",
+      "question": "What value of label smoothing is applied during Transformer training, and what trade-off does it cause between perplexity and BLEU/accuracy?",
+      "expected_answer": "During training, the Transformer uses label smoothing of value epsilon_ls = 0.1. It hurts perplexity because the model learns to be more unsure, but it improves accuracy and BLEU score.",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 8,
+      "evidence_quote": "Label Smoothing During training, we employed label smoothing of value εls = 0 .1 [36]. This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.",
+      "evidence_anchors": [
+        "label smoothing of value εls = 0 .1",
+        "hurts perplexity",
+        "improves accuracy and BLEU score"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q17",
+      "split": "test",
+      "type": "dien_dat_lai",
+      "question": "How did the authors test updating RAG's world knowledge at test time without retraining, and what accuracy was obtained with matched versus mismatched Wikipedia indices?",
+      "expected_answer": "They performed index hot-swapping by building an index from the December 2016 DrQA Wikipedia dump and comparing it against the December 2018 index on 82 world leaders who changed between those dates. RAG answered 70% correctly using the 2016 index for 2016 leaders and 68% using the 2018 index for 2018 leaders, but accuracy dropped to 12% (2018 index on 2016 leaders) and 4% (2016 index on 2018 leaders) when indices were mismatched.",
+      "gold_source_id": "lewis-2020-rag",
+      "gold_page": 8,
+      "alternative_gold_pages": [
+        7
+      ],
+      "evidence_quote": "RAG answers 70% correctly using the 2016 index for 2016 world leaders and 68% using the 2018 index for 2018 world leaders. Accuracy with mismatched indices is low (12% with the 2018 index and 2016 leaders, 4% with the 2016 index and 2018 leaders). This shows we can update RAG’s world knowledge by simply replacing its non-parametric memory.",
+      "evidence_anchors": [
+        "70% correctly using the 2016 index",
+        "68% using the 2018 index",
+        "12% with the 2018 index",
+        "4% with the 2016 index"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q18",
+      "split": "test",
+      "type": "dieu_kien_ngoai_le",
+      "question": "In the human error analysis comparing ReAct and Chain-of-Thought (CoT) on HotpotQA, how do their hallucination and reasoning error rates differ, and what specific repetitive loop error occurs in ReAct?",
+      "expected_answer": "CoT suffers heavily from hallucination (14% false positive rate vs. 6% for ReAct, and 56% of CoT failures vs. 0% for ReAct). However, ReAct has a higher reasoning error rate (47% vs. 16% for CoT) because its structural constraint reduces flexibility, including a frequent error pattern where ReAct repetitively generates previous thoughts and actions and fails to jump out of the loop; additionally, 23% of ReAct failures come from non-informative search results.",
+      "gold_source_id": "yao-2022-react",
+      "gold_page": 6,
+      "evidence_quote": "A) Hallucination is a serious problem for CoT, resulting in much higher false positive rate than ReAct (14% vs. 6%) in success mode, and make up its major failure mode (56%). In contrast, the problem solving trajectory of ReActis more grounded, fact-driven, and trustworthy, thanks to the access of an external knowledge base.\n\nB) While interleaving reasoning, action and observation steps improves ReAct’s groundedness and trustworthiness, such a structural constraint also reduces its flexibility in formulating reasoning steps, leading to more reasoning error rate than CoT. we note that there is one frequent error pattern specific toReAct, in which the model repetitively generates the previous thoughts and actions, and we categorize it as part of “reasoning error” as the model fails to reason about what the proper next action to take and jump out of the loop4.",
+      "evidence_anchors": [
+        "14% vs. 6%",
+        "major failure mode (56%)",
+        "repetitively generates the previous thoughts and actions",
+        "jump out of the loop"
+      ],
+      "filter": null
+    },
+    {
+      "id": "q19",
+      "split": "test",
+      "type": "truc_tiep",
+      "question": "On the FEVER fact verification benchmark and question answering task, what accuracy scores are achieved by the different prompting methods and how do they compare to supervised state-of-the-art?",
+      "expected_answer": "In the 2022 ReAct study using PaLM-540B (Table 1), on HotpotQA (EM) and FEVER (Acc): Standard achieves 28.7 and 57.1, CoT achieves 29.4 and 56.3, CoT-SC achieves 33.4 and 60.4, Act achieves 25.7 and 58.9, ReAct achieves 27.4 and 60.9, CoT-SC -> ReAct achieves 34.2 and 64.6, ReAct -> CoT-SC achieves 35.1 and 62.0, while Supervised SoTA is 67.5 and 89.5.",
+      "gold_source_id": "yao-2022-react",
+      "gold_page": 5,
+      "evidence_quote": "Prompt Methoda HotpotQA Fever (EM) (Acc) Standard 28.7 57.1 CoT(Wei et al., 2022) 29.4 56.3 CoT-SC(Wang et al., 2022a) 33.4 60.4 Act 25.7 58.9 ReAct 27.4 60.9 CoT-SC→ReAct 34.2 64.6 ReAct→CoT-SC 35.1 62.0 Supervised SoTAb 67.5 89.5",
+      "evidence_anchors": [
+        "Standard 28.7 57.1",
+        "ReAct 27.4 60.9",
+        "CoT-SC→ReAct 34.2 64.6",
+        "ReAct→CoT-SC 35.1 62.0"
+      ],
+      "filter": {
+        "category": "agent",
+        "year": 2022
+      }
+    },
+    {
+      "id": "q20",
+      "split": "test",
+      "type": "truc_tiep",
+      "question": "During inference on the machine translation benchmark, how many checkpoints were averaged for the base and big models, and what beam size and length penalty alpha were used?",
+      "expected_answer": "In the 2017 Transformer machine translation experiments, for the base models they averaged the last 5 checkpoints (written at 10-minute intervals), and for the big models they averaged the last 20 checkpoints. They used beam search with a beam size of 4, length penalty alpha = 0.6, and maximum output length of input length + 50.",
+      "gold_source_id": "vaswani-2017-transformer",
+      "gold_page": 8,
+      "evidence_quote": "For the base models, we used a single model obtained by averaging the last 5 checkpoints, which were written at 10-minute intervals. For the big models, we averaged the last 20 checkpoints. We used beam search with a beam size of 4 and length penalty α = 0 .6 [38]. These hyperparameters were chosen after experimentation on the development set. We set the maximum output length during inference to input length + 50, but terminate early when possible [38].",
+      "evidence_anchors": [
+        "averaging the last 5 checkpoints",
+        "last 20 checkpoints",
+        "beam size of 4 and length penalty α = 0 .6"
+      ],
+      "filter": {
+        "category": "architecture",
+        "year": 2017
+      }
+    }
+  ]
+}

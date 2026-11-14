@@ -1,0 +1,182 @@
+[
+  {
+    "position_id": "pos_01",
+    "page_id": "lewis-2020-rag_p01",
+    "document_id": "lewis-2020-rag",
+    "page": 1,
+    "section": "Abstract",
+    "anchor_snippet": "Abstract  Large pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art re",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p01_fix_01",
+      "char_length": 500,
+      "text": "eters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pretrained models with a differentiable access mechanism to explicit non-parametric memory have so far been o"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p01_para_01",
+      "char_length": 650,
+      "text": "Abstract\n\nLarge pre-trained language models have been shown to store factual knowledge in their parameters, and achieve state-of-the-art results when fine-tuned on downstream NLP tasks. However, their ability to access and precisely manipulate knowledge is still limited, and hence on knowledge-intensive tasks, their performance lags behind task-specific architectures. Additionally, providing provenance for their decisions and updating their world knowledge remain open research problems. Pretrained models with a differentiable access mechanism to explicit non-parametric memory have so far been only investigated for extractive downstream tasks."
+    }
+  },
+  {
+    "position_id": "pos_02",
+    "page_id": "lewis-2020-rag_p02",
+    "document_id": "lewis-2020-rag",
+    "page": 2,
+    "section": "2 Methods",
+    "anchor_snippet": "ion Document Index Define \"middle ear\"(x) Question Answering:  Question Query The middle ear includes the tympanic cavity and the three ossi",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p02_fix_00",
+      "char_length": 500,
+      "text": "The Divine Comedy (x) q Query Encoder q(x) MIPS pθ Generator pθ (Parametric) Marginalize This 14th century work is divided into 3 sections: \"Inferno\", \"Purgatorio\" & \"Paradiso\" (y) End-to-End Backprop through q and pθ Barack Obama was born in Hawaii.(x) Fact Verification: Fact Query supports (y) Question Generation Fact Verification: Label Generation Document Index Define \"middle ear\"(x) Question Answering: Question Query The middle ear includes the tympanic cavity and the three ossicles. (y) Qu"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p02_para_00",
+      "char_length": 628,
+      "text": "The Divine Comedy (x) q Query Encoder q(x) MIPS pθ Generator pθ (Parametric) Marginalize This 14th century work is divided into 3 sections: \"Inferno\", \"Purgatorio\" & \"Paradiso\" (y) End-to-End Backprop through q and pθ Barack Obama was born in Hawaii.(x) Fact Verification: Fact Query supports (y) Question Generation Fact Verification:\n\nLabel Generation Document Index Define \"middle ear\"(x) Question Answering:\n\nQuestion Query The middle ear includes the tympanic cavity and the three ossicles. (y) Question Answering:\n\nAnswer GenerationRetriever pη (Non-Parametric) z4 z3 z2 z1 d(z) Jeopardy Question Generation:\n\nAnswer Query"
+    }
+  },
+  {
+    "position_id": "pos_03",
+    "page_id": "lewis-2020-rag_p03",
+    "document_id": "lewis-2020-rag",
+    "page": 3,
+    "section": "2.1 Models",
+    "anchor_snippet": "r generated text. In one approach, RAG-Sequence, the model uses the same document to predict each target token. The second approach, RAG-Tok",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p03_fix_00",
+      "char_length": 500,
+      "text": "byθ that generates a current token based on a context of the previousi− 1 tokensy1:i−1, the original inputx and a retrieved passagez. To train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize over the latent documents in different ways to produce a distribution over generated text. In one approach, RAG-Sequence, the model uses the same document to predict each target token. The second approach, RAG-Token, can pre"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p03_para_00",
+      "char_length": 697,
+      "text": "byθ that generates a current token based on a context of the previousi− 1 tokensy1:i−1, the original inputx and a retrieved passagez.\n\nTo train the retriever and generator end-to-end, we treat the retrieved document as a latent variable. We propose two models that marginalize over the latent documents in different ways to produce a distribution over generated text. In one approach, RAG-Sequence, the model uses the same document to predict each target token. The second approach, RAG-Token, can predict each target token based on a different document. In the following, we formally introduce both models and then describe the pη andpθ components, as well as the training and decoding procedure."
+    }
+  },
+  {
+    "position_id": "pos_04",
+    "page_id": "lewis-2020-rag_p04",
+    "document_id": "lewis-2020-rag",
+    "page": 4,
+    "section": "2.5 Decoding",
+    "anchor_snippet": "and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator.  2.5 Decoding  At test tim",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p04_fix_00",
+      "char_length": 500,
+      "text": "minimize the negative marginal log-likelihood of each target,∑ j− logp(yj|xj) using stochastic gradient descent with Adam [28]. Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator. 2.5 Decoding At test time, RAG-Seque"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p04_para_00",
+      "char_length": 463,
+      "text": "minimize the negative marginal log-likelihood of each target,∑ j− logp(yj|xj) using stochastic gradient descent with Adam [28]. Updating the document encoder BERTd during training is costly as it requires the document index to be periodically updated as REALM does during pre-training [20]. We do not find this step necessary for strong performance, and keep the document encoder (and index) fixed, only fine-tuning the query encoder BERTq and the BART generator."
+    }
+  },
+  {
+    "position_id": "pos_05",
+    "page_id": "lewis-2020-rag_p05",
+    "document_id": "lewis-2020-rag",
+    "page": 5,
+    "section": "3.3 Jeopardy Question Generation",
+    "anchor_snippet": "ikipedia alone. Here, RAG can rely on parametric knowledge to generate reasonable responses.  3.3 Jeopardy Question Generation  To evaluate",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p05_fix_00",
+      "char_length": 500,
+      "text": "MSMARCO as an open-domain abstractive QA task. MSMARCO has some questions that cannot be answered in a way that matches the reference answer without access to the gold passages, such as “What is the weather in V olcano, CA?” so performance will be lower without using gold passages. We also note that some MSMARCO questions cannot be answered using Wikipedia alone. Here, RAG can rely on parametric knowledge to generate reasonable responses. 3.3 Jeopardy Question Generation To evaluate RAG’s genera"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p05_para_00",
+      "char_length": 442,
+      "text": "MSMARCO as an open-domain abstractive QA task. MSMARCO has some questions that cannot be answered in a way that matches the reference answer without access to the gold passages, such as “What is the weather in V olcano, CA?” so performance will be lower without using gold passages. We also note that some MSMARCO questions cannot be answered using Wikipedia alone. Here, RAG can rely on parametric knowledge to generate reasonable responses."
+    }
+  },
+  {
+    "position_id": "pos_06",
+    "page_id": "lewis-2020-rag_p06",
+    "document_id": "lewis-2020-rag",
+    "page": 6,
+    "section": "4.2 Abstractive Question Answering",
+    "anchor_snippet": "50.6 RAG-Token 44.1 55.2/66.1 45.5 50.0 RAG-Seq. 44.5 56.8/68.0 45.2 52.2  Table 2: Generation and classification Test Scores.  MS-MARCO So",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p06_fix_00",
+      "char_length": 500,
+      "text": "Table 1: Open-Domain QA Test Scores. For TQA, left column uses the standard test set for Open- Domain QA, right column uses the TQA-Wiki test set. See Appendix D for further details. Model NQ TQA WQ CT Closed Book T5-11B [52] 34.5 - /50.1 37.4 - T5-11B+SSM[52] 36.6 - /60.5 44.7 - Open Book REALM [20] 40.4 - / - 40.7 46.8 DPR [26] 41.5 57.9/ - 41.1 50.6 RAG-Token 44.1 55.2/66.1 45.5 50.0 RAG-Seq. 44.5 56.8/68.0 45.2 52.2 Table 2: Generation and classification Test Scores. MS-MARCO SotA is [4], FE"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p06_para_00",
+      "char_length": 672,
+      "text": "Table 1: Open-Domain QA Test Scores. For TQA, left column uses the standard test set for Open- Domain QA, right column uses the TQA-Wiki test set. See Appendix D for further details.\n\nModel NQ TQA WQ CT Closed Book T5-11B [52] 34.5 - /50.1 37.4 - T5-11B+SSM[52] 36.6 - /60.5 44.7 - Open Book REALM [20] 40.4 - / - 40.7 46.8 DPR [26] 41.5 57.9/ - 41.1 50.6 RAG-Token 44.1 55.2/66.1 45.5 50.0 RAG-Seq. 44.5 56.8/68.0 45.2 52.2\n\nTable 2: Generation and classification Test Scores.\n\nMS-MARCO SotA is [4], FEVER-3 is [68] and FEVER-2 is [ 57] *Uses gold context/evidence.\n\nBest model without gold access underlined.\n\nModel Jeopardy MSMARCO FVR3 FVR2 B-1 QB-1 R-L B-1 Label Acc."
+    }
+  },
+  {
+    "position_id": "pos_07",
+    "page_id": "lewis-2020-rag_p07",
+    "document_id": "lewis-2020-rag",
+    "page": 7,
+    "section": "4.5 Additional Results",
+    "anchor_snippet": "thor of ” A Farewellto Arms ” Doc 1 Doc 2 Doc 3 Doc 4 Doc 5  Figure 2: RAG-Token document posteriorp(zi|x,yi,y−i) for each generated token f",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p07_fix_00",
+      "char_length": 500,
+      "text": "Document 1: his works are considered classics of American literature ... His wartime experiences formed the basis for his novel ”A Farewell to Arms” (1929) ... Document 2: ... artists of the 1920s ”Lost Generation” expatriate community . His debut novel, ”The Sun Also Rises” , was published in 1926. BOS ” TheSunAlso R ises ” is a novel by this author of ” A Farewellto Arms ” Doc 1 Doc 2 Doc 3 Doc 4 Doc 5 Figure 2: RAG-Token document posteriorp(zi|x,yi,y−i) for each generated token for input “Hem"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p07_para_00",
+      "char_length": 693,
+      "text": "Document 1: his works are considered classics of American literature ... His wartime experiences formed the basis for his novel ”A Farewell to Arms” (1929) ...\n\nDocument 2: ... artists of the 1920s ”Lost Generation” expatriate community . His debut novel, ”The Sun Also Rises” , was published in 1926.\n\nBOS ” TheSunAlso R ises ” is a novel by this author of ” A Farewellto Arms ” Doc 1 Doc 2 Doc 3 Doc 4 Doc 5\n\nFigure 2: RAG-Token document posteriorp(zi|x,yi,y−i) for each generated token for input “Hemingway\" for Jeopardy generation with 5 retrieved documents. The posterior for document 1 is high when generating “A Farewell to Arms\" and for document 2 when generating “The Sun Also Rises\"."
+    }
+  },
+  {
+    "position_id": "pos_08",
+    "page_id": "lewis-2020-rag_p08",
+    "document_id": "lewis-2020-rag",
+    "page": 8,
+    "section": "5 Related Work",
+    "anchor_snippet": "6.8% RAG-Seq. 83.5% 53.8%  Table 6: Ablations on the dev set. As FEVER is a classification task, both RAG models are equivalent. Model NQ TQ",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p08_fix_01",
+      "char_length": 500,
+      "text": "G models are equivalent. Model NQ TQA WQ CT Jeopardy-QGen MSMarco FVR-3 FVR-2 Exact Match B-1 QB-1 R-L B-1 Label Accuracy RAG-Token-BM25 29.7 41.5 32.1 33.1 17.5 22.3 55.5 48.4 75.1 91.6RAG-Sequence-BM25 31.8 44.1 36.6 33.8 11.1 19.5 56.5 46.9 RAG-Token-Frozen 37.8 50.1 37.1 51.1 16.7 21.7 55.9 49.4 72.9 89.4RAG-Sequence-Frozen 41.2 52.1 41.8 52.6 11.8 19.6 56.7 47.3 RAG-Token 43.5 54.8 46.5 51.9 17.9 22.6 56.2 49.4 74.5 90.6RAG-Sequence 44.0 55.8 44.9 53.4 15.3 21.5 57.2 47.5 between these date"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p08_para_01",
+      "char_length": 700,
+      "text": "Table 6: Ablations on the dev set. As FEVER is a classification task, both RAG models are equivalent. Model NQ TQA WQ CT Jeopardy-QGen MSMarco FVR-3 FVR-2 Exact Match B-1 QB-1 R-L B-1 Label Accuracy RAG-Token-BM25 29.7 41.5 32.1 33.1 17.5 22.3 55.5 48.4 75.1 91.6RAG-Sequence-BM25 31.8 44.1 36.6 33.8 11.1 19.5 56.5 46.9 RAG-Token-Frozen 37.8 50.1 37.1 51.1 16.7 21.7 55.9 49.4 72.9 89.4RAG-Sequence-Frozen 41.2 52.1 41.8 52.6 11.8 19.6 56.7 47.3 RAG-Token 43.5 54.8 46.5 51.9 17.9 22.6 56.2 49.4 74.5 90.6RAG-Sequence 44.0 55.8 44.9 53.4 15.3 21.5 57.2 47.5 between these dates and use a template “Who is {position}?” (e.g. “Who is the President of Peru?”) to query our NQ RAG model with each index."
+    }
+  },
+  {
+    "position_id": "pos_09",
+    "page_id": "lewis-2020-rag_p09",
+    "document_id": "lewis-2020-rag",
+    "page": 9,
+    "section": "6 Discussion",
+    "anchor_snippet": "t a single, left-to-right, pre-trained language model could achieve strong performance across both discriminative and generative tasks. For",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p09_fix_00",
+      "char_length": 500,
+      "text": "General-Purpose Architectures for NLP Prior work on general-purpose architectures for NLP tasks has shown great success without the use of retrieval. A single, pre-trained language model has been shown to achieve strong performance on various classification tasks in the GLUE benchmarks [60, 61] after fine-tuning [49, 8]. GPT-2 [50] later showed that a single, left-to-right, pre-trained language model could achieve strong performance across both discriminative and generative tasks. For further im"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p09_para_00",
+      "char_length": 700,
+      "text": "General-Purpose Architectures for NLP Prior work on general-purpose architectures for NLP tasks has shown great success without the use of retrieval. A single, pre-trained language model has been shown to achieve strong performance on various classification tasks in the GLUE benchmarks [60, 61] after fine-tuning [49, 8]. GPT-2 [50] later showed that a single, left-to-right, pre-trained language model could achieve strong performance across both discriminative and generative tasks. For further improvement, BART [32] and T5 [51, 52] propose a single, pre-trained encoder-decoder model that leverages bi-directional attention to achieve stronger performance on discriminative and generative tasks."
+    }
+  },
+  {
+    "position_id": "pos_10",
+    "page_id": "lewis-2020-rag_p10",
+    "document_id": "lewis-2020-rag",
+    "page": 10,
+    "section": "Broader Impact",
+    "anchor_snippet": "ith direct benefit to society, for example by endowing it with a medical index and asking it open-domain questions on that topic, or by help",
+    "strategy_A_chunk": {
+      "chunk_id": "lewis-2020-rag_p10_fix_00",
+      "char_length": 499,
+      "text": "Broader Impact This work offers several positive societal benefits over previous work: the fact that it is more strongly grounded in real factual knowledge (in this case Wikipedia) makes it “hallucinate” less with generations that are more factual, and offers more control and interpretability. RAG could be employed in a wide variety of scenarios with direct benefit to society, for example by endowing it with a medical index and asking it open-domain questions on that topic, or by helping people"
+    },
+    "strategy_BC_chunk": {
+      "chunk_id": "lewis-2020-rag_p10_para_00",
+      "char_length": 533,
+      "text": "Broader Impact\n\nThis work offers several positive societal benefits over previous work: the fact that it is more strongly grounded in real factual knowledge (in this case Wikipedia) makes it “hallucinate” less with generations that are more factual, and offers more control and interpretability. RAG could be employed in a wide variety of scenarios with direct benefit to society, for example by endowing it with a medical index and asking it open-domain questions on that topic, or by helping people be more effective at their jobs."
+    }
+  }
+]

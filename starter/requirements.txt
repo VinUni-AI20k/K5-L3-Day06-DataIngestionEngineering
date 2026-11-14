@@ -1,4 +1,7 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup and PDF parsing + Local Embedding SDK and Vector Store
 psycopg[binary]==3.3.8
-pypdf>=5,<7
-python-dotenv>=1,<2
+pypdf==6.11.0
+python-dotenv==1.2.2
+sentence-transformers==6.3.0
+torch==2.15.0
+qdrant-client==1.20.0
