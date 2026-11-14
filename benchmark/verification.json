@@ -1,0 +1,242 @@
+{
+  "benchmark_version": "1.0",
+  "counts": {
+    "total": 24,
+    "dev": 18,
+    "test": 6,
+    "with_filter": 5,
+    "with_filter_test": 2,
+    "by_type": {
+      "dien_dat_lai": 5,
+      "dieu_kien": 5,
+      "metadata_filter": 5,
+      "ngoai_le": 1,
+      "phan_mo_dau": 3,
+      "truc_tiep": 5
+    }
+  },
+  "errors": [],
+  "warnings": [
+    "t01: evidence also on pages [125] (review as extra gold)"
+  ],
+  "per_question": [
+    {
+      "id": "d01",
+      "split": "dev",
+      "found_on_pages": [
+        9
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d02",
+      "split": "dev",
+      "found_on_pages": [
+        9
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d03",
+      "split": "dev",
+      "found_on_pages": [
+        18
+      ],
+      "evidence_on_gold": true,
+      "gold_section": null
+    },
+    {
+      "id": "d04",
+      "split": "dev",
+      "found_on_pages": [
+        18,
+        40
+      ],
+      "evidence_on_gold": true,
+      "gold_section": null
+    },
+    {
+      "id": "d05",
+      "split": "dev",
+      "found_on_pages": [
+        25
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d06",
+      "split": "dev",
+      "found_on_pages": [
+        25
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d07",
+      "split": "dev",
+      "found_on_pages": [
+        64
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "IV. ĐIỀU TRỊ"
+    },
+    {
+      "id": "d08",
+      "split": "dev",
+      "found_on_pages": [
+        122
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d09",
+      "split": "dev",
+      "found_on_pages": [
+        196
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "IV. ĐIỀU TRỊ GÃY XƯƠNG HÀM TRÊN"
+    },
+    {
+      "id": "d10",
+      "split": "dev",
+      "found_on_pages": [
+        194
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d11",
+      "split": "dev",
+      "found_on_pages": [
+        151
+      ],
+      "evidence_on_gold": true,
+      "gold_section": null
+    },
+    {
+      "id": "d12",
+      "split": "dev",
+      "found_on_pages": [
+        152
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d13",
+      "split": "dev",
+      "found_on_pages": [
+        168
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "IV. ĐIỀU TRỊ"
+    },
+    {
+      "id": "d14",
+      "split": "dev",
+      "found_on_pages": [
+        168
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "IV. ĐIỀU TRỊ"
+    },
+    {
+      "id": "d15",
+      "split": "dev",
+      "found_on_pages": [
+        7
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "DANH MỤC CÁC TỪ VIẾT TẮT"
+    },
+    {
+      "id": "d16",
+      "split": "dev",
+      "found_on_pages": [
+        100
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "d17",
+      "split": "dev",
+      "found_on_pages": [
+        144
+      ],
+      "evidence_on_gold": true,
+      "gold_section": null
+    },
+    {
+      "id": "d18",
+      "split": "dev",
+      "found_on_pages": [
+        3
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "CHỦ BIÊN VÀ BAN BIÊN SOẠN"
+    },
+    {
+      "id": "t01",
+      "split": "test",
+      "found_on_pages": [
+        119,
+        125
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "t02",
+      "split": "test",
+      "found_on_pages": [
+        78
+      ],
+      "evidence_on_gold": true,
+      "gold_section": null
+    },
+    {
+      "id": "t03",
+      "split": "test",
+      "found_on_pages": [
+        184
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "IV. ĐIỀU TRỊ"
+    },
+    {
+      "id": "t04",
+      "split": "test",
+      "found_on_pages": [
+        154
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "t05",
+      "split": "test",
+      "found_on_pages": [
+        200
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "III. CHẨN ĐOÁN"
+    },
+    {
+      "id": "t06",
+      "split": "test",
+      "found_on_pages": [
+        1
+      ],
+      "evidence_on_gold": true,
+      "gold_section": "QUYẾT ĐỊNH BAN HÀNH"
+    }
+  ]
+}

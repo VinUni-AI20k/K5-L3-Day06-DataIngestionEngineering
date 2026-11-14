@@ -22,6 +22,7 @@ starter/
 ├── scripts/check_setup.py        # kiểm tra Qdrant + 1 lần gọi embedding thật
 ├── scripts/build_manifest.py     # sinh data/manifest.json
 ├── scripts/ocr_scanned_pages.py  # OCR trang scan (chỉ cần chạy lại khi đổi OCR)
+├── scripts/verify_benchmark.py   # kiểm chứng evidence + ràng buộc benchmark
 ├── src/ingestion.py              # ✅ đọc, chuẩn hóa, gắn bệnh/mục/tiểu mục
 ├── src/chunking.py               # TODO: A fixed-size, B theo mục
 ├── src/embeddings.py             # TODO: OpenRouter adapter
@@ -88,6 +89,14 @@ Kết quả lần chạy 2026-11-14: 201 trang ingest, 194 trang tính, 205.742 
 - Vẫn còn một số chữ bị tách mà quy tắc không ghép được an toàn, ví dụ `đầ y`, `là m`, `mụ n`, `bù ng` (trang 30–39) và `HỖ N` trong mục lục (trang 6). Ở `là m` và `đầ y`, mảnh đầu cũng là một từ có nghĩa, nên ghép sẽ rủi ro.
 - 7 trang nội dung ngắn (<200 ký tự) là phần cuối của một mục, không phải lỗi trích xuất.
 
-## 4. Các bước tiếp theo
+## 4. Benchmark (bước 3)
 
-Chunking A/B/C, embedding, Qdrant, benchmark và đánh giá: xem [GUIDE.md](../GUIDE.md). Benchmark phải được viết và commit **trước** khi chạy retrieval.
+```bash
+python scripts/verify_benchmark.py   # cần chạy python -m src.ingestion trước
+```
+
+24 câu trong [benchmark/questions.json](../benchmark/questions.json): 18 dev / 6 test, tách theo bệnh, 5 câu có filter `disease_no` (2 câu trong test). Script kiểm tra evidence nằm đúng trang gold sau chuẩn hóa, cảnh báo nếu evidence xuất hiện ở trang khác, và kiểm tra các ràng buộc số lượng cùng việc không rò rỉ bệnh giữa dev và test. Thiết kế và các quyết định về gold: [benchmark/README.md](../benchmark/README.md). Benchmark được commit **trước** khi chạy bất kỳ retrieval nào.
+
+## 5. Các bước tiếp theo
+
+Chunking A/B/C, embedding, Qdrant và đánh giá: xem [GUIDE.md](../GUIDE.md).
